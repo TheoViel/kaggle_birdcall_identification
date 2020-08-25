@@ -1,0 +1,119 @@
+-------------   Fold 4 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24709832 trainable parameters
+
+Epoch 1/50 	 lr=5.0e-04 	 t=268s  	 loss=0.117 	 val_loss=0.026 	 val_f1=0.000
+Epoch 2/50 	 lr=1.0e-03 	 t=271s  	 loss=0.044 	 val_loss=0.027 	 val_f1=0.001
+Epoch 3/50 	 lr=9.8e-04 	 t=271s  	 loss=0.041 	 val_loss=0.020 	 val_f1=0.089
+Epoch 4/50 	 lr=9.6e-04 	 t=270s  	 loss=0.039 	 val_loss=0.018 	 val_f1=0.219
+Epoch 5/50 	 lr=9.4e-04 	 t=270s  	 loss=0.037 	 val_loss=0.016 	 val_f1=0.296
+Epoch 6/50 	 lr=9.2e-04 	 t=271s  	 loss=0.036 	 val_loss=0.015 	 val_f1=0.399
+Epoch 7/50 	 lr=9.0e-04 	 t=269s  	 loss=0.035 	 val_loss=0.014 	 val_f1=0.432
+Epoch 8/50 	 lr=8.8e-04 	 t=271s  	 loss=0.034 	 val_loss=0.014 	 val_f1=0.476
+Epoch 9/50 	 lr=8.5e-04 	 t=269s  	 loss=0.033 	 val_loss=0.013 	 val_f1=0.530
+Epoch 10/50 	 lr=8.3e-04 	 t=270s  	 loss=0.033 	 val_loss=0.013 	 val_f1=0.571
+Epoch 11/50 	 lr=8.1e-04 	 t=268s  	 loss=0.032 	 val_loss=0.013 	 val_f1=0.567
+Epoch 12/50 	 lr=7.9e-04 	 t=269s  	 loss=0.032 	 val_loss=0.012 	 val_f1=0.609
+Epoch 13/50 	 lr=7.7e-04 	 t=273s  	 loss=0.031 	 val_loss=0.012 	 val_f1=0.626
+Epoch 14/50 	 lr=7.5e-04 	 t=272s  	 loss=0.030 	 val_loss=0.012 	 val_f1=0.634
+Epoch 15/50 	 lr=7.3e-04 	 t=270s  	 loss=0.030 	 val_loss=0.012 	 val_f1=0.659
+Epoch 16/50 	 lr=7.1e-04 	 t=277s  	 loss=0.030 	 val_loss=0.012 	 val_f1=0.653
+Epoch 17/50 	 lr=6.9e-04 	 t=272s  	 loss=0.030 	 val_loss=0.012 	 val_f1=0.682
+Epoch 18/50 	 lr=6.7e-04 	 t=269s  	 loss=0.029 	 val_loss=0.011 	 val_f1=0.673
+Epoch 19/50 	 lr=6.5e-04 	 t=271s  	 loss=0.029 	 val_loss=0.011 	 val_f1=0.710
+Epoch 20/50 	 lr=6.3e-04 	 t=273s  	 loss=0.029 	 val_loss=0.011 	 val_f1=0.707
+Epoch 21/50 	 lr=6.0e-04 	 t=270s  	 loss=0.028 	 val_loss=0.011 	 val_f1=0.718
+Epoch 22/50 	 lr=5.8e-04 	 t=270s  	 loss=0.027 	 val_loss=0.011 	 val_f1=0.684
+Epoch 23/50 	 lr=5.6e-04 	 t=269s  	 loss=0.028 	 val_loss=0.011 	 val_f1=0.719
+Epoch 24/50 	 lr=5.4e-04 	 t=269s  	 loss=0.027 	 val_loss=0.011 	 val_f1=0.733
+Epoch 25/50 	 lr=5.2e-04 	 t=269s  	 loss=0.027 	 val_loss=0.010 	 val_f1=0.726
+Epoch 26/50 	 lr=5.0e-04 	 t=270s  	 loss=0.027 	 val_loss=0.011 	 val_f1=0.722
+Epoch 27/50 	 lr=4.8e-04 	 t=271s  	 loss=0.026 	 val_loss=0.011 	 val_f1=0.743
+Epoch 28/50 	 lr=4.6e-04 	 t=270s  	 loss=0.026 	 val_loss=0.011 	 val_f1=0.746
+Epoch 29/50 	 lr=4.4e-04 	 t=269s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.754
+Epoch 30/50 	 lr=4.2e-04 	 t=273s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.743
+Epoch 31/50 	 lr=4.0e-04 	 t=269s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.748
+Epoch 32/50 	 lr=3.8e-04 	 t=269s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.738
+Epoch 33/50 	 lr=3.5e-04 	 t=271s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.747
+Epoch 34/50 	 lr=3.3e-04 	 t=270s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.757
+Epoch 35/50 	 lr=3.1e-04 	 t=270s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.757
+Epoch 36/50 	 lr=2.9e-04 	 t=271s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.768
+Epoch 37/50 	 lr=2.7e-04 	 t=270s  	 loss=0.024 	 val_loss=0.009 	 val_f1=0.760
+Epoch 38/50 	 lr=2.5e-04 	 t=275s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.768
+Epoch 39/50 	 lr=2.3e-04 	 t=270s  	 loss=0.024 	 val_loss=0.010 	 val_f1=0.768
+Epoch 40/50 	 lr=2.1e-04 	 t=269s  	 loss=0.024 	 val_loss=0.009 	 val_f1=0.769
+Epoch 41/50 	 lr=1.9e-04 	 t=270s  	 loss=0.024 	 val_loss=0.009 	 val_f1=0.776
+Epoch 42/50 	 lr=1.7e-04 	 t=270s  	 loss=0.024 	 val_loss=0.009 	 val_f1=0.768
+Epoch 43/50 	 lr=1.5e-04 	 t=274s  	 loss=0.024 	 val_loss=0.009 	 val_f1=0.779
+Epoch 44/50 	 lr=1.3e-04 	 t=269s  	 loss=0.023 	 val_loss=0.010 	 val_f1=0.775
+Epoch 45/50 	 lr=1.0e-04 	 t=269s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.782
+Epoch 46/50 	 lr=8.3e-05 	 t=269s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.776
+Epoch 47/50 	 lr=6.3e-05 	 t=270s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.780
+Epoch 48/50 	 lr=4.2e-05 	 t=270s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.782
+Epoch 49/50 	 lr=2.1e-05 	 t=270s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.776
+Epoch 50/50 	 lr=0.0e+00 	 t=269s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.780
+
+ -> Saving weights to ../checkpoints/2020-08-20/resnest50_fast_1s1x64d_mixup4_3.pt
+
+
+-------------   Fold 5 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24709832 trainable parameters
+
+Epoch 1/50 	 lr=5.0e-04 	 t=271s  	 loss=0.117 	 val_loss=0.027 	 val_f1=0.000
+Epoch 2/50 	 lr=1.0e-03 	 t=271s  	 loss=0.044 	 val_loss=0.025 	 val_f1=0.000
+Epoch 3/50 	 lr=9.8e-04 	 t=271s  	 loss=0.042 	 val_loss=0.022 	 val_f1=0.051
+Epoch 4/50 	 lr=9.6e-04 	 t=272s  	 loss=0.040 	 val_loss=0.019 	 val_f1=0.146
+Epoch 5/50 	 lr=9.4e-04 	 t=271s  	 loss=0.038 	 val_loss=0.017 	 val_f1=0.245
+Epoch 6/50 	 lr=9.2e-04 	 t=271s  	 loss=0.037 	 val_loss=0.016 	 val_f1=0.323
+Epoch 7/50 	 lr=9.0e-04 	 t=271s  	 loss=0.036 	 val_loss=0.015 	 val_f1=0.411
+Epoch 8/50 	 lr=8.8e-04 	 t=271s  	 loss=0.035 	 val_loss=0.015 	 val_f1=0.450
+Epoch 9/50 	 lr=8.5e-04 	 t=272s  	 loss=0.034 	 val_loss=0.013 	 val_f1=0.514
+Epoch 10/50 	 lr=8.3e-04 	 t=271s  	 loss=0.033 	 val_loss=0.013 	 val_f1=0.550
+Epoch 11/50 	 lr=8.1e-04 	 t=271s  	 loss=0.033 	 val_loss=0.013 	 val_f1=0.519
+Epoch 12/50 	 lr=7.9e-04 	 t=271s  	 loss=0.032 	 val_loss=0.012 	 val_f1=0.576
+Epoch 13/50 	 lr=7.7e-04 	 t=271s  	 loss=0.032 	 val_loss=0.012 	 val_f1=0.623
+Epoch 14/50 	 lr=7.5e-04 	 t=271s  	 loss=0.031 	 val_loss=0.012 	 val_f1=0.627
+Epoch 15/50 	 lr=7.3e-04 	 t=272s  	 loss=0.030 	 val_loss=0.011 	 val_f1=0.642
+Epoch 16/50 	 lr=7.1e-04 	 t=271s  	 loss=0.030 	 val_loss=0.012 	 val_f1=0.623
+Epoch 17/50 	 lr=6.9e-04 	 t=271s  	 loss=0.030 	 val_loss=0.012 	 val_f1=0.654
+Epoch 18/50 	 lr=6.7e-04 	 t=271s  	 loss=0.029 	 val_loss=0.012 	 val_f1=0.674
+Epoch 19/50 	 lr=6.5e-04 	 t=271s  	 loss=0.029 	 val_loss=0.011 	 val_f1=0.660
+Epoch 20/50 	 lr=6.3e-04 	 t=271s  	 loss=0.029 	 val_loss=0.011 	 val_f1=0.688
+Epoch 21/50 	 lr=6.0e-04 	 t=271s  	 loss=0.028 	 val_loss=0.011 	 val_f1=0.707
+Epoch 22/50 	 lr=5.8e-04 	 t=272s  	 loss=0.028 	 val_loss=0.011 	 val_f1=0.676
+Epoch 23/50 	 lr=5.6e-04 	 t=272s  	 loss=0.028 	 val_loss=0.010 	 val_f1=0.697
+Epoch 24/50 	 lr=5.4e-04 	 t=275s  	 loss=0.028 	 val_loss=0.011 	 val_f1=0.724
+Epoch 25/50 	 lr=5.2e-04 	 t=283s  	 loss=0.027 	 val_loss=0.011 	 val_f1=0.699
+Epoch 26/50 	 lr=5.0e-04 	 t=282s  	 loss=0.027 	 val_loss=0.010 	 val_f1=0.740
+Epoch 27/50 	 lr=4.8e-04 	 t=283s  	 loss=0.027 	 val_loss=0.010 	 val_f1=0.737
+Epoch 28/50 	 lr=4.6e-04 	 t=283s  	 loss=0.026 	 val_loss=0.011 	 val_f1=0.735
+Epoch 29/50 	 lr=4.4e-04 	 t=283s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.738
+Epoch 30/50 	 lr=4.2e-04 	 t=282s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.741
+Epoch 31/50 	 lr=4.0e-04 	 t=283s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.749
+Epoch 32/50 	 lr=3.8e-04 	 t=282s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.742
+Epoch 33/50 	 lr=3.5e-04 	 t=282s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.748
+Epoch 34/50 	 lr=3.3e-04 	 t=283s  	 loss=0.026 	 val_loss=0.010 	 val_f1=0.763
+Epoch 35/50 	 lr=3.1e-04 	 t=282s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.760
+Epoch 36/50 	 lr=2.9e-04 	 t=282s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.767
+Epoch 37/50 	 lr=2.7e-04 	 t=283s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.751
+Epoch 38/50 	 lr=2.5e-04 	 t=283s  	 loss=0.025 	 val_loss=0.010 	 val_f1=0.765
+Epoch 39/50 	 lr=2.3e-04 	 t=283s  	 loss=0.024 	 val_loss=0.010 	 val_f1=0.765
+Epoch 40/50 	 lr=2.1e-04 	 t=283s  	 loss=0.024 	 val_loss=0.010 	 val_f1=0.768
+Epoch 41/50 	 lr=1.9e-04 	 t=283s  	 loss=0.024 	 val_loss=0.009 	 val_f1=0.772
+Epoch 42/50 	 lr=1.7e-04 	 t=283s  	 loss=0.024 	 val_loss=0.009 	 val_f1=0.776
+Epoch 43/50 	 lr=1.5e-04 	 t=283s  	 loss=0.024 	 val_loss=0.010 	 val_f1=0.784
+Epoch 44/50 	 lr=1.3e-04 	 t=283s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.778
+Epoch 45/50 	 lr=1.0e-04 	 t=284s  	 loss=0.023 	 val_loss=0.010 	 val_f1=0.785
+Epoch 46/50 	 lr=8.3e-05 	 t=283s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.779
+Epoch 47/50 	 lr=6.3e-05 	 t=283s  	 loss=0.024 	 val_loss=0.009 	 val_f1=0.782
+Epoch 48/50 	 lr=4.2e-05 	 t=284s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.788
+Epoch 49/50 	 lr=2.1e-05 	 t=283s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.784
+Epoch 50/50 	 lr=0.0e+00 	 t=284s  	 loss=0.023 	 val_loss=0.009 	 val_f1=0.788
+
+ -> Saving weights to ../checkpoints/2020-08-20/resnest50_fast_1s1x64d_mixup4_4.pt
+

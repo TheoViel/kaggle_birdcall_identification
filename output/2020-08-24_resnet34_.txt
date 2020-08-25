@@ -1,0 +1,89 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 21420104 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=266s  	 loss=0.145 	 val_loss=0.027 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=546s  	 loss=0.035 	 val_loss=0.023 	 val_f1=0.016
+Epoch 3/40 	 lr=9.7e-04 	 t=442s  	 loss=0.033 	 val_loss=0.019 	 val_f1=0.090
+Epoch 4/40 	 lr=9.5e-04 	 t=277s  	 loss=0.029 	 val_loss=0.018 	 val_f1=0.269
+Epoch 5/40 	 lr=9.2e-04 	 t=278s  	 loss=0.026 	 val_loss=0.016 	 val_f1=0.326
+Epoch 6/40 	 lr=8.9e-04 	 t=277s  	 loss=0.026 	 val_loss=0.014 	 val_f1=0.398
+Epoch 7/40 	 lr=8.7e-04 	 t=278s  	 loss=0.023 	 val_loss=0.012 	 val_f1=0.463
+Epoch 8/40 	 lr=8.4e-04 	 t=278s  	 loss=0.024 	 val_loss=0.013 	 val_f1=0.452
+Epoch 9/40 	 lr=8.2e-04 	 t=278s  	 loss=0.023 	 val_loss=0.013 	 val_f1=0.454
+Epoch 10/40 	 lr=7.9e-04 	 t=277s  	 loss=0.022 	 val_loss=0.012 	 val_f1=0.516
+Epoch 11/40 	 lr=7.6e-04 	 t=277s  	 loss=0.022 	 val_loss=0.012 	 val_f1=0.482
+Epoch 12/40 	 lr=7.4e-04 	 t=276s  	 loss=0.021 	 val_loss=0.011 	 val_f1=0.563
+Epoch 13/40 	 lr=7.1e-04 	 t=278s  	 loss=0.021 	 val_loss=0.013 	 val_f1=0.480
+Epoch 14/40 	 lr=6.8e-04 	 t=278s  	 loss=0.022 	 val_loss=0.014 	 val_f1=0.475
+Epoch 15/40 	 lr=6.6e-04 	 t=278s  	 loss=0.019 	 val_loss=0.011 	 val_f1=0.574
+Epoch 16/40 	 lr=6.3e-04 	 t=280s  	 loss=0.020 	 val_loss=0.011 	 val_f1=0.602
+Epoch 17/40 	 lr=6.1e-04 	 t=278s  	 loss=0.019 	 val_loss=0.012 	 val_f1=0.565
+Epoch 18/40 	 lr=5.8e-04 	 t=280s  	 loss=0.020 	 val_loss=0.009 	 val_f1=0.637
+Epoch 19/40 	 lr=5.5e-04 	 t=277s  	 loss=0.018 	 val_loss=0.011 	 val_f1=0.642
+Epoch 20/40 	 lr=5.3e-04 	 t=278s  	 loss=0.017 	 val_loss=0.009 	 val_f1=0.666
+Epoch 21/40 	 lr=5.0e-04 	 t=278s  	 loss=0.018 	 val_loss=0.011 	 val_f1=0.622
+Epoch 22/40 	 lr=4.7e-04 	 t=278s  	 loss=0.019 	 val_loss=0.010 	 val_f1=0.655
+Epoch 23/40 	 lr=4.5e-04 	 t=279s  	 loss=0.018 	 val_loss=0.009 	 val_f1=0.684
+Epoch 24/40 	 lr=4.2e-04 	 t=278s  	 loss=0.017 	 val_loss=0.009 	 val_f1=0.686
+Epoch 25/40 	 lr=3.9e-04 	 t=279s  	 loss=0.016 	 val_loss=0.010 	 val_f1=0.674
+Epoch 26/40 	 lr=3.7e-04 	 t=278s  	 loss=0.016 	 val_loss=0.009 	 val_f1=0.704
+Epoch 27/40 	 lr=3.4e-04 	 t=278s  	 loss=0.015 	 val_loss=0.009 	 val_f1=0.709
+Epoch 28/40 	 lr=3.2e-04 	 t=279s  	 loss=0.016 	 val_loss=0.009 	 val_f1=0.667
+Epoch 29/40 	 lr=2.9e-04 	 t=279s  	 loss=0.016 	 val_loss=0.008 	 val_f1=0.706
+Epoch 30/40 	 lr=2.6e-04 	 t=278s  	 loss=0.016 	 val_loss=0.008 	 val_f1=0.715
+Epoch 31/40 	 lr=2.4e-04 	 t=278s  	 loss=0.015 	 val_loss=0.008 	 val_f1=0.721
+Epoch 32/40 	 lr=2.1e-04 	 t=279s  	 loss=0.014 	 val_loss=0.008 	 val_f1=0.718
+Epoch 33/40 	 lr=1.8e-04 	 t=278s  	 loss=0.014 	 val_loss=0.007 	 val_f1=0.739
+Epoch 34/40 	 lr=1.6e-04 	 t=278s  	 loss=0.014 	 val_loss=0.008 	 val_f1=0.743
+Epoch 35/40 	 lr=1.3e-04 	 t=278s  	 loss=0.014 	 val_loss=0.008 	 val_f1=0.725
+Epoch 36/40 	 lr=1.1e-04 	 t=279s  	 loss=0.012 	 val_loss=0.008 	 val_f1=0.740
+Epoch 37/40 	 lr=7.9e-05 	 t=278s  	 loss=0.013 	 val_loss=0.007 	 val_f1=0.755
+Epoch 38/40 	 lr=5.3e-05 	 t=279s  	 loss=0.013 	 val_loss=0.007 	 val_f1=0.749
+Epoch 39/40 	 lr=2.6e-05 	 t=279s  	 loss=0.012 	 val_loss=0.007 	 val_f1=0.751
+Epoch 40/40 	 lr=0.0e+00 	 t=279s  	 loss=0.012 	 val_loss=0.007 	 val_f1=0.761
+
+ -> Saving weights to ../checkpoints/2020-08-24/resnet34__0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 21420104 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=276s  	 loss=0.145 	 val_loss=0.027 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=276s  	 loss=0.035 	 val_loss=0.023 	 val_f1=0.005
+Epoch 3/40 	 lr=9.7e-04 	 t=275s  	 loss=0.033 	 val_loss=0.019 	 val_f1=0.090
+Epoch 4/40 	 lr=9.5e-04 	 t=278s  	 loss=0.029 	 val_loss=0.018 	 val_f1=0.276
+Traceback (most recent call last):
+  File "main.py", line 181, in <module>
+    pred_oof = k_fold(Config, df_train)
+  File "main.py", line 99, in k_fold
+    pred_val = train(config, df_train, df_val, i)
+  File "main.py", line 61, in train
+    pred_val = fit(
+  File "/home/theo/kaggle/birds/src/training/train.py", line 106, in fit
+    for x, y_batch in val_loader:
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
+    data = self._next_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
+    idx, data = self._get_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
+    success, data = self._try_get_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/queues.py", line 107, in get
+    if not self._poll(timeout):
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

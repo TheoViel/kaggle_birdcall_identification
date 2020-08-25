@@ -1,0 +1,184 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24048968 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=263s  	 loss=0.118 	 val_loss=0.025 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=267s  	 loss=0.033 	 val_loss=0.022 	 val_f1=0.014
+Epoch 3/40 	 lr=9.7e-04 	 t=268s  	 loss=0.032 	 val_loss=0.021 	 val_f1=0.017
+Epoch 4/40 	 lr=9.5e-04 	 t=267s  	 loss=0.030 	 val_loss=0.018 	 val_f1=0.109
+Epoch 5/40 	 lr=9.2e-04 	 t=267s  	 loss=0.028 	 val_loss=0.021 	 val_f1=0.092
+Epoch 6/40 	 lr=8.9e-04 	 t=267s  	 loss=0.027 	 val_loss=0.016 	 val_f1=0.245
+Epoch 7/40 	 lr=8.7e-04 	 t=268s  	 loss=0.025 	 val_loss=0.016 	 val_f1=0.267
+Epoch 8/40 	 lr=8.4e-04 	 t=268s  	 loss=0.025 	 val_loss=0.015 	 val_f1=0.353
+Epoch 9/40 	 lr=8.2e-04 	 t=268s  	 loss=0.024 	 val_loss=0.015 	 val_f1=0.363
+Epoch 10/40 	 lr=7.9e-04 	 t=269s  	 loss=0.023 	 val_loss=0.015 	 val_f1=0.343
+Epoch 11/40 	 lr=7.6e-04 	 t=269s  	 loss=0.024 	 val_loss=0.015 	 val_f1=0.393
+Epoch 12/40 	 lr=7.4e-04 	 t=269s  	 loss=0.023 	 val_loss=0.013 	 val_f1=0.477
+Epoch 13/40 	 lr=7.1e-04 	 t=268s  	 loss=0.022 	 val_loss=0.013 	 val_f1=0.520
+Epoch 14/40 	 lr=6.8e-04 	 t=269s  	 loss=0.022 	 val_loss=0.014 	 val_f1=0.485
+Epoch 15/40 	 lr=6.6e-04 	 t=269s  	 loss=0.020 	 val_loss=0.014 	 val_f1=0.514
+Epoch 16/40 	 lr=6.3e-04 	 t=269s  	 loss=0.021 	 val_loss=0.013 	 val_f1=0.524
+Epoch 17/40 	 lr=6.1e-04 	 t=269s  	 loss=0.020 	 val_loss=0.014 	 val_f1=0.484
+Epoch 18/40 	 lr=5.8e-04 	 t=269s  	 loss=0.020 	 val_loss=0.011 	 val_f1=0.605
+Epoch 19/40 	 lr=5.5e-04 	 t=269s  	 loss=0.019 	 val_loss=0.012 	 val_f1=0.593
+Epoch 20/40 	 lr=5.3e-04 	 t=269s  	 loss=0.018 	 val_loss=0.011 	 val_f1=0.618
+Epoch 21/40 	 lr=5.0e-04 	 t=269s  	 loss=0.019 	 val_loss=0.011 	 val_f1=0.642
+Epoch 22/40 	 lr=4.7e-04 	 t=269s  	 loss=0.019 	 val_loss=0.011 	 val_f1=0.642
+Epoch 23/40 	 lr=4.5e-04 	 t=269s  	 loss=0.018 	 val_loss=0.010 	 val_f1=0.658
+Epoch 24/40 	 lr=4.2e-04 	 t=269s  	 loss=0.017 	 val_loss=0.011 	 val_f1=0.660
+Epoch 25/40 	 lr=3.9e-04 	 t=270s  	 loss=0.017 	 val_loss=0.011 	 val_f1=0.661
+Epoch 26/40 	 lr=3.7e-04 	 t=270s  	 loss=0.016 	 val_loss=0.011 	 val_f1=0.638
+Epoch 27/40 	 lr=3.4e-04 	 t=269s  	 loss=0.016 	 val_loss=0.010 	 val_f1=0.695
+Epoch 28/40 	 lr=3.2e-04 	 t=269s  	 loss=0.016 	 val_loss=0.009 	 val_f1=0.693
+Epoch 29/40 	 lr=2.9e-04 	 t=270s  	 loss=0.017 	 val_loss=0.010 	 val_f1=0.694
+Epoch 30/40 	 lr=2.6e-04 	 t=269s  	 loss=0.016 	 val_loss=0.010 	 val_f1=0.685
+Epoch 31/40 	 lr=2.4e-04 	 t=270s  	 loss=0.016 	 val_loss=0.010 	 val_f1=0.697
+Epoch 32/40 	 lr=2.1e-04 	 t=269s  	 loss=0.015 	 val_loss=0.009 	 val_f1=0.713
+Epoch 33/40 	 lr=1.8e-04 	 t=270s  	 loss=0.015 	 val_loss=0.009 	 val_f1=0.714
+Epoch 34/40 	 lr=1.6e-04 	 t=270s  	 loss=0.015 	 val_loss=0.009 	 val_f1=0.729
+Epoch 35/40 	 lr=1.3e-04 	 t=270s  	 loss=0.015 	 val_loss=0.009 	 val_f1=0.729
+Epoch 36/40 	 lr=1.1e-04 	 t=270s  	 loss=0.013 	 val_loss=0.009 	 val_f1=0.729
+Epoch 37/40 	 lr=7.9e-05 	 t=270s  	 loss=0.014 	 val_loss=0.008 	 val_f1=0.738
+Epoch 38/40 	 lr=5.3e-05 	 t=271s  	 loss=0.014 	 val_loss=0.009 	 val_f1=0.735
+Epoch 39/40 	 lr=2.6e-05 	 t=271s  	 loss=0.013 	 val_loss=0.008 	 val_f1=0.743
+Epoch 40/40 	 lr=0.0e+00 	 t=270s  	 loss=0.013 	 val_loss=0.008 	 val_f1=0.749
+
+ -> Saving weights to ../checkpoints/2020-08-25/resnet50_avgpool_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24048968 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=268s  	 loss=0.118 	 val_loss=0.025 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=269s  	 loss=0.033 	 val_loss=0.022 	 val_f1=0.011
+Epoch 3/40 	 lr=9.7e-04 	 t=270s  	 loss=0.032 	 val_loss=0.020 	 val_f1=0.028
+Epoch 4/40 	 lr=9.5e-04 	 t=269s  	 loss=0.030 	 val_loss=0.020 	 val_f1=0.097
+Epoch 5/40 	 lr=9.2e-04 	 t=269s  	 loss=0.028 	 val_loss=0.019 	 val_f1=0.154
+Epoch 6/40 	 lr=8.9e-04 	 t=270s  	 loss=0.027 	 val_loss=0.017 	 val_f1=0.227
+Epoch 7/40 	 lr=8.7e-04 	 t=270s  	 loss=0.025 	 val_loss=0.015 	 val_f1=0.279
+Epoch 8/40 	 lr=8.4e-04 	 t=270s  	 loss=0.025 	 val_loss=0.015 	 val_f1=0.310
+Epoch 9/40 	 lr=8.2e-04 	 t=270s  	 loss=0.024 	 val_loss=0.014 	 val_f1=0.375
+Epoch 10/40 	 lr=7.9e-04 	 t=271s  	 loss=0.023 	 val_loss=0.014 	 val_f1=0.406
+Epoch 11/40 	 lr=7.6e-04 	 t=270s  	 loss=0.024 	 val_loss=0.013 	 val_f1=0.465
+Epoch 12/40 	 lr=7.4e-04 	 t=270s  	 loss=0.023 	 val_loss=0.013 	 val_f1=0.450
+Epoch 13/40 	 lr=7.1e-04 	 t=270s  	 loss=0.022 	 val_loss=0.013 	 val_f1=0.497
+Epoch 14/40 	 lr=6.8e-04 	 t=271s  	 loss=0.022 	 val_loss=0.014 	 val_f1=0.419
+Epoch 15/40 	 lr=6.6e-04 	 t=271s  	 loss=0.020 	 val_loss=0.014 	 val_f1=0.486
+Epoch 16/40 	 lr=6.3e-04 	 t=271s  	 loss=0.021 	 val_loss=0.013 	 val_f1=0.480
+Epoch 17/40 	 lr=6.1e-04 	 t=270s  	 loss=0.020 	 val_loss=0.011 	 val_f1=0.562
+Epoch 18/40 	 lr=5.8e-04 	 t=270s  	 loss=0.020 	 val_loss=0.011 	 val_f1=0.586
+Epoch 19/40 	 lr=5.5e-04 	 t=271s  	 loss=0.019 	 val_loss=0.013 	 val_f1=0.552
+Epoch 20/40 	 lr=5.3e-04 	 t=270s  	 loss=0.018 	 val_loss=0.010 	 val_f1=0.630
+Epoch 21/40 	 lr=5.0e-04 	 t=271s  	 loss=0.019 	 val_loss=0.010 	 val_f1=0.660
+Epoch 22/40 	 lr=4.7e-04 	 t=271s  	 loss=0.019 	 val_loss=0.011 	 val_f1=0.607
+Epoch 23/40 	 lr=4.5e-04 	 t=271s  	 loss=0.018 	 val_loss=0.010 	 val_f1=0.676
+Epoch 24/40 	 lr=4.2e-04 	 t=271s  	 loss=0.017 	 val_loss=0.010 	 val_f1=0.680
+Epoch 25/40 	 lr=3.9e-04 	 t=271s  	 loss=0.017 	 val_loss=0.010 	 val_f1=0.668
+Epoch 26/40 	 lr=3.7e-04 	 t=271s  	 loss=0.016 	 val_loss=0.011 	 val_f1=0.646
+Epoch 27/40 	 lr=3.4e-04 	 t=271s  	 loss=0.016 	 val_loss=0.009 	 val_f1=0.701
+Epoch 28/40 	 lr=3.2e-04 	 t=271s  	 loss=0.016 	 val_loss=0.009 	 val_f1=0.692
+Epoch 29/40 	 lr=2.9e-04 	 t=271s  	 loss=0.017 	 val_loss=0.009 	 val_f1=0.692
+Epoch 30/40 	 lr=2.6e-04 	 t=270s  	 loss=0.016 	 val_loss=0.008 	 val_f1=0.712
+Epoch 31/40 	 lr=2.4e-04 	 t=271s  	 loss=0.016 	 val_loss=0.009 	 val_f1=0.720
+Epoch 32/40 	 lr=2.1e-04 	 t=272s  	 loss=0.015 	 val_loss=0.008 	 val_f1=0.723
+Epoch 33/40 	 lr=1.8e-04 	 t=271s  	 loss=0.015 	 val_loss=0.008 	 val_f1=0.737
+Epoch 34/40 	 lr=1.6e-04 	 t=271s  	 loss=0.015 	 val_loss=0.008 	 val_f1=0.741
+Epoch 35/40 	 lr=1.3e-04 	 t=271s  	 loss=0.015 	 val_loss=0.008 	 val_f1=0.743
+Epoch 36/40 	 lr=1.1e-04 	 t=271s  	 loss=0.013 	 val_loss=0.008 	 val_f1=0.740
+Epoch 37/40 	 lr=7.9e-05 	 t=271s  	 loss=0.014 	 val_loss=0.008 	 val_f1=0.748
+Epoch 38/40 	 lr=5.3e-05 	 t=272s  	 loss=0.014 	 val_loss=0.008 	 val_f1=0.750
+Epoch 39/40 	 lr=2.6e-05 	 t=271s  	 loss=0.013 	 val_loss=0.008 	 val_f1=0.753
+Epoch 40/40 	 lr=0.0e+00 	 t=272s  	 loss=0.013 	 val_loss=0.007 	 val_f1=0.762
+
+ -> Saving weights to ../checkpoints/2020-08-25/resnet50_avgpool_1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24048968 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=269s  	 loss=0.117 	 val_loss=0.025 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=270s  	 loss=0.033 	 val_loss=0.022 	 val_f1=0.011
+Epoch 3/40 	 lr=9.7e-04 	 t=270s  	 loss=0.032 	 val_loss=0.020 	 val_f1=0.054
+Epoch 4/40 	 lr=9.5e-04 	 t=270s  	 loss=0.030 	 val_loss=0.021 	 val_f1=0.107
+Epoch 5/40 	 lr=9.2e-04 	 t=270s  	 loss=0.028 	 val_loss=0.018 	 val_f1=0.165
+Epoch 6/40 	 lr=8.9e-04 	 t=270s  	 loss=0.027 	 val_loss=0.016 	 val_f1=0.215
+Epoch 7/40 	 lr=8.7e-04 	 t=270s  	 loss=0.025 	 val_loss=0.018 	 val_f1=0.211
+Epoch 8/40 	 lr=8.4e-04 	 t=269s  	 loss=0.025 	 val_loss=0.015 	 val_f1=0.331
+Epoch 9/40 	 lr=8.2e-04 	 t=270s  	 loss=0.024 	 val_loss=0.016 	 val_f1=0.312
+Epoch 10/40 	 lr=7.9e-04 	 t=270s  	 loss=0.023 	 val_loss=0.020 	 val_f1=0.231
+Epoch 11/40 	 lr=7.6e-04 	 t=269s  	 loss=0.024 	 val_loss=0.014 	 val_f1=0.428
+Epoch 12/40 	 lr=7.4e-04 	 t=269s  	 loss=0.022 	 val_loss=0.013 	 val_f1=0.468
+Epoch 13/40 	 lr=7.1e-04 	 t=270s  	 loss=0.022 	 val_loss=0.014 	 val_f1=0.458
+Epoch 14/40 	 lr=6.8e-04 	 t=271s  	 loss=0.022 	 val_loss=0.014 	 val_f1=0.471
+Epoch 15/40 	 lr=6.6e-04 	 t=270s  	 loss=0.019 	 val_loss=0.013 	 val_f1=0.541
+Epoch 16/40 	 lr=6.3e-04 	 t=270s  	 loss=0.021 	 val_loss=0.012 	 val_f1=0.519
+Epoch 17/40 	 lr=6.1e-04 	 t=271s  	 loss=0.019 	 val_loss=0.017 	 val_f1=0.323
+Epoch 18/40 	 lr=5.8e-04 	 t=270s  	 loss=0.020 	 val_loss=0.012 	 val_f1=0.605
+Epoch 19/40 	 lr=5.5e-04 	 t=270s  	 loss=0.019 	 val_loss=0.013 	 val_f1=0.549
+Epoch 20/40 	 lr=5.3e-04 	 t=272s  	 loss=0.018 	 val_loss=0.010 	 val_f1=0.638
+Epoch 21/40 	 lr=5.0e-04 	 t=271s  	 loss=0.018 	 val_loss=0.011 	 val_f1=0.652
+Epoch 22/40 	 lr=4.7e-04 	 t=271s  	 loss=0.019 	 val_loss=0.011 	 val_f1=0.637
+Epoch 23/40 	 lr=4.5e-04 	 t=271s  	 loss=0.018 	 val_loss=0.010 	 val_f1=0.665
+Epoch 24/40 	 lr=4.2e-04 	 t=271s  	 loss=0.017 	 val_loss=0.011 	 val_f1=0.617
+Epoch 25/40 	 lr=3.9e-04 	 t=271s  	 loss=0.017 	 val_loss=0.010 	 val_f1=0.652
+Epoch 26/40 	 lr=3.7e-04 	 t=271s  	 loss=0.016 	 val_loss=0.010 	 val_f1=0.665
+Epoch 27/40 	 lr=3.4e-04 	 t=271s  	 loss=0.015 	 val_loss=0.009 	 val_f1=0.678
+Epoch 28/40 	 lr=3.2e-04 	 t=271s  	 loss=0.016 	 val_loss=0.010 	 val_f1=0.670
+Epoch 29/40 	 lr=2.9e-04 	 t=270s  	 loss=0.017 	 val_loss=0.010 	 val_f1=0.689
+Epoch 30/40 	 lr=2.6e-04 	 t=270s  	 loss=0.016 	 val_loss=0.009 	 val_f1=0.702
+Epoch 31/40 	 lr=2.4e-04 	 t=271s  	 loss=0.015 	 val_loss=0.009 	 val_f1=0.706
+Epoch 32/40 	 lr=2.1e-04 	 t=271s  	 loss=0.014 	 val_loss=0.009 	 val_f1=0.719
+Epoch 33/40 	 lr=1.8e-04 	 t=271s  	 loss=0.015 	 val_loss=0.008 	 val_f1=0.719
+Epoch 34/40 	 lr=1.6e-04 	 t=271s  	 loss=0.015 	 val_loss=0.009 	 val_f1=0.723
+Epoch 35/40 	 lr=1.3e-04 	 t=272s  	 loss=0.014 	 val_loss=0.008 	 val_f1=0.729
+Epoch 36/40 	 lr=1.1e-04 	 t=271s  	 loss=0.013 	 val_loss=0.008 	 val_f1=0.727
+Epoch 37/40 	 lr=7.9e-05 	 t=271s  	 loss=0.014 	 val_loss=0.008 	 val_f1=0.744
+Epoch 38/40 	 lr=5.3e-05 	 t=272s  	 loss=0.013 	 val_loss=0.008 	 val_f1=0.736
+Epoch 39/40 	 lr=2.6e-05 	 t=271s  	 loss=0.013 	 val_loss=0.008 	 val_f1=0.739
+Epoch 40/40 	 lr=0.0e+00 	 t=272s  	 loss=0.013 	 val_loss=0.007 	 val_f1=0.750
+
+ -> Saving weights to ../checkpoints/2020-08-25/resnet50_avgpool_2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24048968 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=267s  	 loss=0.117 	 val_loss=0.025 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=268s  	 loss=0.033 	 val_loss=0.023 	 val_f1=0.011
+Epoch 3/40 	 lr=9.7e-04 	 t=267s  	 loss=0.032 	 val_loss=0.020 	 val_f1=0.034
+Epoch 4/40 	 lr=9.5e-04 	 t=269s  	 loss=0.030 	 val_loss=0.021 	 val_f1=0.097
+Epoch 5/40 	 lr=9.2e-04 	 t=268s  	 loss=0.028 	 val_loss=0.019 	 val_f1=0.101
+Epoch 6/40 	 lr=8.9e-04 	 t=268s  	 loss=0.027 	 val_loss=0.016 	 val_f1=0.214
+Epoch 7/40 	 lr=8.7e-04 	 t=268s  	 loss=0.025 	 val_loss=0.016 	 val_f1=0.252
+Epoch 8/40 	 lr=8.4e-04 	 t=267s  	 loss=0.025 	 val_loss=0.015 	 val_f1=0.319
+Epoch 9/40 	 lr=8.2e-04 	 t=268s  	 loss=0.024 	 val_loss=0.017 	 val_f1=0.285
+Epoch 10/40 	 lr=7.9e-04 	 t=269s  	 loss=0.023 	 val_loss=0.019 	 val_f1=0.238
+Epoch 11/40 	 lr=7.6e-04 	 t=268s  	 loss=0.024 	 val_loss=0.015 	 val_f1=0.387
+Epoch 12/40 	 lr=7.4e-04 	 t=268s  	 loss=0.022 	 val_loss=0.013 	 val_f1=0.471
+Epoch 13/40 	 lr=7.1e-04 	 t=268s  	 loss=0.022 	 val_loss=0.013 	 val_f1=0.498
+Epoch 14/40 	 lr=6.8e-04 	 t=269s  	 loss=0.022 	 val_loss=0.013 	 val_f1=0.458
+Epoch 15/40 	 lr=6.6e-04 	 t=269s  	 loss=0.019 	 val_loss=0.013 	 val_f1=0.552
+Epoch 16/40 	 lr=6.3e-04 	 t=269s  	 loss=0.021 	 val_loss=0.013 	 val_f1=0.488
+Epoch 17/40 	 lr=6.1e-04 	 t=269s  	 loss=0.020 	 val_loss=0.013 	 val_f1=0.562
+Traceback (most recent call last):
+  File "main.py", line 181, in <module>
+    pred_oof = k_fold(Config, df_train)
+  File "main.py", line 99, in k_fold
+    pred_val = train(config, df_train, df_val, i)
+  File "main.py", line 61, in train
+    pred_val = fit(
+  File "/home/theo/kaggle/birds/src/training/train.py", line 94, in fit
+    avg_loss += loss.item() / len(train_loader)
+KeyboardInterrupt

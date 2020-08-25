@@ -1,0 +1,22 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 87283272 trainable parameters
+
+Epoch 1/40 	 lr=2.5e-04 	 t=317s  	 loss=0.089 	 val_loss=0.025 	 val_f1=0.000
+Epoch 2/40 	 lr=5.0e-04 	 t=322s  	 loss=0.035 	 val_loss=0.026 	 val_f1=0.072
+Epoch 3/40 	 lr=4.9e-04 	 t=324s  	 loss=0.030 	 val_loss=0.017 	 val_f1=0.202
+Epoch 4/40 	 lr=4.7e-04 	 t=326s  	 loss=0.026 	 val_loss=0.016 	 val_f1=0.342
+Epoch 5/40 	 lr=4.6e-04 	 t=326s  	 loss=0.024 	 val_loss=0.014 	 val_f1=0.434
+Epoch 6/40 	 lr=4.5e-04 	 t=326s  	 loss=0.024 	 val_loss=0.016 	 val_f1=0.372
+Epoch 7/40 	 lr=4.3e-04 	 t=327s  	 loss=0.023 	 val_loss=0.014 	 val_f1=0.451
+Epoch 8/40 	 lr=4.2e-04 	 t=326s  	 loss=0.021 	 val_loss=0.016 	 val_f1=0.394
+Epoch 9/40 	 lr=4.1e-04 	 t=326s  	 loss=0.021 	 val_loss=0.011 	 val_f1=0.596
+Epoch 10/40 	 lr=3.9e-04 	 t=327s  	 loss=0.019 	 val_loss=0.010 	 val_f1=0.620
+Epoch 11/40 	 lr=3.8e-04 	 t=327s  	 loss=0.020 	 val_loss=0.013 	 val_f1=0.557
+Epoch 12/40 	 lr=3.7e-04 	 t=326s  	 loss=0.019 	 val_loss=0.012 	 val_f1=0.586
+Epoch 13/40 	 lr=3.6e-04 	 t=327s  	 loss=0.018 	 val_loss=0.010 	 val_f1=0.665
+Epoch 14/40 	 lr=3.4e-04 	 t=327s  	 loss=0.017 	 val_loss=0.010 	 val_f1=0.644
+Epoch 15/40 	 lr=3.3e-04 	 t=326s  	 loss=0.018 	 val_loss=0.010 	 val_f1=0.659
