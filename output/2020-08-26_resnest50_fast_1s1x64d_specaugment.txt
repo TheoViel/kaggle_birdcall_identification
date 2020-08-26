@@ -1,0 +1,92 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24709832 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=259s  	 loss=0.114 	 val_loss=0.026 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=269s  	 loss=0.035 	 val_loss=0.025 	 val_f1=0.000
+Epoch 3/40 	 lr=9.7e-04 	 t=270s  	 loss=0.035 	 val_loss=0.022 	 val_f1=0.000
+Epoch 4/40 	 lr=9.5e-04 	 t=270s  	 loss=0.033 	 val_loss=0.022 	 val_f1=0.031
+Epoch 5/40 	 lr=9.2e-04 	 t=271s  	 loss=0.031 	 val_loss=0.018 	 val_f1=0.091
+Epoch 6/40 	 lr=8.9e-04 	 t=271s  	 loss=0.031 	 val_loss=0.017 	 val_f1=0.116
+Epoch 7/40 	 lr=8.7e-04 	 t=271s  	 loss=0.029 	 val_loss=0.015 	 val_f1=0.212
+Epoch 8/40 	 lr=8.4e-04 	 t=271s  	 loss=0.029 	 val_loss=0.015 	 val_f1=0.325
+Traceback (most recent call last):
+  File "main.py", line 184, in <module>
+    pred_oof = k_fold(Config, df_train)
+  File "main.py", line 99, in k_fold
+    pred_val = train(config, df_train, df_val, i)
+  File "main.py", line 61, in train
+    pred_val = fit(
+  File "/home/theo/kaggle/birds/src/training/train.py", line 92, in fit
+    for step, (x, y_batch) in enumerate(train_loader):
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
+    data = self._next_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
+    idx, data = self._get_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
+    success, data = self._try_get_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/queues.py", line 107, in get
+    if not self._poll(timeout):
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24709832 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=272s  	 loss=0.110 	 val_loss=0.027 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=271s  	 loss=0.034 	 val_loss=0.022 	 val_f1=0.001
+Epoch 3/40 	 lr=9.7e-04 	 t=271s  	 loss=0.032 	 val_loss=0.018 	 val_f1=0.058
+Epoch 4/40 	 lr=9.5e-04 	 t=271s  	 loss=0.028 	 val_loss=0.017 	 val_f1=0.162
+Epoch 5/40 	 lr=9.2e-04 	 t=271s  	 loss=0.025 	 val_loss=0.015 	 val_f1=0.366
+Epoch 6/40 	 lr=8.9e-04 	 t=271s  	 loss=0.024 	 val_loss=0.013 	 val_f1=0.462
+Epoch 7/40 	 lr=8.7e-04 	 t=280s  	 loss=0.022 	 val_loss=0.011 	 val_f1=0.498
+Traceback (most recent call last):
+  File "main.py", line 184, in <module>
+    # Training
+  File "main.py", line 99, in k_fold
+    
+  File "main.py", line 61, in train
+    pred_val = fit(
+  File "/home/theo/kaggle/birds/src/training/train.py", line 92, in fit
+    start_time = time.time()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
+    data = self._next_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
+    idx, data = self._get_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
+    success, data = self._try_get_data()
+  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/queues.py", line 107, in get
+    if not self._poll(timeout):
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24709832 trainable parameters
+

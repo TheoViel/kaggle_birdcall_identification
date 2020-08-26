@@ -69,6 +69,7 @@ def train(config, df_train, df_val, fold):
         warmup_prop=config.warmup_prop,
         alpha=config.alpha,
         mixup_proba=config.mixup_proba,
+        specaugment_proba=config.specaugment_proba,
         verbose_eval=config.verbose_eval,
     )
 
@@ -133,8 +134,8 @@ class Config:
     selected_folds = [0, 1, 2, 3, 4]
 
     # Model
-    # selected_model = "resnest50_fast_1s1x64d"
-    selected_model = "resnext101_32x8d_wsl"
+    selected_model = "resnest50_fast_1s1x64d"
+    # selected_model = "resnext101_32x8d_wsl"
     use_msd = True
 
     # selected_model = "resnest101"
@@ -142,16 +143,17 @@ class Config:
     #     selected_model = 'efficientnet-b0'
 
     #     img_size = 256
-    batch_size = 64 // 2
+    batch_size = 64 #// 2
     epochs = 40
-    lr = 1e-3 / 2
+    lr = 1e-3 #/ 2
     warmup_prop = 0.05
     val_bs = 64
 
+    specaugment_proba = 0.5
     mixup_proba = 0.5
     alpha = 5
 
-    name = "msd"
+    name = "specaugment"
 
 
 if __name__ == "__main__":

@@ -27,6 +27,7 @@ def fit(
     lr=1e-3,
     alpha=0.4,
     mixup_proba=0.,
+    specaugment_proba=0.,
     verbose=1,
     verbose_eval=1,
 ):
@@ -37,20 +38,23 @@ def fit(
         model {torch model} -- Model to train
         train_dataset {torch dataset} -- Dataset to train with
         val_dataset {torch dataset} -- Dataset to validate with
-        class_weights {numpy array} -- Class weighting in the CE loss to handle inbalance
     
     Keyword Arguments:
         epochs {int} -- Number of epochs (default: {50})
         batch_size {int} -- Training batch size (default: {32})
-        batch_size {int} -- Validation batch size (default: {32})
+        val_bs {int} -- Validation batch size (default: {32})
         warmup_prop {float} -- Warmup proportion (default: {0.1})
-        lr {[float]} -- Start (or maximum) learning rate (default: {1e-3})
-        verbose {[int]} -- Period (in epochs) to display logs at (default: {1})
-        verbose {[int]} -- Period (in epochs) to perform evaluation at (default: {1})
+        lr {float} -- Start (or maximum) learning rate (default: {1e-3})
+        alpha {float} -- alpha value for mixup (default: {0.4})
+        mixup_proba {float} -- Probability to apply mixup (default: {0.})
+        specaugment_proba {float} -- Probability to apply specaugment (default: {0.})
+        verbose {int} -- Period (in epochs) to display logs at (default: {1})
+        verbose_eval {int} -- Period (in epochs) to perform evaluation at (default: {1})
 
     Returns:
         numpy array -- Predictions at the last epoch
     """
+
     avg_val_loss = 0
     avg_loss = 0
     score = 0
@@ -60,7 +64,7 @@ def fit(
     loss_fct = nn.BCEWithLogitsLoss(reduction="mean").cuda()
 
     spec_augmenter = SpecAugmentation(
-        time_drop_width=64,
+        time_drop_width=16,
         time_stripes_num=2,
         freq_drop_width=8,
         freq_stripes_num=2
@@ -91,7 +95,8 @@ def fit(
         avg_loss = 0
         for step, (x, y_batch) in enumerate(train_loader):
 
-            x = spec_augmenter(x)
+            if np.random.rand() < specaugment_proba:
+                x = spec_augmenter(x)
             
             if np.random.rand() < mixup_proba:
                 x, y_a, y_b ,_ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)

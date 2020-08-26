@@ -60,6 +60,7 @@ class BirdDataset(Dataset):
             melspec = self.spec_transfos(melspec)
 
         image = mono_to_color(melspec)
-        image = resize_and_transpose(image, self.params.img_size)
+        image = resize(image, self.params.img_size)
+        image = normalize(image, mean=MEAN, std=STD)
 
         return image, ONE_HOT[self.y[idx]]

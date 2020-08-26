@@ -76,4 +76,4 @@ class SpecAugmentation(nn.Module):
     def forward(self, input):
         x = self.time_dropper(input)
         x = self.freq_dropper(x)
-        return x
+        return x.float()
