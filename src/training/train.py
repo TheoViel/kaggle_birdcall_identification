@@ -11,8 +11,9 @@ from torch.utils.data.sampler import RandomSampler
 from transformers import get_linear_schedule_with_warmup
 
 from util import f1
+from training.mixup import mixup_data
 from params import NUM_WORKERS, NUM_CLASSES
-from training.mixup import mixup_data, mixup_criterion
+from training.specaugment import SpecAugmentation
 
 
 def fit(
@@ -58,6 +59,13 @@ def fit(
 
     loss_fct = nn.BCEWithLogitsLoss(reduction="mean").cuda()
 
+    spec_augmenter = SpecAugmentation(
+        time_drop_width=64,
+        time_stripes_num=2,
+        freq_drop_width=8,
+        freq_stripes_num=2
+    )
+
     train_loader = DataLoader(
         train_dataset,
         batch_size=batch_size,
@@ -82,6 +90,8 @@ def fit(
 
         avg_loss = 0
         for step, (x, y_batch) in enumerate(train_loader):
+
+            x = spec_augmenter(x)
             
             if np.random.rand() < mixup_proba:
                 x, y_a, y_b ,_ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)
