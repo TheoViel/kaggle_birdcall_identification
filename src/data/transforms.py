@@ -40,14 +40,19 @@ def normalize(image, mean=None, std=None):
     return np.moveaxis(image, 2, 0).astype(np.float32)
 
 
-def crop_or_pad(y, length, train=True):
+def crop_or_pad(y, length, sr, train=True, probs=None):
     # if len(y) > 0:
         # y, _ = librosa.effects.trim(y) # trim, top_db=default(60)
 
     if len(y) <= length:
         y = np.concatenate([y , np.zeros(length - len(y))])
     else:
-        start = np.random.randint(len(y) - length) if train else 0
+        if probs is None:
+            start = np.random.randint(len(y) - length) if train else 0
+        else:
+            start = np.random.choice(np.arange(len(probs)), p=probs) + np.random.random()
+            start = int(sr * (start))
+
         y = y[start : start + length]
         
     return y.astype(np.float32)

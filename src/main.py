@@ -52,7 +52,7 @@ def train(config, df_train, df_val, fold):
     model = get_model(config.selected_model, use_msd=config.use_msd, num_classes=NUM_CLASSES).cuda()
     model.zero_grad()
 
-    train_dataset = BirdDataset(df_train, AudioParams, audio_path=AUDIO_PATH)
+    train_dataset = BirdDataset(df_train, AudioParams, audio_path=AUDIO_PATH, use_conf=config.use_conf)
     val_dataset = BirdDataset(df_val, AudioParams, audio_path=AUDIO_PATH, train=False)
 
     n_parameters = count_parameters(model)
@@ -134,21 +134,22 @@ class Config:
     selected_folds = [0, 1, 2, 3, 4]
 
     # Model
-    # selected_model = "resnest50_fast_1s1x64d"
+    selected_model = "resnest50_fast_1s1x64d"
     # selected_model = "resnext101_32x8d_wsl"
     # selected_model = "resnest101"
     # selected_model = 'resnet50'
-    selected_model = 'efficientnet-b5'
+    # selected_model = 'efficientnet-b5'
     use_msd = False
+    use_conf = True
 
     #     img_size = 256
-    batch_size = 32
+    batch_size = 64
     epochs = 40
-    lr = 5e-4
+    lr = 1e-3
     warmup_prop = 0.05
     val_bs = 64
 
-    if "101" in selected_model:
+    if "101" in selected_model or "b5" in selected_model:
         batch_size = batch_size // 2
         lr = lr / 2
       
@@ -156,11 +157,10 @@ class Config:
     mixup_proba = 0.5
     alpha = 5
 
-    name = "msd"
+    name = "sample"
 
 
 if __name__ == "__main__":
-
     # Data
 
     df_train = pd.read_csv(DATA_PATH + "train.csv")

@@ -90,11 +90,11 @@ def count_parameters(model, all=False):
 
 ONE_HOT = np.eye(NUM_CLASSES)
 
-def f1(truth, pred, threshold=0.5):
+def f1(truth, pred, threshold=0.5, avg='samples'):
 
     if len(truth.shape) == 1:
         truth = ONE_HOT[truth]
 
     pred = (pred > threshold).astype(int)
 
-    return f1_score(truth, pred, average='micro')
+    return f1_score(truth, pred, average=avg)
