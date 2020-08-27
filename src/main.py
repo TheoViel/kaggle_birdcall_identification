@@ -134,26 +134,29 @@ class Config:
     selected_folds = [0, 1, 2, 3, 4]
 
     # Model
-    selected_model = "resnest50_fast_1s1x64d"
+    # selected_model = "resnest50_fast_1s1x64d"
     # selected_model = "resnext101_32x8d_wsl"
-    use_msd = True
-
     # selected_model = "resnest101"
     # selected_model = 'resnet50'
-    #     selected_model = 'efficientnet-b0'
+    selected_model = 'efficientnet-b5'
+    use_msd = False
 
     #     img_size = 256
-    batch_size = 64 #// 2
+    batch_size = 32
     epochs = 40
-    lr = 1e-3 #/ 2
+    lr = 5e-4
     warmup_prop = 0.05
     val_bs = 64
 
-    specaugment_proba = 0.5
+    if "101" in selected_model:
+        batch_size = batch_size // 2
+        lr = lr / 2
+      
+    specaugment_proba = 0
     mixup_proba = 0.5
     alpha = 5
 
-    name = "specaugment"
+    name = "msd"
 
 
 if __name__ == "__main__":

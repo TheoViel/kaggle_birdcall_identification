@@ -61,6 +61,9 @@ class BirdDataset(Dataset):
 
         image = mono_to_color(melspec)
         image = resize(image, self.params.img_size)
+        
+        # image = normalize(image, mean=None, std=None)
         image = normalize(image, mean=MEAN, std=STD)
+
 
         return image, ONE_HOT[self.y[idx]]

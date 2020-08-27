@@ -100,7 +100,7 @@ def fit(
             
             if np.random.rand() < mixup_proba:
                 x, y_a, y_b ,_ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)
-                y_batch = torch.clamp(y_a + y_b, 0, 1)  # I don't use the mixup criterion to help the model robustness
+                y_batch = torch.clamp(y_a + y_b, 0, 1) 
 
             y_pred = model(x.cuda())
             loss = loss_fct(y_pred, y_batch.cuda().float())

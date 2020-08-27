@@ -1,0 +1,17 @@
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Loaded pretrained weights for efficientnet-b5
+    -> 28881720 trainable parameters
+
+Epoch 1/40 	 lr=2.5e-04 	 t=272s  	 loss=0.178 	 val_loss=0.026 	 val_f1=0.000
+Epoch 2/40 	 lr=5.0e-04 	 t=268s  	 loss=0.034 	 val_loss=0.026 	 val_f1=0.000
+Epoch 3/40 	 lr=4.9e-04 	 t=268s  	 loss=0.034 	 val_loss=0.027 	 val_f1=0.000
+Epoch 4/40 	 lr=4.7e-04 	 t=269s  	 loss=0.033 	 val_loss=0.024 	 val_f1=0.012
+Epoch 5/40 	 lr=4.6e-04 	 t=270s  	 loss=0.031 	 val_loss=0.020 	 val_f1=0.067
+Epoch 6/40 	 lr=4.5e-04 	 t=269s  	 loss=0.030 	 val_loss=0.017 	 val_f1=0.107
+Epoch 7/40 	 lr=4.3e-04 	 t=269s  	 loss=0.028 	 val_loss=0.015 	 val_f1=0.192
+Epoch 8/40 	 lr=4.2e-04 	 t=269s  	 loss=0.026 	 val_loss=0.015 	 val_f1=0.365
+Epoch 9/40 	 lr=4.1e-04 	 t=269s  	 loss=0.025 	 val_loss=0.013 	 val_f1=0.460
+Epoch 10/40 	 lr=3.9e-04 	 t=270s  	 loss=0.024 	 val_loss=0.012 	 val_f1=0.525

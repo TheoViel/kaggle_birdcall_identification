@@ -19,7 +19,6 @@ def mono_to_color(X, eps=1e-6):
         V = 255 * (V - _min) / (_max - _min)
         V = V.astype(np.uint8)
     else:
-        # Just zero
         V = np.zeros_like(X, dtype=np.uint8)
 
     return V
@@ -34,9 +33,10 @@ def resize(image, size=None):
     return image
     
 
-def normalize(image, mean, std):
+def normalize(image, mean=None, std=None):
     image = (image / 255.0)
-    image = (image - mean) / std
+    if mean is not None and std is not None:
+        image = (image - mean) / std
     return np.moveaxis(image, 2, 0).astype(np.float32)
 
 

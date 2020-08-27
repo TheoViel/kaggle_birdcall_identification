@@ -47,9 +47,9 @@ def get_model(name, use_msd=False, num_classes=1):
         del model.fc
         model.fc = nn.Linear(nb_ft, num_classes)
     else:
-        nb_ft = model.fc.in_features
-        del model.fc
-        model.fc = nn.Linear(nb_ft, num_classes)
+        nb_ft = model._fc.in_features
+        del model._fc
+        model._fc = nn.Linear(nb_ft, num_classes)
 
     # model.avgpool = AdaptiveGlobalPool2d((1, 1))
     # model.avgpool = nn.AdaptiveMaxPool2d((1, 1))
