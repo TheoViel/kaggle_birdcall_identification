@@ -4,4 +4,4 @@ __pycache__
 .ipynb_checkpoints
 *.pt
 .vscode
-.pkl
+*.pkl

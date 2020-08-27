@@ -1,0 +1,25 @@
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24709832 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=272s  	 loss=0.107 	 val_loss=0.025 	 val_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=270s  	 loss=0.033 	 val_loss=0.023 	 val_f1=0.006
+Traceback (most recent call last):
+  File "main.py", line 189, in <module>
+    pred_oof = k_fold(Config, df_train)
+  File "main.py", line 100, in k_fold
+    pred_val = train(config, df_train, df_val, i)
+  File "main.py", line 61, in train
+    pred_val = fit(
+  File "/home/theo/kaggle/birds/src/training/train.py", line 109, in fit
+    avg_loss += loss.item() / len(train_loader)
+KeyboardInterrupt
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+    -> 24709832 trainable parameters
+

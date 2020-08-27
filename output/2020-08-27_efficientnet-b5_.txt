@@ -1,0 +1,71 @@
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Loaded pretrained weights for efficientnet-b5
+    -> 28881720 trainable parameters
+
+Epoch 1/40 	 lr=2.5e-04 	 t=272s  	 loss=0.178 	 val_loss=0.026 	 val_f1=0.000
+Epoch 2/40 	 lr=5.0e-04 	 t=268s  	 loss=0.034 	 val_loss=0.026 	 val_f1=0.000
+Epoch 3/40 	 lr=4.9e-04 	 t=268s  	 loss=0.034 	 val_loss=0.027 	 val_f1=0.000
+Epoch 4/40 	 lr=4.7e-04 	 t=269s  	 loss=0.033 	 val_loss=0.024 	 val_f1=0.012
+Epoch 5/40 	 lr=4.6e-04 	 t=270s  	 loss=0.031 	 val_loss=0.020 	 val_f1=0.067
+Epoch 6/40 	 lr=4.5e-04 	 t=269s  	 loss=0.030 	 val_loss=0.017 	 val_f1=0.107
+Epoch 7/40 	 lr=4.3e-04 	 t=269s  	 loss=0.028 	 val_loss=0.015 	 val_f1=0.192
+Epoch 8/40 	 lr=4.2e-04 	 t=269s  	 loss=0.026 	 val_loss=0.015 	 val_f1=0.365
+Epoch 9/40 	 lr=4.1e-04 	 t=269s  	 loss=0.025 	 val_loss=0.013 	 val_f1=0.460
+Epoch 10/40 	 lr=3.9e-04 	 t=270s  	 loss=0.024 	 val_loss=0.012 	 val_f1=0.525
+Epoch 11/40 	 lr=3.8e-04 	 t=270s  	 loss=0.023 	 val_loss=0.011 	 val_f1=0.500
+Epoch 12/40 	 lr=3.7e-04 	 t=270s  	 loss=0.022 	 val_loss=0.010 	 val_f1=0.578
+Epoch 13/40 	 lr=3.6e-04 	 t=269s  	 loss=0.022 	 val_loss=0.010 	 val_f1=0.598
+Epoch 14/40 	 lr=3.4e-04 	 t=270s  	 loss=0.020 	 val_loss=0.009 	 val_f1=0.637
+Epoch 15/40 	 lr=3.3e-04 	 t=270s  	 loss=0.020 	 val_loss=0.009 	 val_f1=0.648
+Epoch 16/40 	 lr=3.2e-04 	 t=270s  	 loss=0.019 	 val_loss=0.009 	 val_f1=0.666
+Epoch 17/40 	 lr=3.0e-04 	 t=270s  	 loss=0.020 	 val_loss=0.008 	 val_f1=0.665
+Epoch 18/40 	 lr=2.9e-04 	 t=271s  	 loss=0.019 	 val_loss=0.008 	 val_f1=0.675
+Epoch 19/40 	 lr=2.8e-04 	 t=270s  	 loss=0.018 	 val_loss=0.008 	 val_f1=0.697
+Epoch 20/40 	 lr=2.6e-04 	 t=270s  	 loss=0.018 	 val_loss=0.008 	 val_f1=0.694
+Epoch 21/40 	 lr=2.5e-04 	 t=270s  	 loss=0.017 	 val_loss=0.007 	 val_f1=0.706
+Epoch 22/40 	 lr=2.4e-04 	 t=270s  	 loss=0.017 	 val_loss=0.007 	 val_f1=0.718
+Epoch 23/40 	 lr=2.2e-04 	 t=271s  	 loss=0.016 	 val_loss=0.007 	 val_f1=0.732
+Epoch 24/40 	 lr=2.1e-04 	 t=271s  	 loss=0.016 	 val_loss=0.007 	 val_f1=0.727
+Epoch 25/40 	 lr=2.0e-04 	 t=271s  	 loss=0.016 	 val_loss=0.007 	 val_f1=0.717
+Epoch 26/40 	 lr=1.8e-04 	 t=270s  	 loss=0.016 	 val_loss=0.007 	 val_f1=0.724
+Epoch 27/40 	 lr=1.7e-04 	 t=271s  	 loss=0.016 	 val_loss=0.007 	 val_f1=0.739
+Epoch 28/40 	 lr=1.6e-04 	 t=271s  	 loss=0.016 	 val_loss=0.007 	 val_f1=0.744
+Epoch 29/40 	 lr=1.4e-04 	 t=271s  	 loss=0.016 	 val_loss=0.007 	 val_f1=0.743
+Epoch 30/40 	 lr=1.3e-04 	 t=270s  	 loss=0.015 	 val_loss=0.007 	 val_f1=0.751
+Epoch 31/40 	 lr=1.2e-04 	 t=271s  	 loss=0.015 	 val_loss=0.007 	 val_f1=0.754
+Epoch 32/40 	 lr=1.1e-04 	 t=271s  	 loss=0.014 	 val_loss=0.006 	 val_f1=0.757
+Epoch 33/40 	 lr=9.2e-05 	 t=271s  	 loss=0.015 	 val_loss=0.006 	 val_f1=0.756
+Epoch 34/40 	 lr=7.9e-05 	 t=271s  	 loss=0.014 	 val_loss=0.006 	 val_f1=0.760
+Epoch 35/40 	 lr=6.6e-05 	 t=271s  	 loss=0.014 	 val_loss=0.006 	 val_f1=0.762
+Epoch 36/40 	 lr=5.3e-05 	 t=272s  	 loss=0.014 	 val_loss=0.006 	 val_f1=0.764
+Epoch 37/40 	 lr=3.9e-05 	 t=272s  	 loss=0.014 	 val_loss=0.006 	 val_f1=0.761
+Epoch 38/40 	 lr=2.6e-05 	 t=272s  	 loss=0.013 	 val_loss=0.006 	 val_f1=0.762
+Epoch 39/40 	 lr=1.3e-05 	 t=272s  	 loss=0.013 	 val_loss=0.006 	 val_f1=0.762
+Epoch 40/40 	 lr=0.0e+00 	 t=272s  	 loss=0.014 	 val_loss=0.006 	 val_f1=0.764
+
+ -> Saving weights to ../checkpoints/2020-08-27/efficientnet-b5_msd_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Loaded pretrained weights for efficientnet-b5
+    -> 28881720 trainable parameters
+
+Epoch 1/40 	 lr=2.5e-04 	 t=265s  	 loss=0.178 	 val_loss=0.025 	 val_f1=0.000
+Epoch 2/40 	 lr=5.0e-04 	 t=265s  	 loss=0.034 	 val_loss=0.026 	 val_f1=0.000
+Epoch 3/40 	 lr=4.9e-04 	 t=267s  	 loss=0.034 	 val_loss=0.027 	 val_f1=0.000
+Traceback (most recent call last):
+  File "main.py", line 189, in <module>
+    pred_oof = k_fold(Config, df_train)
+  File "main.py", line 100, in k_fold
+    pred_val = train(config, df_train, df_val, i)
+  File "main.py", line 61, in train
+    pred_val = fit(
+  File "/home/theo/kaggle/birds/src/training/train.py", line 109, in fit
+    avg_loss += loss.item() / len(train_loader)
+KeyboardInterrupt
