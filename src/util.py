@@ -1,7 +1,7 @@
-import os 
-import torch 
+import os
+import torch
 import random
-import numpy as np 
+import numpy as np
 import torch.nn as nn
 
 from sklearn.metrics import f1_score
@@ -22,10 +22,10 @@ def seed_everything(seed):
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
     torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = True #False
+    torch.backends.cudnn.benchmark = True  # False
 
 
-def save_model_weights(model, filename, verbose=1, cp_folder=''):
+def save_model_weights(model, filename, verbose=1, cp_folder=""):
     """
     Saves the weights of a PyTorch model
     
@@ -42,7 +42,7 @@ def save_model_weights(model, filename, verbose=1, cp_folder=''):
     torch.save(model.state_dict(), os.path.join(cp_folder, filename))
 
 
-def load_model_weights(model, filename, verbose=1, cp_folder=''):
+def load_model_weights(model, filename, verbose=1, cp_folder=""):
     """
     Loads the weights of a PyTorch model. The exception handles cpu/gpu incompatibilities
     
@@ -90,7 +90,8 @@ def count_parameters(model, all=False):
 
 ONE_HOT = np.eye(NUM_CLASSES)
 
-def f1(truth, pred, threshold=0.5, avg='samples'):
+
+def f1(truth, pred, threshold=0.5, avg="samples"):
 
     if len(truth.shape) == 1:
         truth = ONE_HOT[truth]

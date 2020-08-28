@@ -49,10 +49,14 @@ def train(config, df_train, df_val, fold):
 
     seed_everything(config.seed)
 
-    model = get_model(config.selected_model, use_msd=config.use_msd, num_classes=NUM_CLASSES).cuda()
+    model = get_model(
+        config.selected_model, use_msd=config.use_msd, num_classes=NUM_CLASSES
+    ).cuda()
     model.zero_grad()
 
-    train_dataset = BirdDataset(df_train, AudioParams, audio_path=AUDIO_PATH, use_conf=config.use_conf)
+    train_dataset = BirdDataset(
+        df_train, AudioParams, audio_path=AUDIO_PATH, use_conf=config.use_conf
+    )
     val_dataset = BirdDataset(df_val, AudioParams, audio_path=AUDIO_PATH, train=False)
 
     n_parameters = count_parameters(model)
@@ -112,12 +116,12 @@ class AudioParams:
     n_mels = 128
     fmin = 20
     fmax = 16000
-    
+
     # n_fft = n_mels * 20 # Size of fft window - smooths the spectrogram
     n_fft = 1024
-    
+
     spec_width = 384
-    hop_length = duration * sr // spec_width + 1   # Computed to have width=spec_width
+    hop_length = duration * sr // spec_width + 1  # Computed to have width=spec_width
     # hop_length = 512
 
 
@@ -140,7 +144,7 @@ class Config:
     # selected_model = 'resnet50'
     # selected_model = 'efficientnet-b5'
     use_msd = False
-    use_conf = True
+    use_conf = False
 
     #     img_size = 256
     batch_size = 64
@@ -152,12 +156,12 @@ class Config:
     if "101" in selected_model or "b5" in selected_model:
         batch_size = batch_size // 2
         lr = lr / 2
-      
+
     specaugment_proba = 0
     mixup_proba = 0.5
     alpha = 5
 
-    name = "sample"
+    name = "test"
 
 
 if __name__ == "__main__":

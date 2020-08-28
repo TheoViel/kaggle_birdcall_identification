@@ -1,5 +1,3 @@
-
-
 def freeze_bn(m):
     """
     Freezes batchnorm in a model
@@ -8,7 +6,7 @@ def freeze_bn(m):
         m {torch module} -- Model
     """
     classname = m.__class__.__name__
-    if classname.find('BatchNorm') != -1:
+    if classname.find("BatchNorm") != -1:
         m.eval()
         m.weight.requires_grad = False
         m.bias.requires_grad = False
@@ -22,7 +20,7 @@ def unfreeze_bn(m):
         m {torch module} -- Model
     """
     classname = m.__class__.__name__
-    if classname.find('BatchNorm') != -1:
+    if classname.find("BatchNorm") != -1:
         m.train()
         m.weight.requires_grad = True
         m.bias.requires_grad = True

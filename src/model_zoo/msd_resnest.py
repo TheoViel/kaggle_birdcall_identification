@@ -1,7 +1,6 @@
 import torch
 from resnest.torch.resnet import *
-from resnest.torch.ablation import resnest_model_urls 
-
+from resnest.torch.ablation import resnest_model_urls
 
 
 class MSDResNet(ResNet):
@@ -53,5 +52,3 @@ def resnest50_fast_1s1x64d(pretrained=False, root="~/.encoding/models", **kwargs
             )
         )
     return model
-
-

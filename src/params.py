@@ -4,8 +4,8 @@ import warnings
 import numpy as np
 
 
-warnings.simplefilter(action='ignore', category=UserWarning)
-warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.simplefilter(action="ignore", category=UserWarning)
+warnings.simplefilter(action="ignore", category=FutureWarning)
 
 SEED = 2020
 

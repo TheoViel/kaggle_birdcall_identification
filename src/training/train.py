@@ -26,8 +26,8 @@ def fit(
     warmup_prop=0.1,
     lr=1e-3,
     alpha=0.4,
-    mixup_proba=0.,
-    specaugment_proba=0.,
+    mixup_proba=0.0,
+    specaugment_proba=0.0,
     verbose=1,
     verbose_eval=1,
 ):
@@ -63,12 +63,9 @@ def fit(
 
     loss_fct = nn.BCEWithLogitsLoss(reduction="mean").cuda()
 
-    spec_augmenter = SpecAugmentation(
-        time_drop_width=16,
-        time_stripes_num=2,
-        freq_drop_width=8,
-        freq_stripes_num=2
-    )
+    # spec_augmenter = SpecAugmentation(
+    #     time_drop_width=16, time_stripes_num=2, freq_drop_width=8, freq_stripes_num=2
+    # )
 
     train_loader = DataLoader(
         train_dataset,
@@ -95,12 +92,12 @@ def fit(
         avg_loss = 0
         for step, (x, y_batch) in enumerate(train_loader):
 
-            if np.random.rand() < specaugment_proba:
-                x = spec_augmenter(x)
-            
+            # if np.random.rand() < specaugment_proba:
+            #     x = spec_augmenter(x)
+
             if np.random.rand() < mixup_proba:
-                x, y_a, y_b ,_ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)
-                y_batch = torch.clamp(y_a + y_b, 0, 1) 
+                x, y_a, y_b, _ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)
+                y_batch = torch.clamp(y_a + y_b, 0, 1)
 
             y_pred = model(x.cuda())
             loss = loss_fct(y_pred, y_batch.cuda().float())
@@ -125,7 +122,7 @@ def fit(
 
                     preds = np.concatenate([preds, torch.sigmoid(y_pred).cpu().numpy()])
 
-            micro_f1 = f1(val_dataset.y, preds, avg='micro')
+            micro_f1 = f1(val_dataset.y, preds, avg="micro")
             samples_f1 = f1(val_dataset.y, preds)
 
         elapsed_time = time.time() - start_time
@@ -137,13 +134,14 @@ def fit(
                 end="",
             )
             if (epoch + 1) % verbose_eval == 0 or (epoch + 1 == epochs):
-                print(f"val_loss={avg_val_loss:.3f} \t micro_f1={micro_f1:.3f} \t samples_f1={samples_f1:.3f}")
+                print(
+                    f"val_loss={avg_val_loss:.3f} \t micro_f1={micro_f1:.3f} \t samples_f1={samples_f1:.3f}"
+                )
             else:
-                print('')
+                print("")
 
     torch.cuda.empty_cache()
     return preds
-
 
 
 def predict(model, dataset, batch_size=64):
@@ -162,7 +160,7 @@ def predict(model, dataset, batch_size=64):
     """
     model.eval()
     preds = np.empty((0, NUM_CLASSES))
-    
+
     loader = DataLoader(
         dataset, batch_size=batch_size, shuffle=False, num_workers=NUM_WORKERS
     )
