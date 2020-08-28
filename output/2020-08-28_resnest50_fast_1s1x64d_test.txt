@@ -115,3 +115,4 @@ KeyboardInterrupt
 Epoch 1/40 	 lr=5.0e-04 	 t=270s  	 loss=0.110 	 val_loss=0.032 	 micro_f1=0.002 	 samples_f1=0.000
 Epoch 2/40 	 lr=1.0e-03 	 t=268s  	 loss=0.033 	 val_loss=0.022 	 micro_f1=0.003 	 samples_f1=0.001
 Epoch 3/40 	 lr=9.7e-04 	 t=268s  	 loss=0.031 	 val_loss=0.018 	 micro_f1=0.082 	 samples_f1=0.042
+Epoch 4/40 	 lr=9.5e-04 	 t=277s  	 loss=0.028 	 val_loss=0.016 	 micro_f1=0.250 	 samples_f1=0.148
