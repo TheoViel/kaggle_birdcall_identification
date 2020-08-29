@@ -1,15 +1,17 @@
 # import cv2
 import numpy as np
 # import albumentations as albu
-
 from audiomentations import *
-from data.audiomentations import *
-
 from params import BACKGROUND_PATH
 
 
-def mono_to_color(X, eps=1e-6):
+def mono_to_color(X, eps=1e-6, mean=None, std=None):
     X = np.stack([X, X, X], axis=-1)
+
+    # Standardize
+    mean = mean or X.mean()
+    std = std or X.std()
+    X = (X - mean) / (std + eps)
 
     # Normalize to [0, 255]
     _min, _max = X.min(), X.max()
@@ -66,7 +68,6 @@ def get_wav_transforms(train=True):
     if train:
         transforms = Compose(
             [
-                # PitchShift(min_semitones=-4, max_semitones=4, p=0.5),  # Too slow
                 AddGaussianSNR(max_SNR=0.5, p=0.5),
                 AddBackgroundNoise(
                     sounds_path=BACKGROUND_PATH, min_snr_in_db=0, max_snr_in_db=2, p=0.5

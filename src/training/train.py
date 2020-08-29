@@ -63,9 +63,9 @@ def fit(
 
     loss_fct = nn.BCEWithLogitsLoss(reduction="mean").cuda()
 
-    # spec_augmenter = SpecAugmentation(
-    #     time_drop_width=16, time_stripes_num=2, freq_drop_width=8, freq_stripes_num=2
-    # )
+    spec_augmenter = SpecAugmentation(
+        time_drop_width=16, time_stripes_num=2, freq_drop_width=8, freq_stripes_num=2
+    )
 
     train_loader = DataLoader(
         train_dataset,
@@ -92,8 +92,9 @@ def fit(
         avg_loss = 0
         for step, (x, y_batch) in enumerate(train_loader):
 
-            # if np.random.rand() < specaugment_proba:
-            #     x = spec_augmenter(x)
+            if specaugment_proba:
+                if np.random.rand() < specaugment_proba:
+                    x = spec_augmenter(x)
 
             if np.random.rand() < mixup_proba:
                 x, y_a, y_b, _ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)
@@ -130,12 +131,12 @@ def fit(
             elapsed_time = elapsed_time * verbose
             lr = scheduler.get_lr()[0]
             print(
-                f"Epoch {epoch + 1}/{epochs} \t lr={lr:.1e} \t t={elapsed_time:.0f}s  \t loss={avg_loss:.3f} \t ",
+                f"Epoch {epoch + 1}/{epochs} \t lr={lr:.1e} \t t={elapsed_time:.0f}s  \t loss={avg_loss:.4f} \t ",
                 end="",
             )
             if (epoch + 1) % verbose_eval == 0 or (epoch + 1 == epochs):
                 print(
-                    f"val_loss={avg_val_loss:.3f} \t micro_f1={micro_f1:.3f} \t samples_f1={samples_f1:.3f}"
+                    f"val_loss={avg_val_loss:.4f} \t micro_f1={micro_f1:.3f} \t samples_f1={samples_f1:.3f}"
                 )
             else:
                 print("")

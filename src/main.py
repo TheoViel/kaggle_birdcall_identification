@@ -143,8 +143,9 @@ class Config:
     # selected_model = "resnest101"
     # selected_model = 'resnet50'
     # selected_model = 'efficientnet-b5'
-    use_msd = False
-    use_conf = False
+    
+    use_msd = True
+    use_conf = True
 
     #     img_size = 256
     batch_size = 64
@@ -161,7 +162,7 @@ class Config:
     mixup_proba = 0.5
     alpha = 5
 
-    name = "test"
+    name = "gem"
 
 
 if __name__ == "__main__":

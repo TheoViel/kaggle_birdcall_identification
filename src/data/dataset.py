@@ -13,20 +13,15 @@ ONE_HOT = np.eye(len(CLASSES))
 
 
 def compute_melspec(y, params):
-    # print('Computing melspec')
     melspec = librosa.feature.melspectrogram(
         y,
         sr=params.sr,
         n_mels=params.n_mels,
         fmin=params.fmin,
         fmax=params.fmax,
-        # hop_length=params.hop_length,
-        # n_fft=params.n_fft,
     )
 
-    # print('Moving to db scale')
     melspec = librosa.power_to_db(melspec).astype(np.float32)
-
     return melspec
 
 
