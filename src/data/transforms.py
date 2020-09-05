@@ -1,4 +1,5 @@
 # import cv2
+import pysndfx
 import numpy as np
 # import albumentations as albu
 from audiomentations import *
@@ -64,17 +65,47 @@ def crop_or_pad(y, length, sr, train=True, probs=None):
     return y.astype(np.float32)
 
 
-def get_wav_transforms(train=True):
-    if train:
-        transforms = Compose(
+def get_wav_transforms():
+    transforms = Compose(
+        [
+            AddGaussianSNR(max_SNR=0.5, p=0.5),
+            AddBackgroundNoise(
+                sounds_path=BACKGROUND_PATH, min_snr_in_db=0, max_snr_in_db=2, p=0.5
+            ),
+        ]
+    )
+
+    return transforms
+
+
+class AudioAugmentation:
+    def __init__(self, p_effects=0.5, p_noise=0.5):
+        self.p_effects = p_effects
+
+        self.noise_transfos = Compose(
             [
-                AddGaussianSNR(max_SNR=0.5, p=0.5),
+                AddGaussianSNR(max_SNR=0.5, p=p_noise),
                 AddBackgroundNoise(
-                    sounds_path=BACKGROUND_PATH, min_snr_in_db=0, max_snr_in_db=2, p=0.5
+                    sounds_path=BACKGROUND_PATH, min_snr_in_db=0, max_snr_in_db=2, p=p_noise
                 ),
             ]
         )
-    else:
-        transforms = None
 
-    return transforms
+    def __call__(self, y, sr):
+        y = self.noise_transfos(y, sr)
+
+        if np.random.uniform() < self.p_effects:
+            effects_chain = (
+                pysndfx.AudioEffectsChain()
+                .reverb(
+                    reverberance=random.randrange(50),
+                    room_scale=random.randrange(50),
+                    stereo_depth=random.randrange(50),
+                )
+                .pitch(shift=random.randrange(-300, 300))
+                .overdrive(gain=random.randrange(2, 20))
+            )
+
+            y = effects_chain(y)
+
+        return y

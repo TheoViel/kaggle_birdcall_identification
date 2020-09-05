@@ -5,11 +5,12 @@ import soundfile
 import numpy as np
 from torch.utils.data import Dataset
 
-from params import MEAN, STD, CLASSES
 from data.transforms import *
+from params import MEAN, STD, CLASSES
 
 
 ONE_HOT = np.eye(len(CLASSES))
+CONF_PATH = "../output/preds_oof.pkl"
 
 
 def compute_melspec(y, params):
@@ -31,7 +32,9 @@ class BirdDataset(Dataset):
         self.params = params
         self.audio_path = audio_path
 
-        self.wav_transfos = get_wav_transforms(train=train)
+        self.wav_transfos = get_wav_transforms() if train else None
+        # self.wav_transfos = AudioAugmentation(p_effects=0.5, p_noise=0.5) if train else None
+
         self.spec_transfos = None
 
         self.y = np.array([CLASSES.index(c) for c in df["ebird_code"]])
@@ -41,7 +44,7 @@ class BirdDataset(Dataset):
 
         self.use_conf = use_conf
         if use_conf:
-            with open(f"../output/preds_oof.pkl", "rb") as file:
+            with open(CONF_PATH, "rb") as file:
                 self.confidences = pickle.load(file)
 
     def __len__(self):
@@ -74,6 +77,5 @@ class BirdDataset(Dataset):
         image = mono_to_color(melspec)
         image = resize(image, self.params.img_size)
         image = normalize(image, mean=None, std=None)
-        # image = normalize(image, mean=MEAN, std=STD)
 
         return image, ONE_HOT[self.y[idx]]

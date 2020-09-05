@@ -74,6 +74,7 @@ def train(config, df_train, df_val, fold):
         alpha=config.alpha,
         mixup_proba=config.mixup_proba,
         specaugment_proba=config.specaugment_proba,
+        label_smoothing=config.label_smoothing,
         verbose_eval=config.verbose_eval,
     )
 
@@ -135,34 +136,40 @@ class Config:
     # k-fold
     k = 5
     random_state = 42
-    selected_folds = [0, 1, 2, 3, 4]
+    selected_folds = [0, 1, 2, 3, 4] 
 
     # Model
-    selected_model = "resnest50_fast_1s1x64d"
+    # selected_model = "resnest50_fast_1s1x64d"
     # selected_model = "resnext101_32x8d_wsl"
-    # selected_model = "resnest101"
+    selected_model = 'se_resnext50_32x4d'
+    # selected_model = 'resnext50_32x4d'
     # selected_model = 'resnet50'
-    # selected_model = 'efficientnet-b5'
     
-    use_msd = True
+    use_msd = False
     use_conf = True
+    
 
-    #     img_size = 256
     batch_size = 64
     epochs = 40
     lr = 1e-3
     warmup_prop = 0.05
     val_bs = 64
 
-    if "101" in selected_model or "b5" in selected_model:
+    if "101" in selected_model or "b5" in selected_model or "b6" in selected_model:
         batch_size = batch_size // 2
         lr = lr / 2
+    
+    if "b7" in selected_model:
+        batch_size = 16
+        lr = 2e-4
+        val_bs = 16
 
-    specaugment_proba = 0
+    label_smoothing = 0.
+    specaugment_proba = 0.
     mixup_proba = 0.5
     alpha = 5
 
-    name = "gem"
+    name = "conf"
 
 
 if __name__ == "__main__":

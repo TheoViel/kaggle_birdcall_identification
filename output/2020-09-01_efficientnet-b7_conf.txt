@@ -1,0 +1,177 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Loaded pretrained weights for efficientnet-b7
+    -> 64463064 trainable parameters
+
+Epoch 1/40 	 lr=1.0e-04 	 t=422s  	 loss=0.2112 	 val_loss=0.0258 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=2.0e-04 	 t=422s  	 loss=0.0341 	 val_loss=0.0250 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 3/40 	 lr=1.9e-04 	 t=423s  	 loss=0.0343 	 val_loss=0.0255 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 4/40 	 lr=1.9e-04 	 t=423s  	 loss=0.0326 	 val_loss=0.0223 	 micro_f1=0.001 	 samples_f1=0.001
+Epoch 5/40 	 lr=1.8e-04 	 t=424s  	 loss=0.0299 	 val_loss=0.0187 	 micro_f1=0.026 	 samples_f1=0.013
+Epoch 6/40 	 lr=1.8e-04 	 t=424s  	 loss=0.0280 	 val_loss=0.0164 	 micro_f1=0.239 	 samples_f1=0.144
+Epoch 7/40 	 lr=1.7e-04 	 t=423s  	 loss=0.0250 	 val_loss=0.0131 	 micro_f1=0.356 	 samples_f1=0.228
+Epoch 8/40 	 lr=1.7e-04 	 t=425s  	 loss=0.0238 	 val_loss=0.0115 	 micro_f1=0.483 	 samples_f1=0.343
+Epoch 9/40 	 lr=1.6e-04 	 t=424s  	 loss=0.0219 	 val_loss=0.0109 	 micro_f1=0.557 	 samples_f1=0.424
+Epoch 10/40 	 lr=1.6e-04 	 t=422s  	 loss=0.0200 	 val_loss=0.0094 	 micro_f1=0.620 	 samples_f1=0.496
+Epoch 11/40 	 lr=1.5e-04 	 t=423s  	 loss=0.0196 	 val_loss=0.0090 	 micro_f1=0.653 	 samples_f1=0.546
+Epoch 12/40 	 lr=1.5e-04 	 t=424s  	 loss=0.0185 	 val_loss=0.0087 	 micro_f1=0.657 	 samples_f1=0.547
+Epoch 13/40 	 lr=1.4e-04 	 t=423s  	 loss=0.0181 	 val_loss=0.0083 	 micro_f1=0.667 	 samples_f1=0.554
+Epoch 14/40 	 lr=1.4e-04 	 t=423s  	 loss=0.0169 	 val_loss=0.0082 	 micro_f1=0.699 	 samples_f1=0.612
+Epoch 15/40 	 lr=1.3e-04 	 t=422s  	 loss=0.0160 	 val_loss=0.0078 	 micro_f1=0.714 	 samples_f1=0.634
+Epoch 16/40 	 lr=1.3e-04 	 t=423s  	 loss=0.0156 	 val_loss=0.0077 	 micro_f1=0.710 	 samples_f1=0.621
+Epoch 17/40 	 lr=1.2e-04 	 t=421s  	 loss=0.0152 	 val_loss=0.0076 	 micro_f1=0.710 	 samples_f1=0.615
+Epoch 18/40 	 lr=1.2e-04 	 t=423s  	 loss=0.0146 	 val_loss=0.0072 	 micro_f1=0.732 	 samples_f1=0.640
+Epoch 19/40 	 lr=1.1e-04 	 t=422s  	 loss=0.0141 	 val_loss=0.0074 	 micro_f1=0.730 	 samples_f1=0.655
+Epoch 20/40 	 lr=1.1e-04 	 t=424s  	 loss=0.0142 	 val_loss=0.0070 	 micro_f1=0.739 	 samples_f1=0.647
+Epoch 21/40 	 lr=1.0e-04 	 t=423s  	 loss=0.0135 	 val_loss=0.0072 	 micro_f1=0.743 	 samples_f1=0.659
+Epoch 22/40 	 lr=9.5e-05 	 t=423s  	 loss=0.0128 	 val_loss=0.0066 	 micro_f1=0.757 	 samples_f1=0.671
+Epoch 23/40 	 lr=8.9e-05 	 t=424s  	 loss=0.0131 	 val_loss=0.0067 	 micro_f1=0.754 	 samples_f1=0.672
+Epoch 24/40 	 lr=8.4e-05 	 t=422s  	 loss=0.0127 	 val_loss=0.0067 	 micro_f1=0.752 	 samples_f1=0.671
+Epoch 25/40 	 lr=7.9e-05 	 t=423s  	 loss=0.0123 	 val_loss=0.0065 	 micro_f1=0.764 	 samples_f1=0.683
+Epoch 26/40 	 lr=7.4e-05 	 t=422s  	 loss=0.0127 	 val_loss=0.0066 	 micro_f1=0.761 	 samples_f1=0.672
+Epoch 27/40 	 lr=6.8e-05 	 t=423s  	 loss=0.0120 	 val_loss=0.0064 	 micro_f1=0.771 	 samples_f1=0.689
+Epoch 28/40 	 lr=6.3e-05 	 t=423s  	 loss=0.0115 	 val_loss=0.0065 	 micro_f1=0.763 	 samples_f1=0.679
+Epoch 29/40 	 lr=5.8e-05 	 t=424s  	 loss=0.0112 	 val_loss=0.0064 	 micro_f1=0.766 	 samples_f1=0.684
+Epoch 30/40 	 lr=5.3e-05 	 t=422s  	 loss=0.0109 	 val_loss=0.0063 	 micro_f1=0.777 	 samples_f1=0.698
+Epoch 31/40 	 lr=4.7e-05 	 t=422s  	 loss=0.0113 	 val_loss=0.0064 	 micro_f1=0.776 	 samples_f1=0.694
+Epoch 32/40 	 lr=4.2e-05 	 t=422s  	 loss=0.0109 	 val_loss=0.0063 	 micro_f1=0.781 	 samples_f1=0.705
+Epoch 33/40 	 lr=3.7e-05 	 t=423s  	 loss=0.0107 	 val_loss=0.0063 	 micro_f1=0.776 	 samples_f1=0.695
+Epoch 34/40 	 lr=3.2e-05 	 t=421s  	 loss=0.0107 	 val_loss=0.0064 	 micro_f1=0.774 	 samples_f1=0.683
+Epoch 35/40 	 lr=2.6e-05 	 t=423s  	 loss=0.0104 	 val_loss=0.0064 	 micro_f1=0.777 	 samples_f1=0.683
+Epoch 36/40 	 lr=2.1e-05 	 t=421s  	 loss=0.0105 	 val_loss=0.0063 	 micro_f1=0.786 	 samples_f1=0.698
+Epoch 37/40 	 lr=1.6e-05 	 t=423s  	 loss=0.0103 	 val_loss=0.0062 	 micro_f1=0.781 	 samples_f1=0.689
+Epoch 38/40 	 lr=1.1e-05 	 t=421s  	 loss=0.0100 	 val_loss=0.0061 	 micro_f1=0.787 	 samples_f1=0.706
+Epoch 39/40 	 lr=5.3e-06 	 t=423s  	 loss=0.0104 	 val_loss=0.0061 	 micro_f1=0.790 	 samples_f1=0.704
+Epoch 40/40 	 lr=0.0e+00 	 t=421s  	 loss=0.0101 	 val_loss=0.0062 	 micro_f1=0.785 	 samples_f1=0.699
+
+ -> Saving weights to ../checkpoints/2020-09-01/efficientnet-b7_conf_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Loaded pretrained weights for efficientnet-b7
+    -> 64463064 trainable parameters
+
+Epoch 1/40 	 lr=1.0e-04 	 t=424s  	 loss=0.2105 	 val_loss=0.0261 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=2.0e-04 	 t=425s  	 loss=0.0341 	 val_loss=0.0250 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 3/40 	 lr=1.9e-04 	 t=425s  	 loss=0.0342 	 val_loss=0.0250 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 4/40 	 lr=1.9e-04 	 t=425s  	 loss=0.0322 	 val_loss=0.0215 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 5/40 	 lr=1.8e-04 	 t=425s  	 loss=0.0297 	 val_loss=0.0179 	 micro_f1=0.028 	 samples_f1=0.014
+Epoch 6/40 	 lr=1.8e-04 	 t=425s  	 loss=0.0283 	 val_loss=0.0166 	 micro_f1=0.180 	 samples_f1=0.102
+Epoch 7/40 	 lr=1.7e-04 	 t=424s  	 loss=0.0254 	 val_loss=0.0143 	 micro_f1=0.325 	 samples_f1=0.203
+Epoch 8/40 	 lr=1.7e-04 	 t=425s  	 loss=0.0242 	 val_loss=0.0115 	 micro_f1=0.422 	 samples_f1=0.278
+Epoch 9/40 	 lr=1.6e-04 	 t=425s  	 loss=0.0224 	 val_loss=0.0111 	 micro_f1=0.529 	 samples_f1=0.402
+Epoch 10/40 	 lr=1.6e-04 	 t=424s  	 loss=0.0207 	 val_loss=0.0097 	 micro_f1=0.592 	 samples_f1=0.462
+Epoch 11/40 	 lr=1.5e-04 	 t=425s  	 loss=0.0202 	 val_loss=0.0092 	 micro_f1=0.627 	 samples_f1=0.505
+Epoch 12/40 	 lr=1.5e-04 	 t=425s  	 loss=0.0189 	 val_loss=0.0087 	 micro_f1=0.655 	 samples_f1=0.548
+Epoch 13/40 	 lr=1.4e-04 	 t=425s  	 loss=0.0187 	 val_loss=0.0081 	 micro_f1=0.662 	 samples_f1=0.537
+Epoch 14/40 	 lr=1.4e-04 	 t=424s  	 loss=0.0173 	 val_loss=0.0079 	 micro_f1=0.675 	 samples_f1=0.566
+Epoch 15/40 	 lr=1.3e-04 	 t=426s  	 loss=0.0165 	 val_loss=0.0076 	 micro_f1=0.704 	 samples_f1=0.611
+Epoch 16/40 	 lr=1.3e-04 	 t=425s  	 loss=0.0162 	 val_loss=0.0075 	 micro_f1=0.710 	 samples_f1=0.614
+Epoch 17/40 	 lr=1.2e-04 	 t=425s  	 loss=0.0156 	 val_loss=0.0073 	 micro_f1=0.708 	 samples_f1=0.602
+Epoch 18/40 	 lr=1.2e-04 	 t=426s  	 loss=0.0150 	 val_loss=0.0069 	 micro_f1=0.739 	 samples_f1=0.653
+Epoch 19/40 	 lr=1.1e-04 	 t=425s  	 loss=0.0147 	 val_loss=0.0070 	 micro_f1=0.733 	 samples_f1=0.637
+Epoch 20/40 	 lr=1.1e-04 	 t=425s  	 loss=0.0147 	 val_loss=0.0068 	 micro_f1=0.734 	 samples_f1=0.639
+Epoch 21/40 	 lr=1.0e-04 	 t=425s  	 loss=0.0137 	 val_loss=0.0067 	 micro_f1=0.745 	 samples_f1=0.673
+Epoch 22/40 	 lr=9.5e-05 	 t=424s  	 loss=0.0131 	 val_loss=0.0065 	 micro_f1=0.754 	 samples_f1=0.672
+Epoch 23/40 	 lr=8.9e-05 	 t=426s  	 loss=0.0135 	 val_loss=0.0066 	 micro_f1=0.752 	 samples_f1=0.666
+Epoch 24/40 	 lr=8.4e-05 	 t=424s  	 loss=0.0129 	 val_loss=0.0066 	 micro_f1=0.753 	 samples_f1=0.662
+Epoch 25/40 	 lr=7.9e-05 	 t=424s  	 loss=0.0124 	 val_loss=0.0063 	 micro_f1=0.767 	 samples_f1=0.685
+Epoch 26/40 	 lr=7.4e-05 	 t=424s  	 loss=0.0129 	 val_loss=0.0065 	 micro_f1=0.760 	 samples_f1=0.677
+Epoch 27/40 	 lr=6.8e-05 	 t=425s  	 loss=0.0122 	 val_loss=0.0063 	 micro_f1=0.769 	 samples_f1=0.690
+Epoch 28/40 	 lr=6.3e-05 	 t=423s  	 loss=0.0119 	 val_loss=0.0063 	 micro_f1=0.763 	 samples_f1=0.673
+Epoch 29/40 	 lr=5.8e-05 	 t=423s  	 loss=0.0114 	 val_loss=0.0062 	 micro_f1=0.771 	 samples_f1=0.694
+Epoch 30/40 	 lr=5.3e-05 	 t=424s  	 loss=0.0111 	 val_loss=0.0062 	 micro_f1=0.777 	 samples_f1=0.698
+Epoch 31/40 	 lr=4.7e-05 	 t=424s  	 loss=0.0116 	 val_loss=0.0061 	 micro_f1=0.779 	 samples_f1=0.704
+Epoch 32/40 	 lr=4.2e-05 	 t=423s  	 loss=0.0111 	 val_loss=0.0061 	 micro_f1=0.775 	 samples_f1=0.695
+Epoch 33/40 	 lr=3.7e-05 	 t=425s  	 loss=0.0110 	 val_loss=0.0061 	 micro_f1=0.774 	 samples_f1=0.692
+Epoch 34/40 	 lr=3.2e-05 	 t=424s  	 loss=0.0110 	 val_loss=0.0060 	 micro_f1=0.780 	 samples_f1=0.696
+Epoch 35/40 	 lr=2.6e-05 	 t=424s  	 loss=0.0107 	 val_loss=0.0060 	 micro_f1=0.781 	 samples_f1=0.701
+Epoch 36/40 	 lr=2.1e-05 	 t=423s  	 loss=0.0108 	 val_loss=0.0061 	 micro_f1=0.781 	 samples_f1=0.695
+Epoch 37/40 	 lr=1.6e-05 	 t=425s  	 loss=0.0105 	 val_loss=0.0060 	 micro_f1=0.782 	 samples_f1=0.701
+Epoch 38/40 	 lr=1.1e-05 	 t=425s  	 loss=0.0102 	 val_loss=0.0059 	 micro_f1=0.785 	 samples_f1=0.706
+Epoch 39/40 	 lr=5.3e-06 	 t=423s  	 loss=0.0106 	 val_loss=0.0059 	 micro_f1=0.783 	 samples_f1=0.702
+Epoch 40/40 	 lr=0.0e+00 	 t=425s  	 loss=0.0103 	 val_loss=0.0059 	 micro_f1=0.782 	 samples_f1=0.700
+
+ -> Saving weights to ../checkpoints/2020-09-01/efficientnet-b7_conf_1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Loaded pretrained weights for efficientnet-b7
+    -> 64463064 trainable parameters
+
+Epoch 1/40 	 lr=1.0e-04 	 t=420s  	 loss=0.2102 	 val_loss=0.0260 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=2.0e-04 	 t=421s  	 loss=0.0341 	 val_loss=0.0251 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 3/40 	 lr=1.9e-04 	 t=421s  	 loss=0.0342 	 val_loss=0.0252 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 4/40 	 lr=1.9e-04 	 t=421s  	 loss=0.0323 	 val_loss=0.0216 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 5/40 	 lr=1.8e-04 	 t=422s  	 loss=0.0298 	 val_loss=0.0195 	 micro_f1=0.029 	 samples_f1=0.015
+Epoch 6/40 	 lr=1.8e-04 	 t=421s  	 loss=0.0283 	 val_loss=0.0163 	 micro_f1=0.165 	 samples_f1=0.092
+Epoch 7/40 	 lr=1.7e-04 	 t=422s  	 loss=0.0253 	 val_loss=0.0139 	 micro_f1=0.299 	 samples_f1=0.183
+Epoch 8/40 	 lr=1.7e-04 	 t=421s  	 loss=0.0242 	 val_loss=0.0122 	 micro_f1=0.423 	 samples_f1=0.284
+Epoch 9/40 	 lr=1.6e-04 	 t=421s  	 loss=0.0223 	 val_loss=0.0112 	 micro_f1=0.509 	 samples_f1=0.372
+Epoch 10/40 	 lr=1.6e-04 	 t=422s  	 loss=0.0207 	 val_loss=0.0102 	 micro_f1=0.572 	 samples_f1=0.442
+Epoch 11/40 	 lr=1.5e-04 	 t=421s  	 loss=0.0201 	 val_loss=0.0099 	 micro_f1=0.615 	 samples_f1=0.505
+Epoch 12/40 	 lr=1.5e-04 	 t=420s  	 loss=0.0191 	 val_loss=0.0093 	 micro_f1=0.643 	 samples_f1=0.536
+Epoch 13/40 	 lr=1.4e-04 	 t=422s  	 loss=0.0187 	 val_loss=0.0090 	 micro_f1=0.655 	 samples_f1=0.546
+Epoch 14/40 	 lr=1.4e-04 	 t=421s  	 loss=0.0174 	 val_loss=0.0086 	 micro_f1=0.678 	 samples_f1=0.578
+Epoch 15/40 	 lr=1.3e-04 	 t=421s  	 loss=0.0165 	 val_loss=0.0080 	 micro_f1=0.687 	 samples_f1=0.573
+Epoch 16/40 	 lr=1.3e-04 	 t=422s  	 loss=0.0162 	 val_loss=0.0079 	 micro_f1=0.706 	 samples_f1=0.607
+Epoch 17/40 	 lr=1.2e-04 	 t=420s  	 loss=0.0155 	 val_loss=0.0078 	 micro_f1=0.707 	 samples_f1=0.610
+Epoch 18/40 	 lr=1.2e-04 	 t=422s  	 loss=0.0150 	 val_loss=0.0075 	 micro_f1=0.730 	 samples_f1=0.643
+Epoch 19/40 	 lr=1.1e-04 	 t=420s  	 loss=0.0146 	 val_loss=0.0075 	 micro_f1=0.723 	 samples_f1=0.619
+Epoch 20/40 	 lr=1.1e-04 	 t=421s  	 loss=0.0147 	 val_loss=0.0074 	 micro_f1=0.727 	 samples_f1=0.626
+Epoch 21/40 	 lr=1.0e-04 	 t=421s  	 loss=0.0138 	 val_loss=0.0074 	 micro_f1=0.736 	 samples_f1=0.648
+Epoch 22/40 	 lr=9.5e-05 	 t=420s  	 loss=0.0131 	 val_loss=0.0071 	 micro_f1=0.744 	 samples_f1=0.658
+Epoch 23/40 	 lr=8.9e-05 	 t=422s  	 loss=0.0134 	 val_loss=0.0071 	 micro_f1=0.750 	 samples_f1=0.664
+Epoch 24/40 	 lr=8.4e-05 	 t=420s  	 loss=0.0130 	 val_loss=0.0071 	 micro_f1=0.748 	 samples_f1=0.665
+Epoch 25/40 	 lr=7.9e-05 	 t=421s  	 loss=0.0125 	 val_loss=0.0070 	 micro_f1=0.760 	 samples_f1=0.680
+Epoch 26/40 	 lr=7.4e-05 	 t=421s  	 loss=0.0131 	 val_loss=0.0072 	 micro_f1=0.746 	 samples_f1=0.656
+Epoch 27/40 	 lr=6.8e-05 	 t=421s  	 loss=0.0123 	 val_loss=0.0070 	 micro_f1=0.762 	 samples_f1=0.677
+Epoch 28/40 	 lr=6.3e-05 	 t=421s  	 loss=0.0119 	 val_loss=0.0069 	 micro_f1=0.762 	 samples_f1=0.671
+Epoch 29/40 	 lr=5.8e-05 	 t=421s  	 loss=0.0115 	 val_loss=0.0069 	 micro_f1=0.764 	 samples_f1=0.678
+Epoch 30/40 	 lr=5.3e-05 	 t=422s  	 loss=0.0112 	 val_loss=0.0069 	 micro_f1=0.767 	 samples_f1=0.686
+Epoch 31/40 	 lr=4.7e-05 	 t=422s  	 loss=0.0116 	 val_loss=0.0066 	 micro_f1=0.774 	 samples_f1=0.693
+Epoch 32/40 	 lr=4.2e-05 	 t=421s  	 loss=0.0113 	 val_loss=0.0066 	 micro_f1=0.777 	 samples_f1=0.698
+Epoch 33/40 	 lr=3.7e-05 	 t=423s  	 loss=0.0111 	 val_loss=0.0067 	 micro_f1=0.769 	 samples_f1=0.682
+Epoch 34/40 	 lr=3.2e-05 	 t=420s  	 loss=0.0110 	 val_loss=0.0066 	 micro_f1=0.770 	 samples_f1=0.688
+Epoch 35/40 	 lr=2.6e-05 	 t=420s  	 loss=0.0107 	 val_loss=0.0067 	 micro_f1=0.774 	 samples_f1=0.692
+Epoch 36/40 	 lr=2.1e-05 	 t=421s  	 loss=0.0109 	 val_loss=0.0067 	 micro_f1=0.776 	 samples_f1=0.697
+Epoch 37/40 	 lr=1.6e-05 	 t=420s  	 loss=0.0104 	 val_loss=0.0067 	 micro_f1=0.775 	 samples_f1=0.695
+Epoch 38/40 	 lr=1.1e-05 	 t=422s  	 loss=0.0103 	 val_loss=0.0066 	 micro_f1=0.778 	 samples_f1=0.705
+Epoch 39/40 	 lr=5.3e-06 	 t=421s  	 loss=0.0106 	 val_loss=0.0066 	 micro_f1=0.780 	 samples_f1=0.703
+Epoch 40/40 	 lr=0.0e+00 	 t=422s  	 loss=0.0103 	 val_loss=0.0066 	 micro_f1=0.781 	 samples_f1=0.704
+
+ -> Saving weights to ../checkpoints/2020-09-01/efficientnet-b7_conf_2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Loaded pretrained weights for efficientnet-b7
+    -> 64463064 trainable parameters
+
+Epoch 1/40 	 lr=1.0e-04 	 t=420s  	 loss=0.2110 	 val_loss=0.0275 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=2.0e-04 	 t=422s  	 loss=0.0341 	 val_loss=0.0251 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 3/40 	 lr=1.9e-04 	 t=420s  	 loss=0.0342 	 val_loss=0.0245 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 4/40 	 lr=1.9e-04 	 t=420s  	 loss=0.0322 	 val_loss=0.0223 	 micro_f1=0.004 	 samples_f1=0.002
+Epoch 5/40 	 lr=1.8e-04 	 t=420s  	 loss=0.0298 	 val_loss=0.0184 	 micro_f1=0.033 	 samples_f1=0.017
+Epoch 6/40 	 lr=1.8e-04 	 t=419s  	 loss=0.0283 	 val_loss=0.0162 	 micro_f1=0.156 	 samples_f1=0.087
+Traceback (most recent call last):
+  File "main.py", line 199, in <module>
+    pred_oof = k_fold(Config, df_train)
+  File "main.py", line 105, in k_fold
+    pred_val = train(config, df_train, df_val, i)
+  File "main.py", line 65, in train
+    pred_val = fit(
+  File "/home/theo/kaggle/birds/src/training/train.py", line 125, in fit
+    avg_loss += loss.item() / len(train_loader)
+KeyboardInterrupt

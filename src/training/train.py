@@ -9,6 +9,7 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import RandomSampler
 from transformers import get_linear_schedule_with_warmup
+from torchvision.models.inception import InceptionOutputs
 
 from util import f1
 from training.mixup import mixup_data
@@ -16,6 +17,12 @@ from params import NUM_WORKERS, NUM_CLASSES
 from training.specaugment import SpecAugmentation
 
 
+def smooth_label(y , alpha=0.01):
+    y = y * (1 - alpha)
+    y[y == 0] = alpha
+    return y
+
+    
 def fit(
     model,
     train_dataset,
@@ -28,6 +35,7 @@ def fit(
     alpha=0.4,
     mixup_proba=0.0,
     specaugment_proba=0.0,
+    label_smoothing=0.0,
     verbose=1,
     verbose_eval=1,
 ):
@@ -91,7 +99,6 @@ def fit(
 
         avg_loss = 0
         for step, (x, y_batch) in enumerate(train_loader):
-
             if specaugment_proba:
                 if np.random.rand() < specaugment_proba:
                     x = spec_augmenter(x)
@@ -100,7 +107,14 @@ def fit(
                 x, y_a, y_b, _ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)
                 y_batch = torch.clamp(y_a + y_b, 0, 1)
 
+            # if label_smoothing:
+            #     y_batch = smooth_label(y_batch, alpha=label_smoothing)
+
             y_pred = model(x.cuda())
+
+            # if type(y_pred) == InceptionOutputs:
+            #     y_pred = y_pred.logits
+
             loss = loss_fct(y_pred, y_batch.cuda().float())
 
             loss.backward()

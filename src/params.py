@@ -24,5 +24,11 @@ DEVICE = torch.device("cuda") if torch.cuda.is_available() else torch.device("cp
 
 IMG_SIZE = (224, 224)
 
-CLASSES = sorted(os.listdir(AUDIO_PATH))
-NUM_CLASSES = len(CLASSES)
+NUM_CLASSES = 264
+
+try:
+    CLASSES = sorted(os.listdir(AUDIO_PATH))
+except:
+    AUDIO_PATH = "../input/birdsong-recognition/train_audio/"
+    CLASSES = sorted(os.listdir(AUDIO_PATH))
+

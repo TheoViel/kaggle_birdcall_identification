@@ -1,0 +1,25 @@
+
+-------------   Fold 5 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Downloading: "https://github.com/pytorch/vision/archive/v0.6.0.zip" to /home/theo/.cache/torch/hub/v0.6.0.zip
+    -> 24048968 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=269s  	 loss=0.1175 	 val_loss=0.0252 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=267s  	 loss=0.0323 	 val_loss=0.0229 	 micro_f1=0.021 	 samples_f1=0.010
+Epoch 3/40 	 lr=9.7e-04 	 t=267s  	 loss=0.0303 	 val_loss=0.0215 	 micro_f1=0.046 	 samples_f1=0.024
+Epoch 4/40 	 lr=9.5e-04 	 t=267s  	 loss=0.0280 	 val_loss=0.0210 	 micro_f1=0.111 	 samples_f1=0.062
+Epoch 5/40 	 lr=9.2e-04 	 t=267s  	 loss=0.0253 	 val_loss=0.0179 	 micro_f1=0.203 	 samples_f1=0.120
+Epoch 6/40 	 lr=8.9e-04 	 t=266s  	 loss=0.0247 	 val_loss=0.0151 	 micro_f1=0.287 	 samples_f1=0.177
+Epoch 7/40 	 lr=8.7e-04 	 t=267s  	 loss=0.0220 	 val_loss=0.0172 	 micro_f1=0.262 	 samples_f1=0.165
+Epoch 8/40 	 lr=8.4e-04 	 t=266s  	 loss=0.0221 	 val_loss=0.0147 	 micro_f1=0.375 	 samples_f1=0.253
+Epoch 9/40 	 lr=8.2e-04 	 t=267s  	 loss=0.0209 	 val_loss=0.0142 	 micro_f1=0.395 	 samples_f1=0.265
+Epoch 10/40 	 lr=7.9e-04 	 t=268s  	 loss=0.0197 	 val_loss=0.0141 	 micro_f1=0.464 	 samples_f1=0.360
+Epoch 11/40 	 lr=7.6e-04 	 t=267s  	 loss=0.0199 	 val_loss=0.0131 	 micro_f1=0.488 	 samples_f1=0.368
+Epoch 12/40 	 lr=7.4e-04 	 t=266s  	 loss=0.0185 	 val_loss=0.0133 	 micro_f1=0.484 	 samples_f1=0.369
+Epoch 13/40 	 lr=7.1e-04 	 t=267s  	 loss=0.0179 	 val_loss=0.0120 	 micro_f1=0.564 	 samples_f1=0.470
+Epoch 14/40 	 lr=6.8e-04 	 t=267s  	 loss=0.0186 	 val_loss=0.0122 	 micro_f1=0.582 	 samples_f1=0.482
+Epoch 15/40 	 lr=6.6e-04 	 t=266s  	 loss=0.0156 	 val_loss=0.0145 	 micro_f1=0.485 	 samples_f1=0.395
+Epoch 16/40 	 lr=6.3e-04 	 t=267s  	 loss=0.0165 	 val_loss=0.0127 	 micro_f1=0.570 	 samples_f1=0.489
+Epoch 17/40 	 lr=6.1e-04 	 t=266s  	 loss=0.0156 	 val_loss=0.0147 	 micro_f1=0.522 	 samples_f1=0.483
