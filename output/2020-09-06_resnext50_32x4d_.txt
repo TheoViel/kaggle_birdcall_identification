@@ -1,0 +1,255 @@
+
+-------------   Fold 1 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=272s  	 loss=0.1214 	 val_loss=0.0252 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=271s  	 loss=0.0336 	 val_loss=0.0228 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 3/40 	 lr=9.7e-04 	 t=271s  	 loss=0.0326 	 val_loss=0.0229 	 micro_f1=0.022 	 samples_f1=0.011
+Epoch 4/40 	 lr=9.5e-04 	 t=272s  	 loss=0.0306 	 val_loss=0.0222 	 micro_f1=0.058 	 samples_f1=0.030
+Epoch 5/40 	 lr=9.2e-04 	 t=272s  	 loss=0.0279 	 val_loss=0.0197 	 micro_f1=0.160 	 samples_f1=0.091
+Epoch 6/40 	 lr=8.9e-04 	 t=272s  	 loss=0.0273 	 val_loss=0.0159 	 micro_f1=0.225 	 samples_f1=0.132
+Epoch 7/40 	 lr=8.7e-04 	 t=271s  	 loss=0.0249 	 val_loss=0.0145 	 micro_f1=0.282 	 samples_f1=0.172
+Epoch 8/40 	 lr=8.4e-04 	 t=272s  	 loss=0.0249 	 val_loss=0.0160 	 micro_f1=0.345 	 samples_f1=0.251
+Epoch 9/40 	 lr=8.2e-04 	 t=272s  	 loss=0.0234 	 val_loss=0.0137 	 micro_f1=0.417 	 samples_f1=0.294
+Epoch 10/40 	 lr=7.9e-04 	 t=273s  	 loss=0.0225 	 val_loss=0.0137 	 micro_f1=0.419 	 samples_f1=0.293
+Epoch 11/40 	 lr=7.6e-04 	 t=272s  	 loss=0.0231 	 val_loss=0.0138 	 micro_f1=0.427 	 samples_f1=0.310
+Epoch 12/40 	 lr=7.4e-04 	 t=273s  	 loss=0.0217 	 val_loss=0.0121 	 micro_f1=0.493 	 samples_f1=0.361
+Epoch 13/40 	 lr=7.1e-04 	 t=272s  	 loss=0.0209 	 val_loss=0.0128 	 micro_f1=0.510 	 samples_f1=0.391
+Epoch 14/40 	 lr=6.8e-04 	 t=272s  	 loss=0.0212 	 val_loss=0.0124 	 micro_f1=0.534 	 samples_f1=0.402
+Epoch 15/40 	 lr=6.6e-04 	 t=273s  	 loss=0.0187 	 val_loss=0.0120 	 micro_f1=0.549 	 samples_f1=0.439
+Epoch 16/40 	 lr=6.3e-04 	 t=273s  	 loss=0.0202 	 val_loss=0.0123 	 micro_f1=0.536 	 samples_f1=0.425
+Epoch 17/40 	 lr=6.1e-04 	 t=273s  	 loss=0.0185 	 val_loss=0.0137 	 micro_f1=0.489 	 samples_f1=0.387
+Epoch 18/40 	 lr=5.8e-04 	 t=273s  	 loss=0.0193 	 val_loss=0.0103 	 micro_f1=0.633 	 samples_f1=0.520
+Epoch 19/40 	 lr=5.5e-04 	 t=273s  	 loss=0.0180 	 val_loss=0.0104 	 micro_f1=0.647 	 samples_f1=0.549
+Epoch 20/40 	 lr=5.3e-04 	 t=272s  	 loss=0.0167 	 val_loss=0.0092 	 micro_f1=0.670 	 samples_f1=0.577
+Epoch 21/40 	 lr=5.0e-04 	 t=273s  	 loss=0.0174 	 val_loss=0.0099 	 micro_f1=0.642 	 samples_f1=0.543
+Epoch 22/40 	 lr=4.7e-04 	 t=273s  	 loss=0.0177 	 val_loss=0.0099 	 micro_f1=0.658 	 samples_f1=0.559
+Epoch 23/40 	 lr=4.5e-04 	 t=273s  	 loss=0.0170 	 val_loss=0.0096 	 micro_f1=0.666 	 samples_f1=0.576
+Epoch 24/40 	 lr=4.2e-04 	 t=273s  	 loss=0.0160 	 val_loss=0.0093 	 micro_f1=0.683 	 samples_f1=0.614
+Epoch 25/40 	 lr=3.9e-04 	 t=273s  	 loss=0.0156 	 val_loss=0.0092 	 micro_f1=0.698 	 samples_f1=0.613
+Epoch 26/40 	 lr=3.7e-04 	 t=273s  	 loss=0.0152 	 val_loss=0.0085 	 micro_f1=0.709 	 samples_f1=0.626
+Epoch 27/40 	 lr=3.4e-04 	 t=272s  	 loss=0.0144 	 val_loss=0.0084 	 micro_f1=0.714 	 samples_f1=0.632
+Epoch 28/40 	 lr=3.2e-04 	 t=272s  	 loss=0.0152 	 val_loss=0.0085 	 micro_f1=0.706 	 samples_f1=0.622
+Epoch 29/40 	 lr=2.9e-04 	 t=273s  	 loss=0.0155 	 val_loss=0.0093 	 micro_f1=0.692 	 samples_f1=0.592
+Epoch 30/40 	 lr=2.6e-04 	 t=273s  	 loss=0.0148 	 val_loss=0.0084 	 micro_f1=0.710 	 samples_f1=0.624
+Epoch 31/40 	 lr=2.4e-04 	 t=273s  	 loss=0.0144 	 val_loss=0.0078 	 micro_f1=0.735 	 samples_f1=0.659
+Epoch 32/40 	 lr=2.1e-04 	 t=273s  	 loss=0.0134 	 val_loss=0.0076 	 micro_f1=0.748 	 samples_f1=0.679
+Epoch 33/40 	 lr=1.8e-04 	 t=273s  	 loss=0.0139 	 val_loss=0.0076 	 micro_f1=0.744 	 samples_f1=0.674
+Epoch 34/40 	 lr=1.6e-04 	 t=272s  	 loss=0.0140 	 val_loss=0.0076 	 micro_f1=0.747 	 samples_f1=0.674
+Epoch 35/40 	 lr=1.3e-04 	 t=272s  	 loss=0.0134 	 val_loss=0.0076 	 micro_f1=0.754 	 samples_f1=0.684
+Epoch 36/40 	 lr=1.1e-04 	 t=273s  	 loss=0.0118 	 val_loss=0.0079 	 micro_f1=0.750 	 samples_f1=0.672
+Epoch 37/40 	 lr=7.9e-05 	 t=273s  	 loss=0.0125 	 val_loss=0.0069 	 micro_f1=0.765 	 samples_f1=0.691
+Epoch 38/40 	 lr=5.3e-05 	 t=272s  	 loss=0.0124 	 val_loss=0.0072 	 micro_f1=0.761 	 samples_f1=0.683
+Epoch 39/40 	 lr=2.6e-05 	 t=272s  	 loss=0.0121 	 val_loss=0.0074 	 micro_f1=0.764 	 samples_f1=0.685
+Epoch 40/40 	 lr=0.0e+00 	 t=274s  	 loss=0.0115 	 val_loss=0.0065 	 micro_f1=0.771 	 samples_f1=0.697
+
+ -> Saving weights to ../checkpoints/2020-09-06/resnext50_32x4d__0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=273s  	 loss=0.1215 	 val_loss=0.0250 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=274s  	 loss=0.0324 	 val_loss=0.0211 	 micro_f1=0.019 	 samples_f1=0.008
+Epoch 3/40 	 lr=9.7e-04 	 t=273s  	 loss=0.0308 	 val_loss=0.0191 	 micro_f1=0.056 	 samples_f1=0.027
+Epoch 4/40 	 lr=9.5e-04 	 t=273s  	 loss=0.0289 	 val_loss=0.0184 	 micro_f1=0.125 	 samples_f1=0.066
+Epoch 5/40 	 lr=9.2e-04 	 t=275s  	 loss=0.0264 	 val_loss=0.0161 	 micro_f1=0.277 	 samples_f1=0.174
+Epoch 6/40 	 lr=8.9e-04 	 t=273s  	 loss=0.0257 	 val_loss=0.0154 	 micro_f1=0.338 	 samples_f1=0.228
+Epoch 7/40 	 lr=8.7e-04 	 t=274s  	 loss=0.0236 	 val_loss=0.0159 	 micro_f1=0.229 	 samples_f1=0.133
+Epoch 8/40 	 lr=8.4e-04 	 t=274s  	 loss=0.0238 	 val_loss=0.0131 	 micro_f1=0.400 	 samples_f1=0.268
+Epoch 9/40 	 lr=8.2e-04 	 t=274s  	 loss=0.0226 	 val_loss=0.0126 	 micro_f1=0.479 	 samples_f1=0.353
+Epoch 10/40 	 lr=7.9e-04 	 t=273s  	 loss=0.0215 	 val_loss=0.0120 	 micro_f1=0.526 	 samples_f1=0.399
+Epoch 11/40 	 lr=7.6e-04 	 t=274s  	 loss=0.0218 	 val_loss=0.0137 	 micro_f1=0.460 	 samples_f1=0.334
+Epoch 12/40 	 lr=7.4e-04 	 t=274s  	 loss=0.0210 	 val_loss=0.0115 	 micro_f1=0.554 	 samples_f1=0.447
+Epoch 13/40 	 lr=7.1e-04 	 t=273s  	 loss=0.0202 	 val_loss=0.0123 	 micro_f1=0.494 	 samples_f1=0.368
+Epoch 14/40 	 lr=6.8e-04 	 t=274s  	 loss=0.0205 	 val_loss=0.0109 	 micro_f1=0.603 	 samples_f1=0.474
+Epoch 15/40 	 lr=6.6e-04 	 t=274s  	 loss=0.0180 	 val_loss=0.0120 	 micro_f1=0.560 	 samples_f1=0.452
+Epoch 16/40 	 lr=6.3e-04 	 t=274s  	 loss=0.0192 	 val_loss=0.0109 	 micro_f1=0.589 	 samples_f1=0.482
+Epoch 17/40 	 lr=6.1e-04 	 t=274s  	 loss=0.0180 	 val_loss=0.0104 	 micro_f1=0.632 	 samples_f1=0.533
+Epoch 18/40 	 lr=5.8e-04 	 t=274s  	 loss=0.0188 	 val_loss=0.0098 	 micro_f1=0.632 	 samples_f1=0.516
+Epoch 19/40 	 lr=5.5e-04 	 t=274s  	 loss=0.0173 	 val_loss=0.0094 	 micro_f1=0.669 	 samples_f1=0.572
+Epoch 20/40 	 lr=5.3e-04 	 t=274s  	 loss=0.0165 	 val_loss=0.0086 	 micro_f1=0.680 	 samples_f1=0.583
+Epoch 21/40 	 lr=5.0e-04 	 t=273s  	 loss=0.0170 	 val_loss=0.0089 	 micro_f1=0.702 	 samples_f1=0.630
+Epoch 22/40 	 lr=4.7e-04 	 t=274s  	 loss=0.0173 	 val_loss=0.0092 	 micro_f1=0.673 	 samples_f1=0.599
+Epoch 23/40 	 lr=4.5e-04 	 t=274s  	 loss=0.0164 	 val_loss=0.0086 	 micro_f1=0.678 	 samples_f1=0.583
+Epoch 24/40 	 lr=4.2e-04 	 t=274s  	 loss=0.0157 	 val_loss=0.0088 	 micro_f1=0.713 	 samples_f1=0.640
+Epoch 25/40 	 lr=3.9e-04 	 t=274s  	 loss=0.0153 	 val_loss=0.0093 	 micro_f1=0.684 	 samples_f1=0.603
+Epoch 26/40 	 lr=3.7e-04 	 t=273s  	 loss=0.0149 	 val_loss=0.0100 	 micro_f1=0.650 	 samples_f1=0.576
+Epoch 27/40 	 lr=3.4e-04 	 t=274s  	 loss=0.0141 	 val_loss=0.0075 	 micro_f1=0.733 	 samples_f1=0.654
+Epoch 28/40 	 lr=3.2e-04 	 t=273s  	 loss=0.0148 	 val_loss=0.0076 	 micro_f1=0.731 	 samples_f1=0.652
+Epoch 29/40 	 lr=2.9e-04 	 t=275s  	 loss=0.0152 	 val_loss=0.0088 	 micro_f1=0.697 	 samples_f1=0.618
+Epoch 30/40 	 lr=2.6e-04 	 t=274s  	 loss=0.0143 	 val_loss=0.0076 	 micro_f1=0.743 	 samples_f1=0.676
+Epoch 31/40 	 lr=2.4e-04 	 t=274s  	 loss=0.0141 	 val_loss=0.0073 	 micro_f1=0.754 	 samples_f1=0.684
+Epoch 32/40 	 lr=2.1e-04 	 t=274s  	 loss=0.0131 	 val_loss=0.0069 	 micro_f1=0.757 	 samples_f1=0.684
+Epoch 33/40 	 lr=1.8e-04 	 t=274s  	 loss=0.0138 	 val_loss=0.0070 	 micro_f1=0.760 	 samples_f1=0.683
+Epoch 34/40 	 lr=1.6e-04 	 t=274s  	 loss=0.0136 	 val_loss=0.0070 	 micro_f1=0.759 	 samples_f1=0.686
+Epoch 35/40 	 lr=1.3e-04 	 t=273s  	 loss=0.0132 	 val_loss=0.0071 	 micro_f1=0.764 	 samples_f1=0.691
+Epoch 36/40 	 lr=1.1e-04 	 t=275s  	 loss=0.0115 	 val_loss=0.0072 	 micro_f1=0.764 	 samples_f1=0.697
+Epoch 37/40 	 lr=7.9e-05 	 t=274s  	 loss=0.0123 	 val_loss=0.0065 	 micro_f1=0.777 	 samples_f1=0.708
+Epoch 38/40 	 lr=5.3e-05 	 t=274s  	 loss=0.0122 	 val_loss=0.0069 	 micro_f1=0.772 	 samples_f1=0.704
+Epoch 39/40 	 lr=2.6e-05 	 t=274s  	 loss=0.0119 	 val_loss=0.0069 	 micro_f1=0.774 	 samples_f1=0.707
+Epoch 40/40 	 lr=0.0e+00 	 t=281s  	 loss=0.0112 	 val_loss=0.0061 	 micro_f1=0.785 	 samples_f1=0.717
+
+ -> Saving weights to ../checkpoints/2020-09-06/resnext50_32x4d__1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=275s  	 loss=0.1213 	 val_loss=0.0250 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=275s  	 loss=0.0326 	 val_loss=0.0222 	 micro_f1=0.026 	 samples_f1=0.012
+Epoch 3/40 	 lr=9.7e-04 	 t=274s  	 loss=0.0309 	 val_loss=0.0250 	 micro_f1=0.034 	 samples_f1=0.019
+Epoch 4/40 	 lr=9.5e-04 	 t=274s  	 loss=0.0291 	 val_loss=0.0176 	 micro_f1=0.170 	 samples_f1=0.096
+Epoch 5/40 	 lr=9.2e-04 	 t=275s  	 loss=0.0265 	 val_loss=0.0167 	 micro_f1=0.240 	 samples_f1=0.145
+Epoch 6/40 	 lr=8.9e-04 	 t=274s  	 loss=0.0260 	 val_loss=0.0213 	 micro_f1=0.112 	 samples_f1=0.062
+Epoch 7/40 	 lr=8.7e-04 	 t=274s  	 loss=0.0239 	 val_loss=0.0171 	 micro_f1=0.218 	 samples_f1=0.138
+Epoch 8/40 	 lr=8.4e-04 	 t=274s  	 loss=0.0239 	 val_loss=0.0151 	 micro_f1=0.327 	 samples_f1=0.218
+Epoch 9/40 	 lr=8.2e-04 	 t=274s  	 loss=0.0225 	 val_loss=0.0131 	 micro_f1=0.426 	 samples_f1=0.295
+Epoch 10/40 	 lr=7.9e-04 	 t=275s  	 loss=0.0217 	 val_loss=0.0132 	 micro_f1=0.456 	 samples_f1=0.321
+Epoch 11/40 	 lr=7.6e-04 	 t=274s  	 loss=0.0222 	 val_loss=0.0128 	 micro_f1=0.492 	 samples_f1=0.364
+Epoch 12/40 	 lr=7.4e-04 	 t=274s  	 loss=0.0211 	 val_loss=0.0118 	 micro_f1=0.559 	 samples_f1=0.439
+Epoch 13/40 	 lr=7.1e-04 	 t=274s  	 loss=0.0204 	 val_loss=0.0127 	 micro_f1=0.469 	 samples_f1=0.337
+Epoch 14/40 	 lr=6.8e-04 	 t=275s  	 loss=0.0207 	 val_loss=0.0123 	 micro_f1=0.573 	 samples_f1=0.454
+Epoch 15/40 	 lr=6.6e-04 	 t=275s  	 loss=0.0180 	 val_loss=0.0110 	 micro_f1=0.613 	 samples_f1=0.502
+Epoch 16/40 	 lr=6.3e-04 	 t=275s  	 loss=0.0191 	 val_loss=0.0118 	 micro_f1=0.578 	 samples_f1=0.487
+Epoch 17/40 	 lr=6.1e-04 	 t=274s  	 loss=0.0177 	 val_loss=0.0110 	 micro_f1=0.628 	 samples_f1=0.533
+Epoch 18/40 	 lr=5.8e-04 	 t=274s  	 loss=0.0188 	 val_loss=0.0105 	 micro_f1=0.634 	 samples_f1=0.545
+Epoch 19/40 	 lr=5.5e-04 	 t=275s  	 loss=0.0174 	 val_loss=0.0100 	 micro_f1=0.667 	 samples_f1=0.579
+Epoch 20/40 	 lr=5.3e-04 	 t=274s  	 loss=0.0164 	 val_loss=0.0091 	 micro_f1=0.668 	 samples_f1=0.563
+Epoch 21/40 	 lr=5.0e-04 	 t=274s  	 loss=0.0172 	 val_loss=0.0095 	 micro_f1=0.677 	 samples_f1=0.582
+Epoch 22/40 	 lr=4.7e-04 	 t=275s  	 loss=0.0173 	 val_loss=0.0097 	 micro_f1=0.654 	 samples_f1=0.569
+Epoch 23/40 	 lr=4.5e-04 	 t=275s  	 loss=0.0166 	 val_loss=0.0089 	 micro_f1=0.685 	 samples_f1=0.597
+Epoch 24/40 	 lr=4.2e-04 	 t=275s  	 loss=0.0156 	 val_loss=0.0087 	 micro_f1=0.704 	 samples_f1=0.632
+Epoch 25/40 	 lr=3.9e-04 	 t=275s  	 loss=0.0153 	 val_loss=0.0091 	 micro_f1=0.713 	 samples_f1=0.637
+Epoch 26/40 	 lr=3.7e-04 	 t=275s  	 loss=0.0148 	 val_loss=0.0088 	 micro_f1=0.709 	 samples_f1=0.639
+Epoch 27/40 	 lr=3.4e-04 	 t=278s  	 loss=0.0141 	 val_loss=0.0084 	 micro_f1=0.720 	 samples_f1=0.640
+Epoch 28/40 	 lr=3.2e-04 	 t=285s  	 loss=0.0148 	 val_loss=0.0081 	 micro_f1=0.723 	 samples_f1=0.649
+Epoch 29/40 	 lr=2.9e-04 	 t=283s  	 loss=0.0152 	 val_loss=0.0083 	 micro_f1=0.728 	 samples_f1=0.642
+Epoch 30/40 	 lr=2.6e-04 	 t=275s  	 loss=0.0144 	 val_loss=0.0078 	 micro_f1=0.745 	 samples_f1=0.672
+Epoch 31/40 	 lr=2.4e-04 	 t=275s  	 loss=0.0140 	 val_loss=0.0080 	 micro_f1=0.734 	 samples_f1=0.654
+Epoch 32/40 	 lr=2.1e-04 	 t=275s  	 loss=0.0131 	 val_loss=0.0075 	 micro_f1=0.749 	 samples_f1=0.675
+Epoch 33/40 	 lr=1.8e-04 	 t=274s  	 loss=0.0136 	 val_loss=0.0078 	 micro_f1=0.741 	 samples_f1=0.676
+Epoch 34/40 	 lr=1.6e-04 	 t=274s  	 loss=0.0137 	 val_loss=0.0074 	 micro_f1=0.752 	 samples_f1=0.676
+Epoch 35/40 	 lr=1.3e-04 	 t=274s  	 loss=0.0131 	 val_loss=0.0074 	 micro_f1=0.759 	 samples_f1=0.683
+Epoch 36/40 	 lr=1.1e-04 	 t=275s  	 loss=0.0115 	 val_loss=0.0077 	 micro_f1=0.754 	 samples_f1=0.677
+Epoch 37/40 	 lr=7.9e-05 	 t=274s  	 loss=0.0123 	 val_loss=0.0070 	 micro_f1=0.762 	 samples_f1=0.689
+Epoch 38/40 	 lr=5.3e-05 	 t=274s  	 loss=0.0123 	 val_loss=0.0072 	 micro_f1=0.760 	 samples_f1=0.688
+Epoch 39/40 	 lr=2.6e-05 	 t=275s  	 loss=0.0119 	 val_loss=0.0073 	 micro_f1=0.764 	 samples_f1=0.696
+Epoch 40/40 	 lr=0.0e+00 	 t=275s  	 loss=0.0114 	 val_loss=0.0067 	 micro_f1=0.768 	 samples_f1=0.695
+
+ -> Saving weights to ../checkpoints/2020-09-06/resnext50_32x4d__2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=273s  	 loss=0.1214 	 val_loss=0.0252 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=275s  	 loss=0.0326 	 val_loss=0.0217 	 micro_f1=0.024 	 samples_f1=0.011
+Epoch 3/40 	 lr=9.7e-04 	 t=279s  	 loss=0.0310 	 val_loss=0.0186 	 micro_f1=0.052 	 samples_f1=0.027
+Epoch 4/40 	 lr=9.5e-04 	 t=275s  	 loss=0.0291 	 val_loss=0.0174 	 micro_f1=0.187 	 samples_f1=0.102
+Epoch 5/40 	 lr=9.2e-04 	 t=275s  	 loss=0.0264 	 val_loss=0.0163 	 micro_f1=0.261 	 samples_f1=0.162
+Epoch 6/40 	 lr=8.9e-04 	 t=274s  	 loss=0.0256 	 val_loss=0.0146 	 micro_f1=0.288 	 samples_f1=0.178
+Epoch 7/40 	 lr=8.7e-04 	 t=275s  	 loss=0.0236 	 val_loss=0.0145 	 micro_f1=0.323 	 samples_f1=0.203
+Epoch 8/40 	 lr=8.4e-04 	 t=274s  	 loss=0.0239 	 val_loss=0.0138 	 micro_f1=0.381 	 samples_f1=0.254
+Epoch 9/40 	 lr=8.2e-04 	 t=276s  	 loss=0.0226 	 val_loss=0.0128 	 micro_f1=0.501 	 samples_f1=0.380
+Epoch 10/40 	 lr=7.9e-04 	 t=275s  	 loss=0.0217 	 val_loss=0.0125 	 micro_f1=0.482 	 samples_f1=0.361
+Epoch 11/40 	 lr=7.6e-04 	 t=275s  	 loss=0.0225 	 val_loss=0.0141 	 micro_f1=0.425 	 samples_f1=0.297
+Epoch 12/40 	 lr=7.4e-04 	 t=274s  	 loss=0.0210 	 val_loss=0.0135 	 micro_f1=0.448 	 samples_f1=0.319
+Epoch 13/40 	 lr=7.1e-04 	 t=274s  	 loss=0.0204 	 val_loss=0.0131 	 micro_f1=0.521 	 samples_f1=0.415
+Epoch 14/40 	 lr=6.8e-04 	 t=275s  	 loss=0.0205 	 val_loss=0.0122 	 micro_f1=0.603 	 samples_f1=0.506
+Epoch 15/40 	 lr=6.6e-04 	 t=276s  	 loss=0.0181 	 val_loss=0.0133 	 micro_f1=0.501 	 samples_f1=0.380
+Epoch 16/40 	 lr=6.3e-04 	 t=275s  	 loss=0.0190 	 val_loss=0.0126 	 micro_f1=0.532 	 samples_f1=0.427
+Epoch 17/40 	 lr=6.1e-04 	 t=274s  	 loss=0.0177 	 val_loss=0.0108 	 micro_f1=0.625 	 samples_f1=0.529
+Epoch 18/40 	 lr=5.8e-04 	 t=274s  	 loss=0.0189 	 val_loss=0.0102 	 micro_f1=0.633 	 samples_f1=0.514
+Epoch 19/40 	 lr=5.5e-04 	 t=275s  	 loss=0.0180 	 val_loss=0.0123 	 micro_f1=0.577 	 samples_f1=0.493
+Epoch 20/40 	 lr=5.3e-04 	 t=275s  	 loss=0.0167 	 val_loss=0.0091 	 micro_f1=0.671 	 samples_f1=0.579
+Epoch 21/40 	 lr=5.0e-04 	 t=275s  	 loss=0.0170 	 val_loss=0.0092 	 micro_f1=0.678 	 samples_f1=0.595
+Epoch 22/40 	 lr=4.7e-04 	 t=279s  	 loss=0.0172 	 val_loss=0.0102 	 micro_f1=0.644 	 samples_f1=0.560
+Epoch 23/40 	 lr=4.5e-04 	 t=276s  	 loss=0.0168 	 val_loss=0.0092 	 micro_f1=0.676 	 samples_f1=0.579
+Epoch 24/40 	 lr=4.2e-04 	 t=281s  	 loss=0.0157 	 val_loss=0.0088 	 micro_f1=0.694 	 samples_f1=0.618
+Epoch 25/40 	 lr=3.9e-04 	 t=275s  	 loss=0.0154 	 val_loss=0.0094 	 micro_f1=0.685 	 samples_f1=0.612
+Epoch 26/40 	 lr=3.7e-04 	 t=274s  	 loss=0.0148 	 val_loss=0.0082 	 micro_f1=0.720 	 samples_f1=0.639
+Epoch 27/40 	 lr=3.4e-04 	 t=275s  	 loss=0.0140 	 val_loss=0.0081 	 micro_f1=0.722 	 samples_f1=0.646
+Epoch 28/40 	 lr=3.2e-04 	 t=276s  	 loss=0.0148 	 val_loss=0.0079 	 micro_f1=0.730 	 samples_f1=0.656
+Epoch 29/40 	 lr=2.9e-04 	 t=275s  	 loss=0.0153 	 val_loss=0.0079 	 micro_f1=0.731 	 samples_f1=0.651
+Epoch 30/40 	 lr=2.6e-04 	 t=275s  	 loss=0.0143 	 val_loss=0.0079 	 micro_f1=0.734 	 samples_f1=0.662
+Epoch 31/40 	 lr=2.4e-04 	 t=275s  	 loss=0.0139 	 val_loss=0.0076 	 micro_f1=0.745 	 samples_f1=0.674
+Epoch 32/40 	 lr=2.1e-04 	 t=275s  	 loss=0.0131 	 val_loss=0.0075 	 micro_f1=0.746 	 samples_f1=0.673
+Epoch 33/40 	 lr=1.8e-04 	 t=274s  	 loss=0.0136 	 val_loss=0.0073 	 micro_f1=0.749 	 samples_f1=0.674
+Epoch 34/40 	 lr=1.6e-04 	 t=274s  	 loss=0.0136 	 val_loss=0.0073 	 micro_f1=0.751 	 samples_f1=0.679
+Epoch 35/40 	 lr=1.3e-04 	 t=275s  	 loss=0.0132 	 val_loss=0.0074 	 micro_f1=0.753 	 samples_f1=0.679
+Epoch 36/40 	 lr=1.1e-04 	 t=276s  	 loss=0.0116 	 val_loss=0.0075 	 micro_f1=0.756 	 samples_f1=0.683
+Epoch 37/40 	 lr=7.9e-05 	 t=275s  	 loss=0.0123 	 val_loss=0.0070 	 micro_f1=0.761 	 samples_f1=0.693
+Epoch 38/40 	 lr=5.3e-05 	 t=275s  	 loss=0.0124 	 val_loss=0.0071 	 micro_f1=0.762 	 samples_f1=0.693
+Epoch 39/40 	 lr=2.6e-05 	 t=275s  	 loss=0.0118 	 val_loss=0.0071 	 micro_f1=0.760 	 samples_f1=0.686
+Epoch 40/40 	 lr=0.0e+00 	 t=276s  	 loss=0.0114 	 val_loss=0.0066 	 micro_f1=0.773 	 samples_f1=0.701
+
+ -> Saving weights to ../checkpoints/2020-09-06/resnext50_32x4d__3.pt
+
+
+-------------   Fold 5 / 5  -------------
+
+    -> 17100 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/40 	 lr=5.0e-04 	 t=276s  	 loss=0.1214 	 val_loss=0.0254 	 micro_f1=0.000 	 samples_f1=0.000
+Epoch 2/40 	 lr=1.0e-03 	 t=277s  	 loss=0.0326 	 val_loss=0.0238 	 micro_f1=0.024 	 samples_f1=0.011
+Epoch 3/40 	 lr=9.7e-04 	 t=276s  	 loss=0.0310 	 val_loss=0.0196 	 micro_f1=0.070 	 samples_f1=0.036
+Epoch 4/40 	 lr=9.5e-04 	 t=276s  	 loss=0.0291 	 val_loss=0.0184 	 micro_f1=0.121 	 samples_f1=0.064
+Epoch 5/40 	 lr=9.2e-04 	 t=277s  	 loss=0.0265 	 val_loss=0.0177 	 micro_f1=0.215 	 samples_f1=0.129
+Epoch 6/40 	 lr=8.9e-04 	 t=276s  	 loss=0.0259 	 val_loss=0.0163 	 micro_f1=0.265 	 samples_f1=0.165
+Epoch 7/40 	 lr=8.7e-04 	 t=275s  	 loss=0.0235 	 val_loss=0.0148 	 micro_f1=0.307 	 samples_f1=0.192
+Epoch 8/40 	 lr=8.4e-04 	 t=276s  	 loss=0.0237 	 val_loss=0.0148 	 micro_f1=0.368 	 samples_f1=0.247
+Epoch 9/40 	 lr=8.2e-04 	 t=276s  	 loss=0.0227 	 val_loss=0.0155 	 micro_f1=0.349 	 samples_f1=0.237
+Epoch 10/40 	 lr=7.9e-04 	 t=276s  	 loss=0.0214 	 val_loss=0.0137 	 micro_f1=0.448 	 samples_f1=0.320
+Epoch 11/40 	 lr=7.6e-04 	 t=276s  	 loss=0.0221 	 val_loss=0.0129 	 micro_f1=0.487 	 samples_f1=0.365
+Epoch 12/40 	 lr=7.4e-04 	 t=276s  	 loss=0.0210 	 val_loss=0.0111 	 micro_f1=0.529 	 samples_f1=0.395
+Epoch 13/40 	 lr=7.1e-04 	 t=275s  	 loss=0.0202 	 val_loss=0.0149 	 micro_f1=0.389 	 samples_f1=0.267
+Epoch 14/40 	 lr=6.8e-04 	 t=276s  	 loss=0.0206 	 val_loss=0.0133 	 micro_f1=0.525 	 samples_f1=0.408
+Epoch 15/40 	 lr=6.6e-04 	 t=277s  	 loss=0.0181 	 val_loss=0.0116 	 micro_f1=0.562 	 samples_f1=0.451
+Epoch 16/40 	 lr=6.3e-04 	 t=277s  	 loss=0.0189 	 val_loss=0.0119 	 micro_f1=0.576 	 samples_f1=0.481
+Epoch 17/40 	 lr=6.1e-04 	 t=276s  	 loss=0.0178 	 val_loss=0.0110 	 micro_f1=0.609 	 samples_f1=0.509
+Epoch 18/40 	 lr=5.8e-04 	 t=276s  	 loss=0.0187 	 val_loss=0.0104 	 micro_f1=0.630 	 samples_f1=0.534
+Epoch 19/40 	 lr=5.5e-04 	 t=276s  	 loss=0.0173 	 val_loss=0.0100 	 micro_f1=0.636 	 samples_f1=0.540
+Epoch 20/40 	 lr=5.3e-04 	 t=276s  	 loss=0.0165 	 val_loss=0.0102 	 micro_f1=0.640 	 samples_f1=0.545
+Epoch 21/40 	 lr=5.0e-04 	 t=277s  	 loss=0.0170 	 val_loss=0.0096 	 micro_f1=0.658 	 samples_f1=0.561
+Epoch 22/40 	 lr=4.7e-04 	 t=276s  	 loss=0.0174 	 val_loss=0.0095 	 micro_f1=0.667 	 samples_f1=0.581
+Epoch 23/40 	 lr=4.5e-04 	 t=277s  	 loss=0.0166 	 val_loss=0.0089 	 micro_f1=0.679 	 samples_f1=0.588
+Epoch 24/40 	 lr=4.2e-04 	 t=276s  	 loss=0.0159 	 val_loss=0.0093 	 micro_f1=0.674 	 samples_f1=0.595
+Epoch 25/40 	 lr=3.9e-04 	 t=276s  	 loss=0.0154 	 val_loss=0.0089 	 micro_f1=0.693 	 samples_f1=0.617
+Epoch 26/40 	 lr=3.7e-04 	 t=276s  	 loss=0.0147 	 val_loss=0.0092 	 micro_f1=0.673 	 samples_f1=0.583
+Epoch 27/40 	 lr=3.4e-04 	 t=277s  	 loss=0.0142 	 val_loss=0.0084 	 micro_f1=0.711 	 samples_f1=0.632
+Epoch 28/40 	 lr=3.2e-04 	 t=276s  	 loss=0.0148 	 val_loss=0.0081 	 micro_f1=0.715 	 samples_f1=0.625
+Epoch 29/40 	 lr=2.9e-04 	 t=276s  	 loss=0.0150 	 val_loss=0.0083 	 micro_f1=0.710 	 samples_f1=0.621
+Epoch 30/40 	 lr=2.6e-04 	 t=276s  	 loss=0.0144 	 val_loss=0.0085 	 micro_f1=0.701 	 samples_f1=0.607
+Epoch 31/40 	 lr=2.4e-04 	 t=277s  	 loss=0.0142 	 val_loss=0.0079 	 micro_f1=0.730 	 samples_f1=0.650
+Epoch 32/40 	 lr=2.1e-04 	 t=276s  	 loss=0.0132 	 val_loss=0.0077 	 micro_f1=0.740 	 samples_f1=0.664
+Epoch 33/40 	 lr=1.8e-04 	 t=276s  	 loss=0.0137 	 val_loss=0.0076 	 micro_f1=0.745 	 samples_f1=0.668
+Epoch 34/40 	 lr=1.6e-04 	 t=276s  	 loss=0.0136 	 val_loss=0.0075 	 micro_f1=0.743 	 samples_f1=0.661
+Epoch 35/40 	 lr=1.3e-04 	 t=276s  	 loss=0.0130 	 val_loss=0.0076 	 micro_f1=0.744 	 samples_f1=0.663
+Epoch 36/40 	 lr=1.1e-04 	 t=276s  	 loss=0.0116 	 val_loss=0.0075 	 micro_f1=0.750 	 samples_f1=0.671
+Epoch 37/40 	 lr=7.9e-05 	 t=276s  	 loss=0.0123 	 val_loss=0.0071 	 micro_f1=0.755 	 samples_f1=0.675
+Epoch 38/40 	 lr=5.3e-05 	 t=276s  	 loss=0.0123 	 val_loss=0.0074 	 micro_f1=0.749 	 samples_f1=0.664
+Epoch 39/40 	 lr=2.6e-05 	 t=276s  	 loss=0.0118 	 val_loss=0.0072 	 micro_f1=0.756 	 samples_f1=0.679
+Epoch 40/40 	 lr=0.0e+00 	 t=277s  	 loss=0.0113 	 val_loss=0.0068 	 micro_f1=0.765 	 samples_f1=0.683
+
+ -> Saving weights to ../checkpoints/2020-09-06/resnext50_32x4d__4.pt
+

@@ -27,10 +27,9 @@ def compute_melspec(y, params):
 
 
 class BirdDataset(Dataset):
-    def __init__(self, df, params, audio_path="", train=True, use_conf=False):
+    def __init__(self, df, params, train=True, use_conf=False):
         self.train = train
         self.params = params
-        self.audio_path = audio_path
 
         self.wav_transfos = get_wav_transforms() if train else None
         # self.wav_transfos = AudioAugmentation(p_effects=0.5, p_noise=0.5) if train else None
@@ -51,7 +50,7 @@ class BirdDataset(Dataset):
         return len(self.paths)
 
     def __getitem__(self, idx: int):
-        y, sr = soundfile.read(self.audio_path + self.paths[idx])
+        y, sr = soundfile.read(self.paths[idx])
 
         if self.use_conf:
             confs = self.confidences[self.paths[idx]][:, self.y[idx]]

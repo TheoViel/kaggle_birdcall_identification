@@ -55,9 +55,9 @@ def train(config, df_train, df_val, fold):
     model.zero_grad()
 
     train_dataset = BirdDataset(
-        df_train, AudioParams, audio_path=AUDIO_PATH, use_conf=config.use_conf
+        df_train, AudioParams, use_conf=config.use_conf
     )
-    val_dataset = BirdDataset(df_val, AudioParams, audio_path=AUDIO_PATH, train=False)
+    val_dataset = BirdDataset(df_val, AudioParams, train=False)
 
     n_parameters = count_parameters(model)
     print(f"    -> {n_parameters} trainable parameters\n")
@@ -88,7 +88,7 @@ def train(config, df_train, df_val, fold):
     return pred_val
 
 
-def k_fold(config, df):
+def k_fold(config, df, df_extra=None):
 
     skf = StratifiedKFold(n_splits=config.k, random_state=config.random_state)
     splits = list(skf.split(X=df, y=df["ebird_code"]))
@@ -101,6 +101,9 @@ def k_fold(config, df):
 
             df_train = df.iloc[train_idx].copy()
             df_val = df.iloc[val_idx].copy()
+
+            if df_extra is not None:
+                df_train = pd.concat((df_train, df_extra), 0).reset_index(drop=True)
 
             pred_val = train(config, df_train, df_val, i)
             pred_oof[val_idx] = pred_val
@@ -141,16 +144,17 @@ class Config:
     # Model
     # selected_model = "resnest50_fast_1s1x64d"
     # selected_model = "resnext101_32x8d_wsl"
-    selected_model = 'se_resnext50_32x4d'
-    # selected_model = 'resnext50_32x4d'
-    # selected_model = 'resnet50'
+    # selected_model = 'se_resnext50_32x4d'
+    selected_model = 'resnext50_32x4d'
+    # selected_model = 'resnest50'
     
     use_msd = False
-    use_conf = True
-    
+    use_conf = False
+    use_extra = True
 
+    # Training
     batch_size = 64
-    epochs = 40
+    epochs = 30
     lr = 1e-3
     warmup_prop = 0.05
     val_bs = 64
@@ -169,20 +173,33 @@ class Config:
     mixup_proba = 0.5
     alpha = 5
 
-    name = "conf"
+    name = "extra"
 
 
 if __name__ == "__main__":
+
     # Data
 
     df_train = pd.read_csv(DATA_PATH + "train.csv")
 
     paths = []
     for c, file in df_train[["ebird_code", "filename"]].values:
-        path = f"{c}/{file[:-4]}.wav"
+        path = f"{AUDIO_PATH}{c}/{file[:-4]}.wav"
         paths.append(path)
-
     df_train["file_path"] = paths
+
+    # Extra Data
+    
+    df_extra = pd.read_csv(DATA_PATH + "train_extended.csv")
+
+    paths = []
+    for c, file in df_extra[["ebird_code", "filename"]].values:
+        path = f"{EXTRA_AUDIO_PATH}{c}/{file[:-4]}.wav"
+        paths.append(path)
+    df_extra["file_path"] = paths
+
+    if not Config.use_extra:
+        df_extra = None
 
     # Checkpoints folder
 
@@ -198,4 +215,4 @@ if __name__ == "__main__":
 
     # Training
 
-    pred_oof = k_fold(Config, df_train)
+    pred_oof = k_fold(Config, df_train, df_extra=df_extra)

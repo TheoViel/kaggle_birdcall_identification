@@ -11,6 +11,7 @@ SEED = 2020
 
 DATA_PATH = "../input/"
 AUDIO_PATH = "../../../data/audio/"
+EXTRA_AUDIO_PATH = "../../../data/extra_audios/"
 
 BACKGROUND_PATH = "../../../data/backgrounds/"
 
@@ -26,9 +27,12 @@ IMG_SIZE = (224, 224)
 
 NUM_CLASSES = 264
 
-try:
-    CLASSES = sorted(os.listdir(AUDIO_PATH))
-except:
-    AUDIO_PATH = "../input/birdsong-recognition/train_audio/"
-    CLASSES = sorted(os.listdir(AUDIO_PATH))
+
+CLASSES = sorted(os.listdir(AUDIO_PATH))
+
+# try:
+#     CLASSES = sorted(os.listdir(AUDIO_PATH))
+# except:
+#     AUDIO_PATH = "../input/birdsong-recognition/train_audio/"
+#     CLASSES = sorted(os.listdir(AUDIO_PATH))
 

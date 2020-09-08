@@ -16,7 +16,7 @@ def get_model(name, use_msd=False, num_classes=1):
     if use_msd:
         if "resnest" in name:
             model = getattr(msd_resnest, name)(pretrained=True)
-        elif "resnext" in name:
+        elif "wsl" in name:
             model = getattr(msd_resnext, name)()
         else:
             raise NotImplementedError
@@ -36,10 +36,14 @@ def get_model(name, use_msd=False, num_classes=1):
         else:
             raise NotImplementedError
 
-    if "efficientnet" not in name:
+    if "efficientnet" not in name and "se" not in name:
         nb_ft = model.fc.in_features
         del model.fc
         model.fc = nn.Linear(nb_ft, num_classes)
+    elif "se" in name:
+        nb_ft = model.last_linear.in_features
+        del model.last_linear
+        model.last_linear = nn.Linear(nb_ft, num_classes)
     else:
         nb_ft = model._fc.in_features
         del model._fc
