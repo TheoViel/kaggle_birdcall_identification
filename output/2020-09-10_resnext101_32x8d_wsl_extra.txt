@@ -1,0 +1,158 @@
+-------------   Fold 1 / 5  -------------
+
+    -> 40479 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/facebookresearch_WSL-Images_master
+    -> 87283272 trainable parameters
+
+Epoch 1/30 	 lr=3.3e-04 	 t=1035s  	 loss=0.0607 	 
+Epoch 2/30 	 lr=4.9e-04 	 t=1016s  	 loss=0.0259 	 
+Epoch 3/30 	 lr=4.7e-04 	 t=1038s  	 loss=0.0222 	 
+Epoch 4/30 	 lr=4.6e-04 	 t=991s  	 loss=0.0207 	 
+Epoch 5/30 	 lr=4.4e-04 	 t=1054s  	 loss=0.0197 	 
+Epoch 6/30 	 lr=4.2e-04 	 t=1009s  	 loss=0.0192 	 
+Epoch 7/30 	 lr=4.0e-04 	 t=1039s  	 loss=0.0179 	 
+Epoch 8/30 	 lr=3.9e-04 	 t=1056s  	 loss=0.0174 	 
+Epoch 9/30 	 lr=3.7e-04 	 t=1048s  	 loss=0.0171 	 
+Epoch 10/30 	 lr=3.5e-04 	 t=1027s  	 loss=0.0164 	 
+Epoch 11/30 	 lr=3.3e-04 	 t=1012s  	 loss=0.0156 	 
+Epoch 12/30 	 lr=3.2e-04 	 t=1015s  	 loss=0.0153 	 
+Epoch 13/30 	 lr=3.0e-04 	 t=994s  	 loss=0.0144 	 
+Epoch 14/30 	 lr=2.8e-04 	 t=1002s  	 loss=0.0141 	 
+Epoch 15/30 	 lr=2.6e-04 	 t=1063s  	 loss=0.0138 	 
+Epoch 16/30 	 lr=2.5e-04 	 t=1053s  	 loss=0.0138 	 
+Epoch 17/30 	 lr=2.3e-04 	 t=1048s  	 loss=0.0132 	 
+Epoch 18/30 	 lr=2.1e-04 	 t=1025s  	 loss=0.0135 	 
+Epoch 19/30 	 lr=1.9e-04 	 t=1016s  	 loss=0.0127 	 
+Epoch 20/30 	 lr=1.8e-04 	 t=1019s  	 loss=0.0122 	 
+Epoch 21/30 	 lr=1.6e-04 	 t=1061s  	 loss=0.0120 	 
+Epoch 22/30 	 lr=1.4e-04 	 t=1011s  	 loss=0.0117 	 
+Epoch 23/30 	 lr=1.2e-04 	 t=1058s  	 loss=0.0117 	 
+Epoch 24/30 	 lr=1.1e-04 	 t=1018s  	 loss=0.0111 	 
+Epoch 25/30 	 lr=8.8e-05 	 t=1074s  	 loss=0.0111 	 
+Epoch 26/30 	 lr=7.0e-05 	 t=1154s  	 loss=0.0110 	 val_loss=0.0060 	 micro_f1=0.792 	 samples_f1=0.757
+Epoch 27/30 	 lr=5.3e-05 	 t=1108s  	 loss=0.0110 	 val_loss=0.0058 	 micro_f1=0.800 	 samples_f1=0.766
+Epoch 28/30 	 lr=3.5e-05 	 t=1099s  	 loss=0.0109 	 val_loss=0.0057 	 micro_f1=0.800 	 samples_f1=0.762
+Epoch 29/30 	 lr=1.8e-05 	 t=1149s  	 loss=0.0107 	 val_loss=0.0057 	 micro_f1=0.803 	 samples_f1=0.768
+Epoch 30/30 	 lr=0.0e+00 	 t=1126s  	 loss=0.0107 	 val_loss=0.0057 	 micro_f1=0.803 	 samples_f1=0.771
+
+ -> Saving weights to ../checkpoints/2020-09-10/resnext101_32x8d_wsl_extra_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+    -> 40479 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/facebookresearch_WSL-Images_master
+    -> 87283272 trainable parameters
+
+Epoch 1/30 	 lr=3.3e-04 	 t=944s  	 loss=0.0604 	 
+Epoch 2/30 	 lr=4.9e-04 	 t=971s  	 loss=0.0259 	 
+Epoch 3/30 	 lr=4.7e-04 	 t=966s  	 loss=0.0222 	 
+Epoch 4/30 	 lr=4.6e-04 	 t=915s  	 loss=0.0206 	 
+Epoch 5/30 	 lr=4.4e-04 	 t=980s  	 loss=0.0196 	 
+Epoch 6/30 	 lr=4.2e-04 	 t=951s  	 loss=0.0191 	 
+Epoch 7/30 	 lr=4.0e-04 	 t=979s  	 loss=0.0180 	 
+Epoch 8/30 	 lr=3.9e-04 	 t=944s  	 loss=0.0174 	 
+Epoch 9/30 	 lr=3.7e-04 	 t=1014s  	 loss=0.0170 	 
+Epoch 10/30 	 lr=3.5e-04 	 t=919s  	 loss=0.0163 	 
+Epoch 11/30 	 lr=3.3e-04 	 t=930s  	 loss=0.0157 	 
+Epoch 12/30 	 lr=3.2e-04 	 t=930s  	 loss=0.0153 	 
+Epoch 13/30 	 lr=3.0e-04 	 t=915s  	 loss=0.0145 	 
+Epoch 14/30 	 lr=2.8e-04 	 t=923s  	 loss=0.0141 	 
+Epoch 15/30 	 lr=2.6e-04 	 t=948s  	 loss=0.0140 	 
+Epoch 16/30 	 lr=2.5e-04 	 t=960s  	 loss=0.0137 	 
+Epoch 17/30 	 lr=2.3e-04 	 t=980s  	 loss=0.0132 	 
+Epoch 18/30 	 lr=2.1e-04 	 t=933s  	 loss=0.0135 	 
+Epoch 19/30 	 lr=1.9e-04 	 t=923s  	 loss=0.0127 	 
+Epoch 20/30 	 lr=1.8e-04 	 t=925s  	 loss=0.0122 	 
+Epoch 21/30 	 lr=1.6e-04 	 t=958s  	 loss=0.0121 	 
+Epoch 22/30 	 lr=1.4e-04 	 t=929s  	 loss=0.0117 	 
+Epoch 23/30 	 lr=1.2e-04 	 t=947s  	 loss=0.0117 	 
+Epoch 24/30 	 lr=1.1e-04 	 t=908s  	 loss=0.0111 	 
+Epoch 25/30 	 lr=8.8e-05 	 t=982s  	 loss=0.0111 	 
+Epoch 26/30 	 lr=7.0e-05 	 t=1040s  	 loss=0.0111 	 val_loss=0.0058 	 micro_f1=0.799 	 samples_f1=0.755
+Epoch 27/30 	 lr=5.3e-05 	 t=1039s  	 loss=0.0110 	 val_loss=0.0056 	 micro_f1=0.802 	 samples_f1=0.760
+Epoch 28/30 	 lr=3.5e-05 	 t=1000s  	 loss=0.0109 	 val_loss=0.0056 	 micro_f1=0.804 	 samples_f1=0.759
+Epoch 29/30 	 lr=1.8e-05 	 t=1047s  	 loss=0.0106 	 val_loss=0.0055 	 micro_f1=0.808 	 samples_f1=0.766
+Epoch 30/30 	 lr=0.0e+00 	 t=1031s  	 loss=0.0108 	 val_loss=0.0054 	 micro_f1=0.809 	 samples_f1=0.768
+
+ -> Saving weights to ../checkpoints/2020-09-10/resnext101_32x8d_wsl_extra_1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+    -> 40479 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/facebookresearch_WSL-Images_master
+    -> 87283272 trainable parameters
+
+Epoch 1/30 	 lr=3.3e-04 	 t=926s  	 loss=0.0604 	 
+Epoch 2/30 	 lr=4.9e-04 	 t=965s  	 loss=0.0259 	 
+Epoch 3/30 	 lr=4.7e-04 	 t=926s  	 loss=0.0223 	 
+Epoch 4/30 	 lr=4.6e-04 	 t=932s  	 loss=0.0207 	 
+Epoch 5/30 	 lr=4.4e-04 	 t=978s  	 loss=0.0196 	 
+Epoch 6/30 	 lr=4.2e-04 	 t=933s  	 loss=0.0191 	 
+Epoch 7/30 	 lr=4.0e-04 	 t=981s  	 loss=0.0180 	 
+Epoch 8/30 	 lr=3.9e-04 	 t=926s  	 loss=0.0173 	 
+Epoch 9/30 	 lr=3.7e-04 	 t=976s  	 loss=0.0171 	 
+Epoch 10/30 	 lr=3.5e-04 	 t=925s  	 loss=0.0163 	 
+Epoch 11/30 	 lr=3.3e-04 	 t=932s  	 loss=0.0156 	 
+Epoch 12/30 	 lr=3.2e-04 	 t=931s  	 loss=0.0153 	 
+Epoch 13/30 	 lr=3.0e-04 	 t=956s  	 loss=0.0144 	 
+Epoch 14/30 	 lr=2.8e-04 	 t=938s  	 loss=0.0140 	 
+Epoch 15/30 	 lr=2.6e-04 	 t=986s  	 loss=0.0138 	 
+Epoch 16/30 	 lr=2.5e-04 	 t=997s  	 loss=0.0137 	 
+Epoch 17/30 	 lr=2.3e-04 	 t=984s  	 loss=0.0132 	 
+Epoch 18/30 	 lr=2.1e-04 	 t=935s  	 loss=0.0135 	 
+Epoch 19/30 	 lr=1.9e-04 	 t=915s  	 loss=0.0126 	 
+Epoch 20/30 	 lr=1.8e-04 	 t=911s  	 loss=0.0121 	 
+Epoch 21/30 	 lr=1.6e-04 	 t=978s  	 loss=0.0120 	 
+Epoch 22/30 	 lr=1.4e-04 	 t=923s  	 loss=0.0117 	 
+Epoch 23/30 	 lr=1.2e-04 	 t=954s  	 loss=0.0117 	 
+Epoch 24/30 	 lr=1.1e-04 	 t=947s  	 loss=0.0111 	 
+Epoch 25/30 	 lr=8.8e-05 	 t=1003s  	 loss=0.0110 	 
+Epoch 26/30 	 lr=7.0e-05 	 t=1061s  	 loss=0.0110 	 val_loss=0.0062 	 micro_f1=0.794 	 samples_f1=0.752
+Epoch 27/30 	 lr=5.3e-05 	 t=1062s  	 loss=0.0109 	 val_loss=0.0061 	 micro_f1=0.799 	 samples_f1=0.757
+Epoch 28/30 	 lr=3.5e-05 	 t=1023s  	 loss=0.0108 	 val_loss=0.0060 	 micro_f1=0.802 	 samples_f1=0.757
+Epoch 29/30 	 lr=1.8e-05 	 t=1077s  	 loss=0.0106 	 val_loss=0.0058 	 micro_f1=0.810 	 samples_f1=0.767
+Epoch 30/30 	 lr=0.0e+00 	 t=1049s  	 loss=0.0107 	 val_loss=0.0058 	 micro_f1=0.808 	 samples_f1=0.768
+
+ -> Saving weights to ../checkpoints/2020-09-10/resnext101_32x8d_wsl_extra_2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+    -> 40479 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/facebookresearch_WSL-Images_master
+    -> 87283272 trainable parameters
+
+Epoch 1/30 	 lr=3.3e-04 	 t=962s  	 loss=0.0605 	 
+Epoch 2/30 	 lr=4.9e-04 	 t=961s  	 loss=0.0260 	 
+Epoch 3/30 	 lr=4.7e-04 	 t=949s  	 loss=0.0224 	 
+Epoch 4/30 	 lr=4.6e-04 	 t=986s  	 loss=0.0208 	 
+Epoch 5/30 	 lr=4.4e-04 	 t=987s  	 loss=0.0196 	 
+Epoch 6/30 	 lr=4.2e-04 	 t=932s  	 loss=0.0191 	 
+Epoch 7/30 	 lr=4.0e-04 	 t=1013s  	 loss=0.0179 	 
+Epoch 8/30 	 lr=3.9e-04 	 t=952s  	 loss=0.0173 	 
+Epoch 9/30 	 lr=3.7e-04 	 t=955s  	 loss=0.0170 	 
+Epoch 10/30 	 lr=3.5e-04 	 t=950s  	 loss=0.0163 	 
+Epoch 11/30 	 lr=3.3e-04 	 t=972s  	 loss=0.0157 	 
+Epoch 12/30 	 lr=3.2e-04 	 t=938s  	 loss=0.0152 	 
+Epoch 13/30 	 lr=3.0e-04 	 t=951s  	 loss=0.0144 	 
+Epoch 14/30 	 lr=2.8e-04 	 t=942s  	 loss=0.0140 	 
+Epoch 15/30 	 lr=2.6e-04 	 t=951s  	 loss=0.0138 	 
+Epoch 16/30 	 lr=2.5e-04 	 t=1009s  	 loss=0.0136 	 
+Epoch 17/30 	 lr=2.3e-04 	 t=978s  	 loss=0.0131 	 
+Epoch 18/30 	 lr=2.1e-04 	 t=953s  	 loss=0.0135 	 
+Epoch 19/30 	 lr=1.9e-04 	 t=927s  	 loss=0.0126 	 
+Epoch 20/30 	 lr=1.8e-04 	 t=922s  	 loss=0.0121 	 
+Epoch 21/30 	 lr=1.6e-04 	 t=974s  	 loss=0.0120 	 
+Epoch 22/30 	 lr=1.4e-04 	 t=926s  	 loss=0.0117 	 
+Epoch 23/30 	 lr=1.2e-04 	 t=975s  	 loss=0.0116 	 
+Epoch 24/30 	 lr=1.1e-04 	 t=1003s  	 loss=0.0111 	 
+Epoch 25/30 	 lr=8.8e-05 	 t=986s  	 loss=0.0111 	 
+Epoch 26/30 	 lr=7.0e-05 	 t=1037s  	 loss=0.0110 	 val_loss=0.0063 	 micro_f1=0.798 	 samples_f1=0.747
+Epoch 27/30 	 lr=5.3e-05 	 t=1072s  	 loss=0.0109 	 val_loss=0.0060 	 micro_f1=0.802 	 samples_f1=0.756
+Epoch 28/30 	 lr=3.5e-05 	 t=1028s  	 loss=0.0108 	 val_loss=0.0061 	 micro_f1=0.801 	 samples_f1=0.754

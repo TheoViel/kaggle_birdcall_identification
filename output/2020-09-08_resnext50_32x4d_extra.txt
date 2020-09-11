@@ -1,226 +1,3 @@
-
--------------   Fold 1 / 5  -------------
-
-    -> 40479 training birds
-    -> 4275 validation birds
-Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
-    -> 23520840 trainable parameters
-
-Traceback (most recent call last):
-  File "main.py", line 218, in <module>
-    pred_oof = k_fold(Config, df_train, df_extra=df_extra)
-  File "main.py", line 108, in k_fold
-    pred_val = train(config, df_train, df_val, i)
-  File "main.py", line 65, in train
-    pred_val = fit(
-  File "/home/theo/kaggle/birds/src/training/train.py", line 133, in fit
-    for x, y_batch in val_loader:
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
-    data = self._next_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
-    idx, data = self._get_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
-    success, data = self._try_get_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
-    data = self._data_queue.get(timeout=timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/queues.py", line 107, in get
-    if not self._poll(timeout):
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 257, in poll
-    return self._poll(timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
-    r = wait([self], timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 931, in wait
-    ready = selector.select(timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/selectors.py", line 415, in select
-    fd_event_list = self._selector.poll(timeout)
-KeyboardInterrupt
-
--------------   Fold 1 / 5  -------------
-
-    -> 17100 training birds
-    -> 4275 validation birds
-Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
-    -> 23520840 trainable parameters
-
-Epoch 1/30 	 lr=6.7e-04 	 t=489s  	 loss=0.1099 	 val_loss=0.0255 	 micro_f1=0.000 	 samples_f1=0.000
-Epoch 2/30 	 lr=9.8e-04 	 t=468s  	 loss=0.0330 	 val_loss=0.0221 	 micro_f1=0.004 	 samples_f1=0.002
-Traceback (most recent call last):
-  File "main.py", line 218, in <module>
-    pred_oof = k_fold(Config, df_train, df_extra=df_extra)
-  File "main.py", line 108, in k_fold
-    pred_val = train(config, df_train, df_val, i)
-  File "main.py", line 65, in train
-    pred_val = fit(
-  File "/home/theo/kaggle/birds/src/training/train.py", line 121, in fit
-    avg_loss += loss.item() / len(train_loader)
-KeyboardInterrupt
-
--------------   Fold 1 / 5  -------------
-
-    -> 17100 training birds
-    -> 4275 validation birds
-Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
-    -> 23520840 trainable parameters
-
-Epoch 1/30 	 lr=6.7e-04 	 t=466s  	 loss=0.1099 	 val_loss=0.0255 	 micro_f1=0.000 	 samples_f1=0.000
-Traceback (most recent call last):
-  File "main.py", line 218, in <module>
-    pred_oof = k_fold(Config, df_train, df_extra=df_extra)
-  File "main.py", line 108, in k_fold
-    pred_val = train(config, df_train, df_val, i)
-  File "main.py", line 65, in train
-    pred_val = fit(
-  File "/home/theo/kaggle/birds/src/training/train.py", line 101, in fit
-    for step, (x, y_batch) in enumerate(train_loader):
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
-    data = self._next_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
-    idx, data = self._get_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
-    success, data = self._try_get_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
-    data = self._data_queue.get(timeout=timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/queues.py", line 107, in get
-    if not self._poll(timeout):
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 257, in poll
-    return self._poll(timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
-    r = wait([self], timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 931, in wait
-    ready = selector.select(timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/selectors.py", line 415, in select
-    fd_event_list = self._selector.poll(timeout)
-KeyboardInterrupt
-
--------------   Fold 1 / 5  -------------
-
-    -> 17100 training birds
-    -> 4275 validation birds
-Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
-    -> 23520840 trainable parameters
-
-Traceback (most recent call last):
-  File "main.py", line 218, in <module>
-    pred_oof = k_fold(Config, df_train, df_extra=df_extra)
-  File "main.py", line 108, in k_fold
-    pred_val = train(config, df_train, df_val, i)
-  File "main.py", line 65, in train
-    pred_val = fit(
-  File "/home/theo/kaggle/birds/src/training/train.py", line 146, in fit
-    micro_f1 = f1(val_dataset.y, preds, avg="micro")
-  File "/home/theo/kaggle/birds/src/util.py", line 101, in f1
-    return f1_score(truth, pred, average=avg)
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/utils/validation.py", line 73, in inner_f
-    return f(**kwargs)
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 1044, in f1_score
-    return fbeta_score(y_true, y_pred, beta=1, labels=labels,
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/utils/validation.py", line 73, in inner_f
-    return f(**kwargs)
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 1168, in fbeta_score
-    _, _, f, _ = precision_recall_fscore_support(y_true, y_pred,
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/utils/validation.py", line 73, in inner_f
-    return f(**kwargs)
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 1433, in precision_recall_fscore_support
-    labels = _check_set_wise_labels(y_true, y_pred, average, labels,
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 1250, in _check_set_wise_labels
-    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/metrics/_classification.py", line 81, in _check_targets
-    check_consistent_length(y_true, y_pred)
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/sklearn/utils/validation.py", line 256, in check_consistent_length
-    raise ValueError("Found input variables with inconsistent numbers of"
-ValueError: Found input variables with inconsistent numbers of samples: [4275, 0]
-
--------------   Fold 1 / 5  -------------
-
-    -> 17100 training birds
-    -> 4275 validation birds
-Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
-    -> 23520840 trainable parameters
-
-Traceback (most recent call last):
-  File "main.py", line 218, in <module>
-    pred_oof = k_fold(Config, df_train, df_extra=df_extra)
-  File "main.py", line 108, in k_fold
-    pred_val = train(config, df_train, df_val, i)
-  File "main.py", line 65, in train
-    pred_val = fit(
-  File "/home/theo/kaggle/birds/src/training/train.py", line 101, in fit
-    for step, (x, y_batch) in enumerate(train_loader):
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
-    data = self._next_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
-    idx, data = self._get_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
-    success, data = self._try_get_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
-    data = self._data_queue.get(timeout=timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/queues.py", line 107, in get
-    if not self._poll(timeout):
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 257, in poll
-    return self._poll(timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
-    r = wait([self], timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 931, in wait
-    ready = selector.select(timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/selectors.py", line 415, in select
-    fd_event_list = self._selector.poll(timeout)
-KeyboardInterrupt
-
--------------   Fold 1 / 5  -------------
-
-    -> 17100 training birds
-    -> 4275 validation birds
-Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
-    -> 23520840 trainable parameters
-
-Traceback (most recent call last):
-  File "main.py", line 218, in <module>
-    pred_oof = k_fold(Config, df_train, df_extra=df_extra)
-  File "main.py", line 108, in k_fold
-    pred_val = train(config, df_train, df_val, i)
-  File "main.py", line 65, in train
-    pred_val = fit(
-  File "/home/theo/kaggle/birds/src/training/train.py", line 101, in fit
-    for step, (x, y_batch) in enumerate(train_loader):
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
-    data = self._next_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
-    idx, data = self._get_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
-    success, data = self._try_get_data()
-  File "/nix/store/9qb7lwxr0zl6r3sjld88ny35y5ybxfp5-python3-3.8.5-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
-    data = self._data_queue.get(timeout=timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/queues.py", line 107, in get
-    if not self._poll(timeout):
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 257, in poll
-    return self._poll(timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
-    r = wait([self], timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/multiprocessing/connection.py", line 931, in wait
-    ready = selector.select(timeout)
-  File "/nix/store/cfnpsvmkdldbd07gsf9ar2gl49qbmhim-python3-3.8.5/lib/python3.8/selectors.py", line 415, in select
-    fd_event_list = self._selector.poll(timeout)
-KeyboardInterrupt
-
--------------   Fold 1 / 5  -------------
-
-    -> 17100 training birds
-    -> 4275 validation birds
-Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
-    -> 23520840 trainable parameters
-
-493.5056607723236
-Epoch 1/30 	 lr=0.0e+00 	 t=494s  	 loss=0.0000 	 Traceback (most recent call last):
-  File "main.py", line 218, in <module>
-    pred_oof = k_fold(Config, df_train, df_extra=df_extra)
-  File "main.py", line 108, in k_fold
-    pred_val = train(config, df_train, df_val, i)
-  File "main.py", line 65, in train
-    pred_val = fit(
-  File "/home/theo/kaggle/birds/src/training/train.py", line 160, in fit
-    f"val_loss={avg_val_loss:.4f} \t micro_f1={micro_f1:.3f} \t samples_f1={samples_f1:.3f}"
-NameError: name 'micro_f1' is not defined
-
 -------------   Fold 1 / 5  -------------
 
     -> 40479 training birds
@@ -231,3 +8,197 @@ Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
 Epoch 1/30 	 lr=6.7e-04 	 t=1121s  	 loss=0.0810 	 val_loss=0.0232 	 micro_f1=0.028 	 samples_f1=0.014
 Epoch 2/30 	 lr=9.8e-04 	 t=1135s  	 loss=0.0281 	 val_loss=0.0229 	 micro_f1=0.063 	 samples_f1=0.039
 Epoch 3/30 	 lr=9.5e-04 	 t=1119s  	 loss=0.0248 	 val_loss=0.0177 	 micro_f1=0.228 	 samples_f1=0.137
+Epoch 4/30 	 lr=9.1e-04 	 t=1060s  	 loss=0.0232 	 val_loss=0.0152 	 micro_f1=0.346 	 samples_f1=0.227
+Epoch 5/30 	 lr=8.8e-04 	 t=1091s  	 loss=0.0228 	 val_loss=0.0136 	 micro_f1=0.430 	 samples_f1=0.306
+Epoch 6/30 	 lr=8.4e-04 	 t=1098s  	 loss=0.0213 	 val_loss=0.0139 	 micro_f1=0.432 	 samples_f1=0.315
+Epoch 7/30 	 lr=8.1e-04 	 t=1076s  	 loss=0.0201 	 val_loss=0.0118 	 micro_f1=0.523 	 samples_f1=0.394
+Epoch 8/30 	 lr=7.7e-04 	 t=1097s  	 loss=0.0198 	 val_loss=0.0122 	 micro_f1=0.522 	 samples_f1=0.404
+Epoch 9/30 	 lr=7.4e-04 	 t=1077s  	 loss=0.0187 	 val_loss=0.0105 	 micro_f1=0.582 	 samples_f1=0.465
+Epoch 10/30 	 lr=7.0e-04 	 t=1084s  	 loss=0.0188 	 val_loss=0.0112 	 micro_f1=0.608 	 samples_f1=0.532
+Epoch 11/30 	 lr=6.7e-04 	 t=1097s  	 loss=0.0177 	 val_loss=0.0093 	 micro_f1=0.652 	 samples_f1=0.561
+Epoch 12/30 	 lr=6.3e-04 	 t=1097s  	 loss=0.0176 	 val_loss=0.0099 	 micro_f1=0.653 	 samples_f1=0.556
+Epoch 13/30 	 lr=6.0e-04 	 t=1087s  	 loss=0.0177 	 val_loss=0.0106 	 micro_f1=0.602 	 samples_f1=0.476
+Epoch 14/30 	 lr=5.6e-04 	 t=1118s  	 loss=0.0164 	 val_loss=0.0094 	 micro_f1=0.652 	 samples_f1=0.560
+Epoch 15/30 	 lr=5.3e-04 	 t=1119s  	 loss=0.0163 	 val_loss=0.0086 	 micro_f1=0.689 	 samples_f1=0.621
+Epoch 16/30 	 lr=4.9e-04 	 t=1080s  	 loss=0.0156 	 val_loss=0.0082 	 micro_f1=0.704 	 samples_f1=0.620
+Epoch 17/30 	 lr=4.6e-04 	 t=1069s  	 loss=0.0152 	 val_loss=0.0084 	 micro_f1=0.696 	 samples_f1=0.620
+Epoch 18/30 	 lr=4.2e-04 	 t=1083s  	 loss=0.0154 	 val_loss=0.0078 	 micro_f1=0.724 	 samples_f1=0.652
+Epoch 19/30 	 lr=3.9e-04 	 t=1128s  	 loss=0.0148 	 val_loss=0.0073 	 micro_f1=0.737 	 samples_f1=0.674
+Epoch 20/30 	 lr=3.5e-04 	 t=1148s  	 loss=0.0144 	 val_loss=0.0073 	 micro_f1=0.740 	 samples_f1=0.679
+Epoch 21/30 	 lr=3.2e-04 	 t=1118s  	 loss=0.0147 	 val_loss=0.0070 	 micro_f1=0.746 	 samples_f1=0.681
+Epoch 22/30 	 lr=2.8e-04 	 t=1122s  	 loss=0.0141 	 val_loss=0.0072 	 micro_f1=0.751 	 samples_f1=0.689
+Epoch 23/30 	 lr=2.5e-04 	 t=1136s  	 loss=0.0135 	 val_loss=0.0068 	 micro_f1=0.756 	 samples_f1=0.689
+Epoch 24/30 	 lr=2.1e-04 	 t=1082s  	 loss=0.0133 	 val_loss=0.0068 	 micro_f1=0.755 	 samples_f1=0.684
+Epoch 25/30 	 lr=1.8e-04 	 t=1090s  	 loss=0.0133 	 val_loss=0.0065 	 micro_f1=0.766 	 samples_f1=0.704
+Epoch 26/30 	 lr=1.4e-04 	 t=1083s  	 loss=0.0127 	 val_loss=0.0066 	 micro_f1=0.768 	 samples_f1=0.705
+Epoch 27/30 	 lr=1.1e-04 	 t=1107s  	 loss=0.0126 	 val_loss=0.0063 	 micro_f1=0.777 	 samples_f1=0.715
+Epoch 28/30 	 lr=7.0e-05 	 t=1110s  	 loss=0.0123 	 val_loss=0.0059 	 micro_f1=0.786 	 samples_f1=0.727
+Epoch 29/30 	 lr=3.5e-05 	 t=1148s  	 loss=0.0124 	 val_loss=0.0060 	 micro_f1=0.786 	 samples_f1=0.727
+Epoch 30/30 	 lr=0.0e+00 	 t=1071s  	 loss=0.0120 	 val_loss=0.0061 	 micro_f1=0.786 	 samples_f1=0.731
+
+ -> Saving weights to ../checkpoints/2020-09-08/resnext50_32x4d_extra_0.pt
+
+
+-------------   Fold 2 / 5  -------------
+
+    -> 40479 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/30 	 lr=6.7e-04 	 t=1098s  	 loss=0.0809 	 val_loss=0.0233 	 micro_f1=0.042 	 samples_f1=0.022
+Epoch 2/30 	 lr=9.8e-04 	 t=1090s  	 loss=0.0281 	 val_loss=0.0190 	 micro_f1=0.109 	 samples_f1=0.058
+Epoch 3/30 	 lr=9.5e-04 	 t=1153s  	 loss=0.0249 	 val_loss=0.0182 	 micro_f1=0.221 	 samples_f1=0.134
+Epoch 4/30 	 lr=9.1e-04 	 t=1084s  	 loss=0.0232 	 val_loss=0.0148 	 micro_f1=0.380 	 samples_f1=0.256
+Epoch 5/30 	 lr=8.8e-04 	 t=1123s  	 loss=0.0228 	 val_loss=0.0149 	 micro_f1=0.392 	 samples_f1=0.290
+Epoch 6/30 	 lr=8.4e-04 	 t=1143s  	 loss=0.0217 	 val_loss=0.0180 	 micro_f1=0.311 	 samples_f1=0.194
+Epoch 7/30 	 lr=8.1e-04 	 t=1110s  	 loss=0.0202 	 val_loss=0.0121 	 micro_f1=0.508 	 samples_f1=0.383
+Epoch 8/30 	 lr=7.7e-04 	 t=1153s  	 loss=0.0199 	 val_loss=0.0133 	 micro_f1=0.460 	 samples_f1=0.338
+Epoch 9/30 	 lr=7.4e-04 	 t=1104s  	 loss=0.0188 	 val_loss=0.0146 	 micro_f1=0.456 	 samples_f1=0.373
+Epoch 10/30 	 lr=7.0e-04 	 t=1129s  	 loss=0.0189 	 val_loss=0.0107 	 micro_f1=0.592 	 samples_f1=0.478
+Epoch 11/30 	 lr=6.7e-04 	 t=1134s  	 loss=0.0177 	 val_loss=0.0095 	 micro_f1=0.643 	 samples_f1=0.545
+Epoch 12/30 	 lr=6.3e-04 	 t=1141s  	 loss=0.0178 	 val_loss=0.0109 	 micro_f1=0.614 	 samples_f1=0.507
+Epoch 13/30 	 lr=6.0e-04 	 t=1137s  	 loss=0.0176 	 val_loss=0.0087 	 micro_f1=0.672 	 samples_f1=0.570
+Epoch 14/30 	 lr=5.6e-04 	 t=1164s  	 loss=0.0164 	 val_loss=0.0082 	 micro_f1=0.679 	 samples_f1=0.581
+Epoch 15/30 	 lr=5.3e-04 	 t=1183s  	 loss=0.0164 	 val_loss=0.0077 	 micro_f1=0.711 	 samples_f1=0.619
+Epoch 16/30 	 lr=4.9e-04 	 t=1130s  	 loss=0.0156 	 val_loss=0.0078 	 micro_f1=0.714 	 samples_f1=0.629
+Epoch 17/30 	 lr=4.6e-04 	 t=1123s  	 loss=0.0151 	 val_loss=0.0076 	 micro_f1=0.713 	 samples_f1=0.616
+Epoch 18/30 	 lr=4.2e-04 	 t=1111s  	 loss=0.0157 	 val_loss=0.0076 	 micro_f1=0.725 	 samples_f1=0.647
+Epoch 19/30 	 lr=3.9e-04 	 t=1166s  	 loss=0.0149 	 val_loss=0.0068 	 micro_f1=0.749 	 samples_f1=0.675
+Epoch 20/30 	 lr=3.5e-04 	 t=1176s  	 loss=0.0145 	 val_loss=0.0070 	 micro_f1=0.747 	 samples_f1=0.656
+Epoch 21/30 	 lr=3.2e-04 	 t=1147s  	 loss=0.0147 	 val_loss=0.0071 	 micro_f1=0.741 	 samples_f1=0.663
+Epoch 22/30 	 lr=2.8e-04 	 t=1144s  	 loss=0.0143 	 val_loss=0.0068 	 micro_f1=0.758 	 samples_f1=0.686
+Epoch 23/30 	 lr=2.5e-04 	 t=1167s  	 loss=0.0136 	 val_loss=0.0067 	 micro_f1=0.759 	 samples_f1=0.681
+Epoch 24/30 	 lr=2.1e-04 	 t=1136s  	 loss=0.0134 	 val_loss=0.0062 	 micro_f1=0.777 	 samples_f1=0.705
+Epoch 25/30 	 lr=1.8e-04 	 t=1117s  	 loss=0.0133 	 val_loss=0.0060 	 micro_f1=0.780 	 samples_f1=0.709
+Epoch 26/30 	 lr=1.4e-04 	 t=1132s  	 loss=0.0128 	 val_loss=0.0062 	 micro_f1=0.775 	 samples_f1=0.701
+Epoch 27/30 	 lr=1.1e-04 	 t=1143s  	 loss=0.0127 	 val_loss=0.0059 	 micro_f1=0.784 	 samples_f1=0.722
+Epoch 28/30 	 lr=7.0e-05 	 t=1146s  	 loss=0.0125 	 val_loss=0.0056 	 micro_f1=0.796 	 samples_f1=0.725
+Epoch 29/30 	 lr=3.5e-05 	 t=1199s  	 loss=0.0125 	 val_loss=0.0057 	 micro_f1=0.791 	 samples_f1=0.721
+Epoch 30/30 	 lr=0.0e+00 	 t=1121s  	 loss=0.0121 	 val_loss=0.0058 	 micro_f1=0.794 	 samples_f1=0.729
+
+ -> Saving weights to ../checkpoints/2020-09-08/resnext50_32x4d_extra_1.pt
+
+
+-------------   Fold 3 / 5  -------------
+
+    -> 40479 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/30 	 lr=6.7e-04 	 t=1132s  	 loss=0.0808 	 val_loss=0.0230 	 micro_f1=0.029 	 samples_f1=0.015
+Epoch 2/30 	 lr=9.8e-04 	 t=1171s  	 loss=0.0279 	 val_loss=0.0197 	 micro_f1=0.117 	 samples_f1=0.064
+Epoch 3/30 	 lr=9.5e-04 	 t=1165s  	 loss=0.0247 	 val_loss=0.0168 	 micro_f1=0.262 	 samples_f1=0.162
+Epoch 4/30 	 lr=9.1e-04 	 t=1119s  	 loss=0.0230 	 val_loss=0.0149 	 micro_f1=0.332 	 samples_f1=0.217
+Epoch 5/30 	 lr=8.8e-04 	 t=1159s  	 loss=0.0228 	 val_loss=0.0136 	 micro_f1=0.381 	 samples_f1=0.255
+Epoch 6/30 	 lr=8.4e-04 	 t=1110s  	 loss=0.0217 	 val_loss=0.0122 	 micro_f1=0.466 	 samples_f1=0.331
+Epoch 7/30 	 lr=8.1e-04 	 t=1132s  	 loss=0.0201 	 val_loss=0.0136 	 micro_f1=0.467 	 samples_f1=0.353
+Epoch 8/30 	 lr=7.7e-04 	 t=1183s  	 loss=0.0199 	 val_loss=0.0112 	 micro_f1=0.570 	 samples_f1=0.446
+Epoch 9/30 	 lr=7.4e-04 	 t=1134s  	 loss=0.0189 	 val_loss=0.0125 	 micro_f1=0.511 	 samples_f1=0.388
+Epoch 10/30 	 lr=7.0e-04 	 t=1158s  	 loss=0.0188 	 val_loss=0.0118 	 micro_f1=0.529 	 samples_f1=0.398
+Epoch 11/30 	 lr=6.7e-04 	 t=1141s  	 loss=0.0176 	 val_loss=0.0098 	 micro_f1=0.638 	 samples_f1=0.534
+Epoch 12/30 	 lr=6.3e-04 	 t=1149s  	 loss=0.0176 	 val_loss=0.0103 	 micro_f1=0.649 	 samples_f1=0.555
+Epoch 13/30 	 lr=6.0e-04 	 t=1152s  	 loss=0.0178 	 val_loss=0.0095 	 micro_f1=0.656 	 samples_f1=0.538
+Epoch 14/30 	 lr=5.6e-04 	 t=1189s  	 loss=0.0164 	 val_loss=0.0119 	 micro_f1=0.618 	 samples_f1=0.523
+Epoch 15/30 	 lr=5.3e-04 	 t=1130s  	 loss=0.0164 	 val_loss=0.0078 	 micro_f1=0.716 	 samples_f1=0.627
+Epoch 16/30 	 lr=4.9e-04 	 t=1160s  	 loss=0.0155 	 val_loss=0.0082 	 micro_f1=0.710 	 samples_f1=0.623
+Epoch 17/30 	 lr=4.6e-04 	 t=1130s  	 loss=0.0152 	 val_loss=0.0087 	 micro_f1=0.691 	 samples_f1=0.588
+Epoch 18/30 	 lr=4.2e-04 	 t=1134s  	 loss=0.0156 	 val_loss=0.0081 	 micro_f1=0.714 	 samples_f1=0.635
+Epoch 19/30 	 lr=3.9e-04 	 t=1196s  	 loss=0.0149 	 val_loss=0.0077 	 micro_f1=0.725 	 samples_f1=0.634
+Epoch 20/30 	 lr=3.5e-04 	 t=1208s  	 loss=0.0144 	 val_loss=0.0085 	 micro_f1=0.700 	 samples_f1=0.627
+Epoch 21/30 	 lr=3.2e-04 	 t=1144s  	 loss=0.0147 	 val_loss=0.0074 	 micro_f1=0.747 	 samples_f1=0.672
+Epoch 22/30 	 lr=2.8e-04 	 t=1151s  	 loss=0.0142 	 val_loss=0.0072 	 micro_f1=0.747 	 samples_f1=0.671
+Epoch 23/30 	 lr=2.5e-04 	 t=1161s  	 loss=0.0135 	 val_loss=0.0070 	 micro_f1=0.764 	 samples_f1=0.694
+Epoch 24/30 	 lr=2.1e-04 	 t=1143s  	 loss=0.0132 	 val_loss=0.0069 	 micro_f1=0.768 	 samples_f1=0.702
+Epoch 25/30 	 lr=1.8e-04 	 t=1100s  	 loss=0.0133 	 val_loss=0.0066 	 micro_f1=0.772 	 samples_f1=0.705
+Epoch 26/30 	 lr=1.4e-04 	 t=1148s  	 loss=0.0127 	 val_loss=0.0068 	 micro_f1=0.774 	 samples_f1=0.711
+Epoch 27/30 	 lr=1.1e-04 	 t=1134s  	 loss=0.0126 	 val_loss=0.0067 	 micro_f1=0.776 	 samples_f1=0.716
+Epoch 28/30 	 lr=7.0e-05 	 t=1133s  	 loss=0.0124 	 val_loss=0.0061 	 micro_f1=0.785 	 samples_f1=0.724
+Epoch 29/30 	 lr=3.5e-05 	 t=1214s  	 loss=0.0124 	 val_loss=0.0063 	 micro_f1=0.787 	 samples_f1=0.728
+Epoch 30/30 	 lr=0.0e+00 	 t=1131s  	 loss=0.0120 	 val_loss=0.0065 	 micro_f1=0.783 	 samples_f1=0.727
+
+ -> Saving weights to ../checkpoints/2020-09-08/resnext50_32x4d_extra_2.pt
+
+
+-------------   Fold 4 / 5  -------------
+
+    -> 40479 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/30 	 lr=6.7e-04 	 t=1102s  	 loss=0.0807 	 val_loss=0.0226 	 micro_f1=0.036 	 samples_f1=0.019
+Epoch 2/30 	 lr=9.8e-04 	 t=1141s  	 loss=0.0277 	 val_loss=0.0200 	 micro_f1=0.096 	 samples_f1=0.054
+Epoch 3/30 	 lr=9.5e-04 	 t=1175s  	 loss=0.0247 	 val_loss=0.0165 	 micro_f1=0.261 	 samples_f1=0.158
+Epoch 4/30 	 lr=9.1e-04 	 t=1095s  	 loss=0.0229 	 val_loss=0.0146 	 micro_f1=0.371 	 samples_f1=0.247
+Epoch 5/30 	 lr=8.8e-04 	 t=1158s  	 loss=0.0226 	 val_loss=0.0141 	 micro_f1=0.393 	 samples_f1=0.271
+Epoch 6/30 	 lr=8.4e-04 	 t=1123s  	 loss=0.0212 	 val_loss=0.0128 	 micro_f1=0.473 	 samples_f1=0.348
+Epoch 7/30 	 lr=8.1e-04 	 t=1124s  	 loss=0.0200 	 val_loss=0.0126 	 micro_f1=0.471 	 samples_f1=0.336
+Epoch 8/30 	 lr=7.7e-04 	 t=1161s  	 loss=0.0197 	 val_loss=0.0119 	 micro_f1=0.544 	 samples_f1=0.421
+Epoch 9/30 	 lr=7.4e-04 	 t=1116s  	 loss=0.0188 	 val_loss=0.0105 	 micro_f1=0.588 	 samples_f1=0.466
+Epoch 10/30 	 lr=7.0e-04 	 t=1149s  	 loss=0.0190 	 val_loss=0.0100 	 micro_f1=0.623 	 samples_f1=0.515
+Epoch 11/30 	 lr=6.7e-04 	 t=1148s  	 loss=0.0176 	 val_loss=0.0092 	 micro_f1=0.654 	 samples_f1=0.552
+Epoch 12/30 	 lr=6.3e-04 	 t=1143s  	 loss=0.0179 	 val_loss=0.0115 	 micro_f1=0.600 	 samples_f1=0.501
+Epoch 13/30 	 lr=6.0e-04 	 t=1149s  	 loss=0.0178 	 val_loss=0.0087 	 micro_f1=0.672 	 samples_f1=0.567
+Epoch 14/30 	 lr=5.6e-04 	 t=1192s  	 loss=0.0163 	 val_loss=0.0108 	 micro_f1=0.618 	 samples_f1=0.513
+Epoch 15/30 	 lr=5.3e-04 	 t=1160s  	 loss=0.0162 	 val_loss=0.0086 	 micro_f1=0.690 	 samples_f1=0.606
+Epoch 16/30 	 lr=4.9e-04 	 t=1125s  	 loss=0.0154 	 val_loss=0.0081 	 micro_f1=0.710 	 samples_f1=0.619
+Epoch 17/30 	 lr=4.6e-04 	 t=1156s  	 loss=0.0151 	 val_loss=0.0077 	 micro_f1=0.720 	 samples_f1=0.632
+Epoch 18/30 	 lr=4.2e-04 	 t=1158s  	 loss=0.0155 	 val_loss=0.0082 	 micro_f1=0.719 	 samples_f1=0.640
+Epoch 19/30 	 lr=3.9e-04 	 t=1183s  	 loss=0.0147 	 val_loss=0.0076 	 micro_f1=0.739 	 samples_f1=0.665
+Epoch 20/30 	 lr=3.5e-04 	 t=1178s  	 loss=0.0144 	 val_loss=0.0074 	 micro_f1=0.741 	 samples_f1=0.668
+Epoch 21/30 	 lr=3.2e-04 	 t=1151s  	 loss=0.0147 	 val_loss=0.0074 	 micro_f1=0.744 	 samples_f1=0.670
+Epoch 22/30 	 lr=2.8e-04 	 t=1155s  	 loss=0.0142 	 val_loss=0.0072 	 micro_f1=0.763 	 samples_f1=0.695
+Epoch 23/30 	 lr=2.5e-04 	 t=1181s  	 loss=0.0134 	 val_loss=0.0070 	 micro_f1=0.767 	 samples_f1=0.700
+Epoch 24/30 	 lr=2.1e-04 	 t=1154s  	 loss=0.0133 	 val_loss=0.0066 	 micro_f1=0.772 	 samples_f1=0.705
+Epoch 25/30 	 lr=1.8e-04 	 t=1132s  	 loss=0.0132 	 val_loss=0.0067 	 micro_f1=0.778 	 samples_f1=0.718
+Epoch 26/30 	 lr=1.4e-04 	 t=1173s  	 loss=0.0127 	 val_loss=0.0067 	 micro_f1=0.777 	 samples_f1=0.721
+Epoch 27/30 	 lr=1.1e-04 	 t=1144s  	 loss=0.0127 	 val_loss=0.0065 	 micro_f1=0.782 	 samples_f1=0.724
+Epoch 28/30 	 lr=7.0e-05 	 t=1140s  	 loss=0.0123 	 val_loss=0.0061 	 micro_f1=0.793 	 samples_f1=0.736
+Epoch 29/30 	 lr=3.5e-05 	 t=1234s  	 loss=0.0124 	 val_loss=0.0062 	 micro_f1=0.789 	 samples_f1=0.732
+Epoch 30/30 	 lr=0.0e+00 	 t=1164s  	 loss=0.0119 	 val_loss=0.0063 	 micro_f1=0.789 	 samples_f1=0.734
+
+ -> Saving weights to ../checkpoints/2020-09-08/resnext50_32x4d_extra_3.pt
+
+
+-------------   Fold 5 / 5  -------------
+
+    -> 40479 training birds
+    -> 4275 validation birds
+Using cache found in /home/theo/.cache/torch/hub/pytorch_vision_v0.6.0
+    -> 23520840 trainable parameters
+
+Epoch 1/30 	 lr=6.7e-04 	 t=1177s  	 loss=0.0807 	 val_loss=0.0229 	 micro_f1=0.024 	 samples_f1=0.012
+Epoch 2/30 	 lr=9.8e-04 	 t=1246s  	 loss=0.0279 	 val_loss=0.0200 	 micro_f1=0.087 	 samples_f1=0.046
+Epoch 3/30 	 lr=9.5e-04 	 t=1205s  	 loss=0.0245 	 val_loss=0.0174 	 micro_f1=0.268 	 samples_f1=0.173
+Epoch 4/30 	 lr=9.1e-04 	 t=1177s  	 loss=0.0228 	 val_loss=0.0160 	 micro_f1=0.355 	 samples_f1=0.246
+Epoch 5/30 	 lr=8.8e-04 	 t=1201s  	 loss=0.0225 	 val_loss=0.0145 	 micro_f1=0.383 	 samples_f1=0.261
+Epoch 6/30 	 lr=8.4e-04 	 t=1199s  	 loss=0.0214 	 val_loss=0.0144 	 micro_f1=0.423 	 samples_f1=0.300
+Epoch 7/30 	 lr=8.1e-04 	 t=1152s  	 loss=0.0202 	 val_loss=0.0118 	 micro_f1=0.546 	 samples_f1=0.425
+Epoch 8/30 	 lr=7.7e-04 	 t=1173s  	 loss=0.0199 	 val_loss=0.0121 	 micro_f1=0.544 	 samples_f1=0.424
+Epoch 9/30 	 lr=7.4e-04 	 t=1157s  	 loss=0.0188 	 val_loss=0.0114 	 micro_f1=0.566 	 samples_f1=0.441
+Epoch 10/30 	 lr=7.0e-04 	 t=1188s  	 loss=0.0189 	 val_loss=0.0122 	 micro_f1=0.558 	 samples_f1=0.443
+Epoch 11/30 	 lr=6.7e-04 	 t=1181s  	 loss=0.0178 	 val_loss=0.0094 	 micro_f1=0.649 	 samples_f1=0.544
+Epoch 12/30 	 lr=6.3e-04 	 t=1186s  	 loss=0.0176 	 val_loss=0.0108 	 micro_f1=0.629 	 samples_f1=0.517
+Epoch 13/30 	 lr=6.0e-04 	 t=1223s  	 loss=0.0174 	 val_loss=0.0094 	 micro_f1=0.661 	 samples_f1=0.560
+Epoch 14/30 	 lr=5.6e-04 	 t=1207s  	 loss=0.0162 	 val_loss=0.0089 	 micro_f1=0.687 	 samples_f1=0.602
+Epoch 15/30 	 lr=5.3e-04 	 t=1247s  	 loss=0.0163 	 val_loss=0.0086 	 micro_f1=0.704 	 samples_f1=0.627
+Epoch 16/30 	 lr=4.9e-04 	 t=1143s  	 loss=0.0156 	 val_loss=0.0084 	 micro_f1=0.704 	 samples_f1=0.603
+Epoch 17/30 	 lr=4.6e-04 	 t=1173s  	 loss=0.0152 	 val_loss=0.0079 	 micro_f1=0.719 	 samples_f1=0.623
+Epoch 18/30 	 lr=4.2e-04 	 t=1201s  	 loss=0.0154 	 val_loss=0.0087 	 micro_f1=0.715 	 samples_f1=0.633
+Epoch 19/30 	 lr=3.9e-04 	 t=1218s  	 loss=0.0148 	 val_loss=0.0080 	 micro_f1=0.723 	 samples_f1=0.646
+Epoch 20/30 	 lr=3.5e-04 	 t=1175s  	 loss=0.0144 	 val_loss=0.0077 	 micro_f1=0.739 	 samples_f1=0.667
+Epoch 21/30 	 lr=3.2e-04 	 t=1165s  	 loss=0.0147 	 val_loss=0.0074 	 micro_f1=0.749 	 samples_f1=0.672
+Epoch 22/30 	 lr=2.8e-04 	 t=1265s  	 loss=0.0142 	 val_loss=0.0073 	 micro_f1=0.758 	 samples_f1=0.683
+Epoch 23/30 	 lr=2.5e-04 	 t=1189s  	 loss=0.0135 	 val_loss=0.0074 	 micro_f1=0.754 	 samples_f1=0.682
+Epoch 24/30 	 lr=2.1e-04 	 t=1154s  	 loss=0.0133 	 val_loss=0.0070 	 micro_f1=0.768 	 samples_f1=0.694
+Epoch 25/30 	 lr=1.8e-04 	 t=1165s  	 loss=0.0132 	 val_loss=0.0070 	 micro_f1=0.767 	 samples_f1=0.697
+Epoch 26/30 	 lr=1.4e-04 	 t=1174s  	 loss=0.0127 	 val_loss=0.0071 	 micro_f1=0.770 	 samples_f1=0.700
+Epoch 27/30 	 lr=1.1e-04 	 t=1168s  	 loss=0.0125 	 val_loss=0.0068 	 micro_f1=0.774 	 samples_f1=0.708
+Epoch 28/30 	 lr=7.0e-05 	 t=1183s  	 loss=0.0124 	 val_loss=0.0063 	 micro_f1=0.784 	 samples_f1=0.716
+Epoch 29/30 	 lr=3.5e-05 	 t=1235s  	 loss=0.0125 	 val_loss=0.0065 	 micro_f1=0.785 	 samples_f1=0.718
+Epoch 30/30 	 lr=0.0e+00 	 t=1157s  	 loss=0.0120 	 val_loss=0.0066 	 micro_f1=0.780 	 samples_f1=0.715
+
+ -> Saving weights to ../checkpoints/2020-09-08/resnext50_32x4d_extra_4.pt
+
