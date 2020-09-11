@@ -1,38 +1,10 @@
-import re
-import gc
 import os
-import time
-import random
-import operator
 import datetime
-import soundfile
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import IPython.display as ipd
-import matplotlib.pyplot as plt
 
-from sklearn.metrics import *
-from collections import Counter
 from tqdm.notebook import tqdm
-from scipy.special import softmax
-from sklearn.model_selection import *
-
-import torch
-import torch.nn as nn
-import torch.utils.data
-import torch.nn.functional as F
-import torchvision.models as models
-import torch.utils.model_zoo as model_zoo
-
-from torch import Tensor
-from torch.optim import *
-from audiomentations import *
-from torch.nn.modules.loss import *
-from torch.optim.lr_scheduler import *
-from torch.hub import load_state_dict_from_url
-from torch.utils.data import Dataset, DataLoader
-
+from sklearn.model_selection import StratifiedKFold
 
 from util import *
 from params import *
@@ -42,7 +14,32 @@ from model_zoo.models import get_model
 from training.train import fit, predict
 
 
+class AudioParams:
+    """
+    Parameters used for the audio data
+    """
+    sr = 32000
+    duration = 5
+
+    # Melspectrogram
+    n_mels = 128
+    fmin = 20
+    fmax = 16000
+
+
 def train(config, df_train, df_val, fold):
+    """
+    Trains and validate a model
+
+    Arguments:
+        config {Config} -- Parameters
+        df_train {pandas dataframe} -- Training metadata
+        df_val {pandas dataframe} -- Validation metadata
+        fold {int} -- Selected fold
+
+    Returns:
+        np array -- Validation predictions
+    """
 
     print(f"    -> {len(df_train)} training birds")
     print(f"    -> {len(df_val)} validation birds")
@@ -54,9 +51,7 @@ def train(config, df_train, df_val, fold):
     ).cuda()
     model.zero_grad()
 
-    train_dataset = BirdDataset(
-        df_train, AudioParams, use_conf=config.use_conf
-    )
+    train_dataset = BirdDataset(df_train, AudioParams, use_conf=config.use_conf)
     val_dataset = BirdDataset(df_val, AudioParams, train=False)
 
     n_parameters = count_parameters(model)
@@ -73,9 +68,8 @@ def train(config, df_train, df_val, fold):
         warmup_prop=config.warmup_prop,
         alpha=config.alpha,
         mixup_proba=config.mixup_proba,
-        specaugment_proba=config.specaugment_proba,
-        label_smoothing=config.label_smoothing,
         verbose_eval=config.verbose_eval,
+        epochs_eval_min=config.epochs_eval_min,
     )
 
     if config.save:
@@ -89,6 +83,19 @@ def train(config, df_train, df_val, fold):
 
 
 def k_fold(config, df, df_extra=None):
+    """
+    Performs a k-fold cross validation
+
+    Arguments:
+        config {Config} -- Parameters
+        df {pandas dataframe} -- Metadata
+
+    Keyword Arguments:
+        df_extra {pandas dataframe or None} -- Metadata of the extra samples to use (default: {None})
+
+    Returns:
+        np array -- Out-of-fold predictions
+    """
 
     skf = StratifiedKFold(n_splits=config.k, random_state=config.random_state)
     splits = list(skf.split(X=df, y=df["ebird_code"]))
@@ -111,44 +118,28 @@ def k_fold(config, df, df_extra=None):
     return pred_oof
 
 
-class AudioParams:
-    sr = 32000
-    duration = 5
-    img_size = None
-
-    # Melspectrogram
-    n_mels = 128
-    fmin = 20
-    fmax = 16000
-
-    # n_fft = n_mels * 20 # Size of fft window - smooths the spectrogram
-    n_fft = 1024
-
-    spec_width = 384
-    hop_length = duration * sr // spec_width + 1  # Computed to have width=spec_width
-    # hop_length = 512
-
-
 class Config:
+    """
+    Parameter used for training
+    """
     # General
     seed = 2020
     verbose = 1
     verbose_eval = 1
+    epochs_eval_min = 25
     save = True
 
     # k-fold
     k = 5
     random_state = 42
-    selected_folds = [0, 1, 2, 3, 4] 
+    selected_folds = [0, 1, 2, 3, 4]
 
     # Model
     # selected_model = "resnest50_fast_1s1x64d"
-    # selected_model = "resnext101_32x8d_wsl"
-    # selected_model = 'se_resnext50_32x4d'
-    selected_model = 'resnext50_32x4d'
+    selected_model = "resnext101_32x8d_wsl"
+    # selected_model = 'resnext50_32x4d'
     # selected_model = 'resnest50'
-    
-    use_msd = False
+
     use_conf = False
     use_extra = True
 
@@ -162,14 +153,7 @@ class Config:
     if "101" in selected_model or "b5" in selected_model or "b6" in selected_model:
         batch_size = batch_size // 2
         lr = lr / 2
-    
-    if "b7" in selected_model:
-        batch_size = 16
-        lr = 2e-4
-        val_bs = 16
 
-    label_smoothing = 0.
-    specaugment_proba = 0.
     mixup_proba = 0.5
     alpha = 5
 
@@ -189,7 +173,7 @@ if __name__ == "__main__":
     df_train["file_path"] = paths
 
     # Extra Data
-    
+
     df_extra = pd.read_csv(DATA_PATH + "train_extended.csv")
 
     paths = []

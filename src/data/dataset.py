@@ -14,12 +14,18 @@ CONF_PATH = "../output/preds_oof.pkl"
 
 
 def compute_melspec(y, params):
+    """
+    Computes a mel-spectrogram and puts it at decibel scale
+
+    Arguments:
+        y {np array} -- signal
+        params {AudioParams} -- Parameters to use for the spectrogram. Expected to have the attributes sr, n_mels, f_min, f_max
+
+    Returns:
+        np array -- Mel-spectrogram
+    """
     melspec = librosa.feature.melspectrogram(
-        y,
-        sr=params.sr,
-        n_mels=params.n_mels,
-        fmin=params.fmin,
-        fmax=params.fmax,
+        y, sr=params.sr, n_mels=params.n_mels, fmin=params.fmin, fmax=params.fmax,
     )
 
     melspec = librosa.power_to_db(melspec).astype(np.float32)
@@ -27,14 +33,26 @@ def compute_melspec(y, params):
 
 
 class BirdDataset(Dataset):
+    """
+    Torch dataset for the problem
+    """
+
     def __init__(self, df, params, train=True, use_conf=False):
+        """
+        Constructor
+
+        Arguments:
+            df {pandas dataframe} -- Metadata
+            params {AudioParams} -- Audio parameters
+
+        Keyword Arguments:
+            train {bool} -- Whether the dataset is used for training or validation (default: {True})
+            use_conf {bool} -- Whether to use confidence for cropping (default: {False})
+        """
         self.train = train
         self.params = params
 
         self.wav_transfos = get_wav_transforms() if train else None
-        # self.wav_transfos = AudioAugmentation(p_effects=0.5, p_noise=0.5) if train else None
-
-        self.spec_transfos = None
 
         self.y = np.array([CLASSES.index(c) for c in df["ebird_code"]])
         self.paths = df["file_path"].values
@@ -49,7 +67,7 @@ class BirdDataset(Dataset):
     def __len__(self):
         return len(self.paths)
 
-    def __getitem__(self, idx: int):
+    def __getitem__(self, idx):
         y, sr = soundfile.read(self.paths[idx])
 
         if self.use_conf:
@@ -70,11 +88,7 @@ class BirdDataset(Dataset):
 
         melspec = compute_melspec(y, self.params)
 
-        if self.spec_transfos is not None:
-            melspec = self.spec_transfos(melspec)
-
         image = mono_to_color(melspec)
-        image = resize(image, self.params.img_size)
         image = normalize(image, mean=None, std=None)
 
         return image, ONE_HOT[self.y[idx]]

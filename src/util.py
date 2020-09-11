@@ -92,6 +92,20 @@ ONE_HOT = np.eye(NUM_CLASSES)
 
 
 def f1(truth, pred, threshold=0.5, avg="samples"):
+    """
+    The f1 metric for the problem
+
+    Arguments:
+        truth {np array [N] or [N x C]} -- Ground truths
+        pred {np array [N x C]} -- Predicted probabilites
+
+    Keyword Arguments:
+        threshold {float} -- Threshold for classification (default: {0.5})
+        avg {str} -- How to perform average in the f1 score (default: {"samples"})
+
+    Returns:
+        float -- f1 score
+    """
 
     if len(truth.shape) == 1:
         truth = ONE_HOT[truth]
