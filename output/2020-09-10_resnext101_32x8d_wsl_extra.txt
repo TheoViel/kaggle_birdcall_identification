@@ -156,3 +156,4 @@ Epoch 25/30 	 lr=8.8e-05 	 t=986s  	 loss=0.0111
 Epoch 26/30 	 lr=7.0e-05 	 t=1037s  	 loss=0.0110 	 val_loss=0.0063 	 micro_f1=0.798 	 samples_f1=0.747
 Epoch 27/30 	 lr=5.3e-05 	 t=1072s  	 loss=0.0109 	 val_loss=0.0060 	 micro_f1=0.802 	 samples_f1=0.756
 Epoch 28/30 	 lr=3.5e-05 	 t=1028s  	 loss=0.0108 	 val_loss=0.0061 	 micro_f1=0.801 	 samples_f1=0.754
+Epoch 29/30 	 lr=1.8e-05 	 t=1058s  	 loss=0.0107 	 val_loss=0.0060 	 micro_f1=0.808 	 samples_f1=0.760
