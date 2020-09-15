@@ -1,12 +1,25 @@
 # import cv2
 import pysndfx
 import numpy as np
-# import albumentations as albu
 from audiomentations import *
 from params import BACKGROUND_PATH
 
 
 def mono_to_color(X, eps=1e-6, mean=None, std=None):
+    """
+    Converts a one channel array to a 3 channel one in [0, 255]
+
+    Arguments:
+        X {numpy array [H x W]} -- 2D array to convert
+
+    Keyword Arguments:
+        eps {float} -- To avoid dividing by 0 (default: {1e-6})
+        mean {None or np array} -- Mean for normalization (default: {None})
+        std {None or np array} -- Std for normalization (default: {None})
+
+    Returns:
+        numpy array [3 x H x W] -- RGB numpy array
+    """
     X = np.stack([X, X, X], axis=-1)
 
     # Standardize
@@ -27,16 +40,20 @@ def mono_to_color(X, eps=1e-6, mean=None, std=None):
     return V
 
 
-def resize(image, size=None):
-    if size is not None:
-        h, w, _ = image.shape
-        new_w, new_h = int(w * size / h), size
-        # image = cv2.resize(image, (new_w, new_h))
-
-    return image
-
-
 def normalize(image, mean=None, std=None):
+    """
+    Normalizes an array in [0, 255] to the format adapted to neural network
+
+    Arguments:
+        image {np array [3 x H x W]} -- [description]
+
+    Keyword Arguments:
+        mean {None or np array} -- Mean for normalization, expected of size 3 (default: {None})
+        std {None or np array} -- Std for normalization, expected of size 3 (default: {None})
+
+    Returns:
+        np array [H x W x 3] -- Normalized array
+    """
     image = image / 255.0
     if mean is not None and std is not None:
         image = (image - mean) / std
@@ -44,9 +61,21 @@ def normalize(image, mean=None, std=None):
 
 
 def crop_or_pad(y, length, sr, train=True, probs=None):
-    # if len(y) > 0:
-    # y, _ = librosa.effects.trim(y) # trim, top_db=default(60)
+    """
+    Crops an array to a chosen length
 
+    Arguments:
+        y {1D np array} -- Array to crop
+        length {int} -- Length of the crop
+        sr {int} -- Sampling rate
+
+    Keyword Arguments:
+        train {bool} -- Whether we are at train time. If so, crop randomly, else return the beginning of y (default: {True})
+        probs {None or numpy array} -- Probabilities to use to chose where to crop (default: {None})
+
+    Returns:
+        1D np array -- Cropped array
+    """
     if len(y) <= length:
         y = np.concatenate([y, np.zeros(length - len(y))])
     else:
@@ -66,6 +95,12 @@ def crop_or_pad(y, length, sr, train=True, probs=None):
 
 
 def get_wav_transforms():
+    """
+    Returns the transformation to apply on waveforms
+
+    Returns:
+        Audiomentations transform -- Transforms
+    """
     transforms = Compose(
         [
             AddGaussianSNR(max_SNR=0.5, p=0.5),
@@ -74,38 +109,4 @@ def get_wav_transforms():
             ),
         ]
     )
-
     return transforms
-
-
-class AudioAugmentation:
-    def __init__(self, p_effects=0.5, p_noise=0.5):
-        self.p_effects = p_effects
-
-        self.noise_transfos = Compose(
-            [
-                AddGaussianSNR(max_SNR=0.5, p=p_noise),
-                AddBackgroundNoise(
-                    sounds_path=BACKGROUND_PATH, min_snr_in_db=0, max_snr_in_db=2, p=p_noise
-                ),
-            ]
-        )
-
-    def __call__(self, y, sr):
-        y = self.noise_transfos(y, sr)
-
-        if np.random.uniform() < self.p_effects:
-            effects_chain = (
-                pysndfx.AudioEffectsChain()
-                .reverb(
-                    reverberance=random.randrange(50),
-                    room_scale=random.randrange(50),
-                    stereo_depth=random.randrange(50),
-                )
-                .pitch(shift=random.randrange(-300, 300))
-                .overdrive(gain=random.randrange(2, 20))
-            )
-
-            y = effects_chain(y)
-
-        return y

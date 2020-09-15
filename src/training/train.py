@@ -4,25 +4,41 @@ import torch
 import numpy as np
 import torch.nn as nn
 
-from tqdm import tqdm
 from torch.optim import Adam
 from torch.utils.data import DataLoader
-from torch.utils.data.sampler import RandomSampler
 from transformers import get_linear_schedule_with_warmup
-from torchvision.models.inception import InceptionOutputs
 
 from util import f1
-from training.mixup import mixup_data
 from params import NUM_WORKERS, NUM_CLASSES
-from training.specaugment import SpecAugmentation
 
 
-def smooth_label(y , alpha=0.01):
-    y = y * (1 - alpha)
-    y[y == 0] = alpha
-    return y
+def mixup_data(x, y, alpha=0.4):
+    """
+    Applies mixup to a sample
 
-    
+    Arguments:
+        x {torch tensor} -- Input batch
+        y {torch tensor} -- Labels
+
+    Keyword Arguments:
+        alpha {float} -- Parameter of the beta distribution (default: {0.4})
+
+    Returns:
+        torch tensor  -- Mixed input
+        torch tensor  -- Labels of the original batch
+        torch tensor  -- Labels of the shuffle batch
+        float  -- Probability samples by the beta distribution
+    """
+    lam = np.random.beta(alpha, alpha) if alpha > 0 else 1
+
+    index = torch.randperm(x.size()[0]).cuda()
+
+    mixed_x = lam * x + (1 - lam) * x[index, :]
+    y_a, y_b = y, y[index]
+
+    return mixed_x, y_a, y_b, lam
+
+
 def fit(
     model,
     train_dataset,
@@ -34,10 +50,9 @@ def fit(
     lr=1e-3,
     alpha=0.4,
     mixup_proba=0.0,
-    specaugment_proba=0.0,
-    label_smoothing=0.0,
     verbose=1,
     verbose_eval=1,
+    epochs_eval_min=0,
 ):
     """
     Usual torch fit function
@@ -55,9 +70,9 @@ def fit(
         lr {float} -- Start (or maximum) learning rate (default: {1e-3})
         alpha {float} -- alpha value for mixup (default: {0.4})
         mixup_proba {float} -- Probability to apply mixup (default: {0.})
-        specaugment_proba {float} -- Probability to apply specaugment (default: {0.})
         verbose {int} -- Period (in epochs) to display logs at (default: {1})
         verbose_eval {int} -- Period (in epochs) to perform evaluation at (default: {1})
+        epochs_eval_min {int} -- Number of epochs to start evaluating from (default: {0})
 
     Returns:
         numpy array -- Predictions at the last epoch
@@ -70,10 +85,6 @@ def fit(
     optimizer = Adam(model.parameters(), lr=lr)
 
     loss_fct = nn.BCEWithLogitsLoss(reduction="mean").cuda()
-
-    spec_augmenter = SpecAugmentation(
-        time_drop_width=16, time_stripes_num=2, freq_drop_width=8, freq_stripes_num=2
-    )
 
     train_loader = DataLoader(
         train_dataset,
@@ -99,24 +110,14 @@ def fit(
 
         avg_loss = 0
         for step, (x, y_batch) in enumerate(train_loader):
-            if specaugment_proba:
-                if np.random.rand() < specaugment_proba:
-                    x = spec_augmenter(x)
 
             if np.random.rand() < mixup_proba:
                 x, y_a, y_b, _ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)
                 y_batch = torch.clamp(y_a + y_b, 0, 1)
 
-            # if label_smoothing:
-            #     y_batch = smooth_label(y_batch, alpha=label_smoothing)
-
             y_pred = model(x.cuda())
 
-            # if type(y_pred) == InceptionOutputs:
-            #     y_pred = y_pred.logits
-
             loss = loss_fct(y_pred, y_batch.cuda().float())
-
             loss.backward()
             avg_loss += loss.item() / len(train_loader)
 
@@ -124,7 +125,10 @@ def fit(
             optimizer.zero_grad()
             scheduler.step()
 
-        if (epoch + 1) % verbose_eval == 0 or (epoch + 1 == epochs):
+        do_eval = ((epoch + 1) % verbose_eval == 0 and epoch >= epochs_eval_min) or (
+            epoch + 1 == epochs
+        )
+        if do_eval:
             model.eval()
 
             avg_val_loss = 0.0
@@ -148,7 +152,7 @@ def fit(
                 f"Epoch {epoch + 1}/{epochs} \t lr={lr:.1e} \t t={elapsed_time:.0f}s  \t loss={avg_loss:.4f} \t ",
                 end="",
             )
-            if (epoch + 1) % verbose_eval == 0 or (epoch + 1 == epochs):
+            if do_eval:
                 print(
                     f"val_loss={avg_val_loss:.4f} \t micro_f1={micro_f1:.3f} \t samples_f1={samples_f1:.3f}"
                 )
