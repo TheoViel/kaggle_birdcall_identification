@@ -56,5 +56,18 @@ BACKGROUND_PATH
 
 ## Repository structure
 
+- `input` : Input metadata
+- `kept_logs`: Training logs of the 4 models used in the ensemble. Associated configs are in `configs.py`
+- `notebooks` : Notebook to compute confidence for improved sampling
+- `output` : More logs and outputs of the training
+- `src` : Source code
 
+## Inference
 
+- To reproduce our final score, fork this notebook [notebook](https://www.kaggle.com/theoviel/inference-theo) in the kaggle kernels.
+- Model weights are available on kaggle : [[Part 1]](https://www.kaggle.com/theoviel/birds-cp-1) , [[Part 2]](https://www.kaggle.com/theoviel/birds-cp-2), [[Part 3]](https://www.kaggle.com/theoviel/birds-checkpoints-3), 
+- Weights used in the final ensemble are the following, where `IDX` is the fold number and varies from 0 to 4 :
+  - `resnext50_32x4d_extra_IDX.pt`
+  - `resnext101_32x8d_wsl_extra_IDX.pt`
+  - `resnest50_fast_1s1x64d_mixup5_IDX.pt`
+  - `resnest50_fast_1s1x64d_conf_IDX.pt`
