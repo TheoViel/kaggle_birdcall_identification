@@ -13,11 +13,65 @@ The aim of the competition is to identify birds in audio recordings. The main ch
 There are three sites in the test data, two of them requires models to identify which birds out of the 264 species are present in every 5 seconds interval, whereas the third one only requires weak labelling. The metric used to assess performances is the [F1-score](https://en.wikipedia.org/wiki/F1_score). 
 
 
+## Solution Overview
+
+Our solution has three main aspects : data augmentation, modeling and post-processing
+
+### Data Augmentation
+
+Data augmentation is the key to reduce the discrepancy between train and test. We start by randomly cropping 5 seconds of the audio and then add aggressive noise augmentations :
+- Gaussian noise
+
+With a soud to noise ratio up to 0.5
+
+- Background noise
+
+We randomly chose 5 seconds of a sample in the background dataset available [here](https://www.kaggle.com/theoviel/bird-backgrounds). This dataset contains samples without bircall from the example test audios from the competition data, and some samples from the freesound bird detection challenge that were manually selected.
+
+- Modified Mixup
+
+Mixup creates a combination of a batch `x1` and its shuffled version `x2` : `x = a * x1 + (1 - a) * x2` where `a` is samples with a beta distribution. 
+Then, instead of using the classical objective for mixup, we define the target associated to `x` as the union of the original targets. 
+This forces the model to correctly predict both labels.
+Mixup is applied with probability 0.5 and I used 5 as parameter for the beta disctribution, which forces `a` to be close to 0.5.
+
+- Improved cropping 
+
+Instead of randomly selecting the crops, selecting them based on out-of-fold confidence was also used. The confidence at time `t` is the probability of the ground truth class predicted on the 5 second crop starting from `t`.
+
+### Modeling
+
+We used 4 models in the final blend :
+
+- resnext50 [0.606 LB] - trained with the additional audio recordings.
+- resnext101 [0.606 LB] - trained with the additional audio recordings as well.
+- resnest50 [0.612 LB] 
+- resnest50 [0.617 LB] - trained with improved crops
+
+
+They were trained for 40 epochs (30 if the external data is used), with a linear scheduler with 0.05 warmup proportion. Learning rate is 0.001 with a batch size of 64 for the small models, and both are divided by two for the resnext101 one, in order to fit in a single 2080Ti.
+
+We had no reliable validation strategy, and used stratified 5 folds where the prediction is made on the 5 first second of the validation audios.
+
+### Post-processing
+
+We used 0.5 as our threshold `T`.
+
+- First step is to zero the predictions lower than `T`
+- Then, we aggregate the predictions
+  - For the sites 1 and 2, the prediction of a given window is summed with those of the two neighbouring windows. 
+  - For the site 3, we aggregate using the max
+- The `n` most likely birds with probability higher than `T` are kept
+  - `n = 3` for the sites 1 and 2
+  - `n` is chose according to the audio length for the site 3.
+
+
+
 ## Data
 
 - Competition data is available on the [competition page](https://www.kaggle.com/c/birdsong-recognition/data)
 
-Audio samples aren't actually used but the metadata are already in the `input` folder.
+Audio samples aren't actually used and the `csv`files are already in the `input` folder.
 
 - Resampled data in `.wav` resampled at 32 kHz format is available in the following Kaggle datasets : 
   - [[Part 1](https://www.kaggle.com/ttahara/birdsong-resampled-train-audio-00)], 
