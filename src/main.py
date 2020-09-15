@@ -46,9 +46,7 @@ def train(config, df_train, df_val, fold):
 
     seed_everything(config.seed)
 
-    model = get_model(
-        config.selected_model, use_msd=config.use_msd, num_classes=NUM_CLASSES
-    ).cuda()
+    model = get_model(config.selected_model, num_classes=NUM_CLASSES).cuda()
     model.zero_grad()
 
     train_dataset = BirdDataset(df_train, AudioParams, use_conf=config.use_conf)
@@ -132,20 +130,19 @@ class Config:
     # k-fold
     k = 5
     random_state = 42
-    selected_folds = [0, 1, 2, 3, 4]
+    selected_folds = [0]
 
     # Model
-    # selected_model = "resnest50_fast_1s1x64d"
-    selected_model = "resnext101_32x8d_wsl"
+    selected_model = "resnest50_fast_1s1x64d"
+    # selected_model = "resnext101_32x8d_wsl"
     # selected_model = 'resnext50_32x4d'
-    # selected_model = 'resnest50'
 
     use_conf = False
-    use_extra = True
+    use_extra = False
 
     # Training
     batch_size = 64
-    epochs = 30
+    epochs = 30 if use_extra else 40
     lr = 1e-3
     warmup_prop = 0.05
     val_bs = 64
@@ -157,7 +154,7 @@ class Config:
     mixup_proba = 0.5
     alpha = 5
 
-    name = "extra"
+    name = "double"
 
 
 if __name__ == "__main__":
@@ -181,6 +178,8 @@ if __name__ == "__main__":
         path = f"{EXTRA_AUDIO_PATH}{c}/{file[:-4]}.wav"
         paths.append(path)
     df_extra["file_path"] = paths
+
+    # df_extra = df_extra[df_extra['duration'] < 200]  # remove long audios
 
     if not Config.use_extra:
         df_extra = None

@@ -110,9 +110,6 @@ def fit(
 
         avg_loss = 0
         for step, (x, y_batch) in enumerate(train_loader):
-            if specaugment_proba:
-                if np.random.rand() < specaugment_proba:
-                    x = spec_augmenter(x)
 
             if np.random.rand() < mixup_proba:
                 x, y_a, y_b, _ = mixup_data(x.cuda(), y_batch.cuda(), alpha=alpha)

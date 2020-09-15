@@ -71,7 +71,8 @@ class BirdDataset(Dataset):
         y, sr = soundfile.read(self.paths[idx])
 
         if self.use_conf:
-            confs = self.confidences[self.paths[idx]][:, self.y[idx]]
+            path = "/".join(self.paths[idx].split('/')[-2:])
+            confs = self.confidences[path][:, self.y[idx]]
             if len(confs):
                 confs = confs / np.sum(confs)
             else:
