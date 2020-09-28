@@ -1,6 +1,6 @@
 # Kaggle Birdcall Identification
 
-Code for the [Cornell Birdcall Identification competition](https://www.kaggle.com/c/birdsong-recognition)
+3rd place solution for the [Cornell Birdcall Identification competition](https://www.kaggle.com/c/birdsong-recognition)
 
 ## Context
 
@@ -43,11 +43,10 @@ Instead of randomly selecting the crops, selecting them based on out-of-fold con
 
 We used 4 models in the final blend :
 
-- resnext50 [0.606 LB] - trained with the additional audio recordings.
-- resnext101 [0.606 LB] - trained with the additional audio recordings as well.
-- resnest50 [0.612 LB] 
-- resnest50 [0.617 LB] - trained with improved crops
-
+- resnext50 [0.606 Public LB -> 0.675 Private] - trained with the additional audio recordings. This model alone scores better than our ensemble.
+- resnext101 [0.606 Public LB -> 0.661 Private] - trained with the additional audio recordings as well.
+- resnest50 [0.612 Public LB -> 0.641 Private] 
+- resnest50 [0.617 Public LB -> 0.620 Private] - trained with improved crops 
 
 They were trained for 40 epochs (30 if the external data is used), with a linear scheduler with 0.05 warmup proportion. Learning rate is 0.001 with a batch size of 64 for the small models, and both are divided by two for the resnext101 one, in order to fit in a single 2080Ti.
 
@@ -61,10 +60,9 @@ We used 0.5 as our threshold `T`.
 - Then, we aggregate the predictions
   - For the sites 1 and 2, the prediction of a given window is summed with those of the two neighbouring windows. 
   - For the site 3, we aggregate using the max
-- The `n` most likely birds with probability higher than `T` are kept
+- The `n` most likely birds with probability higher than `T` are kept 
   - `n = 3` for the sites 1 and 2
   - `n` is chose according to the audio length for the site 3.
-
 
 
 ## Data
